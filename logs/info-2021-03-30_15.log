@@ -1,0 +1,37 @@
+
+[2021-03-30 15:56:09] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-30 15:56:09] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+
+[2021-03-30 15:56:09] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Starting App on DESKTOP-6CRAUAT with PID 25356 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-30 15:56:09] [operation_prod] [INFO] [main]  cn.jxau.producer.App-No active profile set, falling back to default profiles: default
+
+[2021-03-30 15:56:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-30 15:56:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-30 15:56:12] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+
+[2021-03-30 15:56:12] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-30 15:56:12] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-30 15:56:12] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-30 15:56:13] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-30 15:56:14] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8081"]
+
+[2021-03-30 15:56:14] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Started App in 5.789 seconds (JVM running for 7.956)
+
+[2021-03-30 15:58:28] [operation_prod] [INFO] [http-nio-8081-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-30 15:58:50] [operation_prod] [INFO] [http-nio-8081-exec-3]  io.lettuce.core.EpollProvider-Starting without optional epoll library
+
+[2021-03-30 15:58:50] [operation_prod] [INFO] [http-nio-8081-exec-3]  io.lettuce.core.KqueueProvider-Starting without optional kqueue library

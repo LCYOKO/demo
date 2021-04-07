@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="85c621a5-b1ee-4294-81b2-c9105394b95b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/api/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/jxau/consumer/ConsumerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/jxau/consumer/config/ZooKeeperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/cn/jxau/consumer/serviceImpl/OrderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources-env/dev/application-web.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources-env/dev/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/test/java/cn/jxau/consumer/ConsumerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/test/java/cn/jxau/consumer/TestLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-03-28_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-03-30_17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-02_23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-03_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-03_20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-03_21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-03_22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-03_23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-03-28_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-03-30_15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-03-30_17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-02_22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-02_23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-03_19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-03_20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-03_21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-03_22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-05_21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/logs/error-2021-03-29_22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/logs/info-2021-04-03_18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/logs/info-2021-04-03_23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/HelloClientDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/HelloServerDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RabbitMqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/RedisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/CatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/CatsDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/HandleErrors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/Handlers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/HttpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/LoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/http/NullToNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/listener/MessageDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/listener/MessageListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/mq/RabbitSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/OrderServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/impl/HelloServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/thrift/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/thrift/ThriftClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/thrift/ThriftServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/thrift/HelloWorldService.thrift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/thrift/hello.thrift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/thrift/logger.thrift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestFinagle.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\repository" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1q4LALsIriYBzY5X3i9f0d9G4MV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="cn.jxau.producer.thrift" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cn.jxau.producer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\webProject\demo\producer\src\main\java\thrift" />
+      <recent name="D:\webProject\demo\producer\src\main\java\cn\jxau\producer" />
+      <recent name="D:\webProject\demo\producer\src\main\resources" />
+      <recent name="D:\webProject\demo\consumer\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\webProject\demo\consumer\src\main\resources-env" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="HelloServerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.HelloServerDemo" />
+      <module name="producer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFinagle.sendMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="producer" />
+      <option name="PACKAGE_NAME" value="cn.jxau.producer" />
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestFinagle" />
+      <option name="METHOD_NAME" value="sendMsg" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFinagle.testFinagle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="producer" />
+      <option name="PACKAGE_NAME" value="cn.jxau.producer" />
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestFinagle" />
+      <option name="METHOD_NAME" value="testFinagle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLog.testLog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="consumer" />
+      <option name="PACKAGE_NAME" value="cn.jxau.consumer" />
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.consumer.TestLog" />
+      <option name="METHOD_NAME" value="testLog" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.jxau.producer.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.jxau.consumer.ConsumerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.jxau.producer.app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.App" />
+        <item itemvalue="JUnit.TestFinagle.sendMsg" />
+        <item itemvalue="Application.HelloServerDemo" />
+        <item itemvalue="JUnit.TestFinagle.testFinagle" />
+        <item itemvalue="JUnit.TestLog.testLog" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.16051912" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@700a661c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@700a661c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@82e053a8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85c621a5-b1ee-4294-81b2-c9105394b95b" name="Default Changelist" comment="" />
+      <created>1616333770298</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616333770298</updated>
+      <workItem from="1616333775141" duration="917000" />
+      <workItem from="1616394354749" duration="1189000" />
+      <workItem from="1616477441250" duration="1186000" />
+      <workItem from="1616504847816" duration="508000" />
+      <workItem from="1616844048390" duration="9953000" />
+      <workItem from="1616911906821" duration="7459000" />
+      <workItem from="1616931110456" duration="2956000" />
+      <workItem from="1616981852619" duration="14514000" />
+      <workItem from="1617068276463" duration="6233000" />
+      <workItem from="1617109805728" duration="589000" />
+      <workItem from="1617184694432" duration="2393000" />
+      <workItem from="1617240396438" duration="5846000" />
+      <workItem from="1617328613928" duration="6570000" />
+      <workItem from="1617417557456" duration="18232000" />
+      <workItem from="1617628370065" duration="2253000" />
+      <workItem from="1617675540126" duration="3852000" />
+      <workItem from="1617760398805" duration="17000" />
+      <workItem from="1617765905672" duration="1041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.2.2.RELEASE/spring-rabbit-2.2.2.RELEASE-sources.jar!/org/springframework/amqp/rabbit/listener/adapter/MessageListenerAdapter.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/mq/RabbitSender.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

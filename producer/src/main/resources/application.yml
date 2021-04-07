@@ -1,0 +1,50 @@
+
+#dubbo:
+#  application:
+#    name: dubbo-producer
+#  registry:
+#    address: zookeeper://192.168.102.130:2181
+#  protocol:
+#    name: dubbo
+#    port: 20880
+#  scan:
+#    base-packages: cn.jxau.producer.serviceimpl
+server:
+  port: 8081
+
+
+
+spring:
+  redis:
+    host: localhost
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 500
+        max-wait: 1000
+        min-idle: 0
+    port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    template:
+      mandatory: true
+
+    listener:
+      simple:
+        acknowledge-mode: manual
+        max-concurrency: 10
+        concurrency: 5
+dubbo:
+  application:
+    logger: slf4j
+rabbitmq:
+  topic-name: order.#;
+  queue-name: order
+  exchange-name: topic.exchange
+  exchange-type: topic

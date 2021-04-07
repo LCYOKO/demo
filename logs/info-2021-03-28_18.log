@@ -1,0 +1,1376 @@
+
+[2021-03-28 18:07:15] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-03-28 18:07:15] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:07:15] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:07:15] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 33164 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:07:15] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-The following profiles are active: web
+
+[2021-03-28 18:07:16] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:07:16] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:07:16] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:07:16] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:07:16] [operation_prod] [WARN] [main]  org.mybatis.spring.mapper.ClassPathMapperScanner-No MyBatis mapper was found in '[cn.jxau.consumer]' package. Please check your configuration.
+
+[2021-03-28 18:07:17] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:07:17] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:07:17] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:07:17] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:07:18] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.config.DubboShutdownHook- [DUBBO] Run shutdown hook now., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:07:18] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.registry.support.AbstractRegistryFactory- [DUBBO] Close all registries [], dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:07:40] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-03-28 18:07:40] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:07:40] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:07:40] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 8480 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:07:40] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-The following profiles are active: web
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:07:41] [operation_prod] [WARN] [main]  org.mybatis.spring.mapper.ClassPathMapperScanner-No MyBatis mapper was found in '[cn.jxau.consumer]' package. Please check your configuration.
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:07:41] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:07:42] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.config.DubboShutdownHook- [DUBBO] Run shutdown hook now., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:07:42] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.registry.support.AbstractRegistryFactory- [DUBBO] Close all registries [], dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:08:07] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-03-28 18:08:07] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:08:07] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:08:07] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 11176 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:08:07] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:08:08] [operation_prod] [WARN] [main]  org.mybatis.spring.mapper.ClassPathMapperScanner-No MyBatis mapper was found in '[cn.jxau.consumer]' package. Please check your configuration.
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:08:08] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:08:09] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.config.DubboShutdownHook- [DUBBO] Run shutdown hook now., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:08:09] [operation_prod] [INFO] [DubboShutdownHook]  org.apache.dubbo.registry.support.AbstractRegistryFactory- [DUBBO] Close all registries [], dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 34500 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:09:00] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:09:00] [operation_prod] [WARN] [main]  org.mybatis.spring.mapper.ClassPathMapperScanner-No MyBatis mapper was found in '[cn.jxau.consumer]' package. Please check your configuration.
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:09:01] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:09:01] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+[2021-03-28 18:09:13] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:09:13] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:09:13] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 13600 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:09:13] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:09:14] [operation_prod] [WARN] [main]  org.mybatis.spring.mapper.ClassPathMapperScanner-No MyBatis mapper was found in '[cn.jxau.consumer]' package. Please check your configuration.
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:09:14] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:09:15] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:09:15] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:09:15] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:09:15] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:09:15] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 22948 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:10:32] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:10:33] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:10:33] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:10:33] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:10:33] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:10:34] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:10:34] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:10:35] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:10:35] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 3.535 seconds (JVM running for 5.048)
+
+[2021-03-28 18:10:58] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:11:17] [operation_prod] [ERROR] [http-nio-8080-exec-3]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Optional int parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.] with root cause
+java.lang.IllegalStateException: Optional int parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleNullValue(AbstractNamedValueMethodArgumentResolver.java:245)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:116)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:11:37] [operation_prod] [ERROR] [http-nio-8080-exec-4]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:12:04] [operation_prod] [ERROR] [http-nio-8080-exec-5]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:12:42] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:12:42] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:12:42] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 6684 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:12:43] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:12:43] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:12:43] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:12:43] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:12:43] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:12:44] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:12:45] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:12:45] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 2.795 seconds (JVM running for 4.473)
+
+[2021-03-28 18:12:55] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:12:55] [operation_prod] [ERROR] [http-nio-8080-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:12:55] [operation_prod] [ERROR] [http-nio-8080-exec-2]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 30268 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:13:15] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:13:16] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:13:17] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:13:17] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 2.705 seconds (JVM running for 4.079)
+
+[2021-03-28 18:13:20] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:13:20] [operation_prod] [ERROR] [http-nio-8080-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:15:32] [operation_prod] [ERROR] [http-nio-8080-exec-3]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:15:51] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:15:51] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:15:51] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 8760 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:15:51] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:15:52] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:15:53] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:15:53] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:15:53] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:15:53] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 2.464 seconds (JVM running for 3.96)
+
+[2021-03-28 18:16:09] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:16:09] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:16:09] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 20616 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:16:09] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:16:10] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:16:11] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:16:11] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:16:11] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:16:11] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 3.196 seconds (JVM running for 4.723)
+
+[2021-03-28 18:16:23] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:16:23] [operation_prod] [ERROR] [http-nio-8080-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:22:52] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:22:52] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:22:52] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 34104 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:22:52] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:22:53] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:22:54] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:22:54] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:22:54] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:22:54] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 2.705 seconds (JVM running for 4.343)
+
+[2021-03-28 18:23:24] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:23:24] [operation_prod] [ERROR] [http-nio-8080-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:29:06] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:29:06] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-producer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.name=dubbo, dubbo.protocol.port=20880, dubbo.registry.address=zookeeper://192.168.102.130:2181, dubbo.scan.base-packages=cn.jxau.producer.serviceimpl}
+
+[2021-03-28 18:29:06] [operation_prod] [INFO] [main]  cn.jxau.producer.app-Starting app on DESKTOP-6CRAUAT with PID 10980 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:29:06] [operation_prod] [INFO] [main]  cn.jxau.producer.app-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:29:07] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main]  org.apache.curator.utils.Compatibility-Using emulated InjectSessionExpiration
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Starting
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Default schema
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.state.ConnectionStateManager-State change: CONNECTED
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:17] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Pausing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Stopping ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Destroying ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:29:18] [operation_prod] [ERROR] [main]  o.s.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.AwaitingNonWebApplicationListener- [Dubbo] Current Spring Boot Application is about to shutdown...
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [Curator-Framework-0]  org.apache.curator.framework.imps.CuratorFrameworkImpl-backgroundOperationsLoop exiting
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Starting
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Default schema
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.state.ConnectionStateManager-State change: CONNECTED
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:18] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.a.ReferenceAnnotationBeanPostProcessor-class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-producer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.name=dubbo, dubbo.protocol.port=20880, dubbo.registry.address=zookeeper://192.168.102.130:2181, dubbo.scan.base-packages=cn.jxau.producer.serviceimpl}
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  cn.jxau.producer.app-Starting app on DESKTOP-6CRAUAT with PID 13712 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  cn.jxau.producer.app-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+
+[2021-03-28 18:29:45] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8081"]
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:29:46] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main]  org.apache.curator.utils.Compatibility-Using emulated InjectSessionExpiration
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Starting
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Default schema
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.state.ConnectionStateManager-State change: CONNECTED
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:56] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:29:57] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8081"]
+
+[2021-03-28 18:29:57] [operation_prod] [INFO] [main]  cn.jxau.producer.app-Started app in 12.584 seconds (JVM running for 13.962)
+
+[2021-03-28 18:30:28] [operation_prod] [ERROR] [http-nio-8080-exec-3]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:30:37] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:30:37] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:30:37] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 23584 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:30:37] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:30:38] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:30:39] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:30:39] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:30:39] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:30:39] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 2.519 seconds (JVM running for 3.845)
+
+[2021-03-28 18:30:45] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-03-28 18:30:45] [operation_prod] [ERROR] [http-nio-8080-exec-1]  o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at cn.jxau.consumer.controller.OrderController.getOrder(OrderController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.name=dubbo-consumer, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.registry.address=zookeeper://192.168.102.130:2181}
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Starting ConsumerApplication on DESKTOP-6CRAUAT with PID 21272 (D:\webProject\demo\consumer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-No active profile set, falling back to default profiles: default
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+
+[2021-03-28 18:32:28] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+
+[2021-03-28 18:32:29] [operation_prod] [INFO] [main]  o.a.d.c.spring.beans.factory.annotation.ReferenceBeanBuilder-The configBean[type:ReferenceBean] has been built.
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main]  org.apache.curator.utils.Compatibility-Using emulated InjectSessionExpiration
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Starting
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main]  org.apache.curator.framework.imps.CuratorFrameworkImpl-Default schema
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.state.ConnectionStateManager-State change: CONNECTED
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:32:38] [operation_prod] [INFO] [main-EventThread]  org.apache.curator.framework.imps.EnsembleTracker-New config event received: {}
+
+[2021-03-28 18:32:40] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8080"]
+
+[2021-03-28 18:32:40] [operation_prod] [INFO] [main]  cn.jxau.consumer.ConsumerApplication-Started ConsumerApplication in 12.947 seconds (JVM running for 14.429)
+
+[2021-03-28 18:32:54] [operation_prod] [INFO] [http-nio-8080-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
