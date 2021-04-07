@@ -10,7 +10,7 @@
 #  scan:
 #    base-packages: cn.jxau.producer.serviceimpl
 server:
-  port: 8081
+  port: 8082
 
 
 
@@ -34,12 +34,22 @@ spring:
     publisher-returns: true
     template:
       mandatory: true
-
     listener:
       simple:
         acknowledge-mode: manual
         max-concurrency: 10
         concurrency: 5
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    password: 3852159
+    username: root
+    url: jdbc:mysql://localhost:3306/dc?useSSL=false
+    hikari:
+      auto-commit: true
+
+
 dubbo:
   application:
     logger: slf4j
@@ -48,3 +58,5 @@ rabbitmq:
   queue-name: order
   exchange-name: topic.exchange
   exchange-type: topic
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

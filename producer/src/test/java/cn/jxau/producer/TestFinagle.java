@@ -1,6 +1,7 @@
 package cn.jxau.producer;
 
 import cn.jxau.producer.entity.Order;
+import cn.jxau.producer.mapper.FoodDao;
 import cn.jxau.producer.mq.RabbitSender;
 import cn.jxau.producer.services.impl.HelloServiceImpl;
 import cn.jxau.producer.thrift.Hello;
@@ -55,6 +56,16 @@ public class TestFinagle {
         order.setId(123);
         sender.sendOrder(order);
     }
+
+
+    @Autowired
+    private FoodDao foodDao;
+    @Test
+    public void decFoodAmount(){
+        System.out.println(foodDao.selectByPrimaryKey(1));
+    }
+
+
 
 
 

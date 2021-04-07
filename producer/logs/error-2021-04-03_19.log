@@ -1,0 +1,4 @@
+
+[2021-04-03 19:55:21] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no exchange 'oderTopicExchange' in vhost '/', class-id=60, method-id=40)
+
+[2021-04-03 19:56:47] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: channel error; protocol method: #method<channel.close>(reply-code=404, reply-text=NOT_FOUND - no exchange 'oderTopicExchange' in vhost '/', class-id=60, method-id=40)

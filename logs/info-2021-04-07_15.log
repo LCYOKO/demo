@@ -1,0 +1,155 @@
+
+[2021-04-07 15:07:31] [operation_prod] [INFO] [http-nio-8082-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-04-07 15:07:50] [operation_prod] [INFO] [http-nio-8082-exec-3]  io.lettuce.core.EpollProvider-Starting without optional epoll library
+
+[2021-04-07 15:07:50] [operation_prod] [INFO] [http-nio-8082-exec-3]  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+
+[2021-04-07 15:15:58] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+[2021-04-07 15:15:58] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-04-07 15:15:58] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.logger=slf4j, dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+
+[2021-04-07 15:15:58] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Starting App on DESKTOP-6CRAUAT with PID 14552 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-04-07 15:15:58] [operation_prod] [INFO] [main]  cn.jxau.producer.App-No active profile set, falling back to default profiles: default
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8083"]
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-04-07 15:15:59] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-04-07 15:16:00] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, try to find an extension (bean) of type org.apache.dubbo.common.logger.Level, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:16:00] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, type:org.apache.dubbo.common.logger.Level found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:16:00] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, try to find an extension (bean) of type java.io.File, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:16:00] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, type:java.io.File found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:16:00] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:16:00] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-04-07 15:16:00] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:16:01] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8083"]
+
+[2021-04-07 15:16:01] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Started App in 3.044 seconds (JVM running for 4.518)
+
+[2021-04-07 15:16:11] [operation_prod] [INFO] [http-nio-8083-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-04-07 15:16:11] [operation_prod] [INFO] [http-nio-8083-exec-1]  io.lettuce.core.EpollProvider-Starting without optional epoll library
+
+[2021-04-07 15:16:11] [operation_prod] [INFO] [http-nio-8083-exec-1]  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+
+[2021-04-07 15:18:18] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+[2021-04-07 15:18:18] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-04-07 15:18:18] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.logger=slf4j, dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+
+[2021-04-07 15:18:18] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Starting App on DESKTOP-6CRAUAT with PID 29488 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-04-07 15:18:18] [operation_prod] [INFO] [main]  cn.jxau.producer.App-No active profile set, falling back to default profiles: default
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8082"]
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-04-07 15:18:19] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-04-07 15:18:20] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, try to find an extension (bean) of type org.apache.dubbo.common.logger.Level, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:20] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, type:org.apache.dubbo.common.logger.Level found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:20] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, try to find an extension (bean) of type java.io.File, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:20] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, type:java.io.File found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:20] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:18:20] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-04-07 15:18:20] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:18:21] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8082"]
+
+[2021-04-07 15:18:21] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Started App in 2.994 seconds (JVM running for 4.441)
+
+[2021-04-07 15:18:52] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+[2021-04-07 15:18:52] [operation_prod] [INFO] [main]  o.a.d.s.boot.context.event.WelcomeLogoApplicationListener-
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+
+[2021-04-07 15:18:52] [operation_prod] [INFO] [main]  o.a.d.s.b.c.event.OverrideDubboConfigApplicationListener-Dubbo Config was overridden by externalized configuration {dubbo.application.logger=slf4j, dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+
+[2021-04-07 15:18:53] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Starting App on DESKTOP-6CRAUAT with PID 25408 (D:\webProject\demo\producer\target\classes started by acer-L in D:\webProject\demo)
+
+[2021-04-07 15:18:53] [operation_prod] [INFO] [main]  cn.jxau.producer.App-No active profile set, falling back to default profiles: default
+
+[2021-04-07 15:18:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+
+[2021-04-07 15:18:53] [operation_prod] [INFO] [main]  o.a.d.c.s.context.annotation.DubboConfigBindingRegistrar-The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+
+[2021-04-07 15:18:54] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8083"]
+
+[2021-04-07 15:18:54] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardService-Starting service [Tomcat]
+
+[2021-04-07 15:18:54] [operation_prod] [INFO] [main]  org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/9.0.29]
+
+[2021-04-07 15:18:54] [operation_prod] [INFO] [main]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring embedded WebApplicationContext
+
+[2021-04-07 15:18:55] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, try to find an extension (bean) of type org.apache.dubbo.common.logger.Level, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:55] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:level, type:org.apache.dubbo.common.logger.Level found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:55] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, try to find an extension (bean) of type java.io.File, dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:55] [operation_prod] [WARN] [main]  o.a.dubbo.config.spring.extension.SpringExtensionFactory- [DUBBO] No spring extension (bean) named:file, type:java.io.File found, stop get bean., dubbo version: 2.7.3, current host: 192.168.102.1
+
+[2021-04-07 15:18:55] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:18:55] [operation_prod] [INFO] [main]  o.a.d.c.s.b.f.annotation.DubboConfigBindingBeanPostProcessor-The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+
+[2021-04-07 15:18:55] [operation_prod] [INFO] [main]  org.apache.dubbo.common.logger.LoggerFactory-using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+
+[2021-04-07 15:18:55] [operation_prod] [INFO] [main]  org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8083"]
+
+[2021-04-07 15:18:55] [operation_prod] [INFO] [main]  cn.jxau.producer.App-Started App in 3.308 seconds (JVM running for 4.942)
+
+[2021-04-07 15:19:23] [operation_prod] [INFO] [http-nio-8082-exec-1]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+[2021-04-07 15:19:23] [operation_prod] [INFO] [http-nio-8082-exec-1]  io.lettuce.core.EpollProvider-Starting without optional epoll library
+
+[2021-04-07 15:19:23] [operation_prod] [INFO] [http-nio-8082-exec-1]  io.lettuce.core.KqueueProvider-Starting without optional kqueue library
+
+[2021-04-07 15:19:30] [operation_prod] [INFO] [http-nio-8083-exec-2]  o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/]-Initializing Spring DispatcherServlet 'dispatcherServlet'

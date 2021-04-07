@@ -18,18 +18,46 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <properties>
         <springboot.vserion>2.2.3.RELEASE</springboot.vserion>
         <curator.version>4.2.0</curator.version>
         <dubbo.vserion>2.7.3</dubbo.vserion>
+        <mybatis-starter.version>2.0.1</mybatis-starter.version>
+        <mysql-connector.version>5.1.47</mysql-connector.version>
     </properties>
 
+
+    <!--  分割线   -->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jdbc</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.mybatis.spring.boot</groupId>-->
+<!--                <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--                <version>${mybatis-starter.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.3</version>
             </dependency>
 
             <!-- logback -->
@@ -45,11 +73,11 @@
                 <version>${logback.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-access</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>ch.qos.logback</groupId>-->
+<!--                <artifactId>logback-access</artifactId>-->
+<!--                <version>${logback.version}</version>-->
+<!--            </dependency>-->
 
 
             <dependency>
