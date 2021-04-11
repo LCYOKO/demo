@@ -1,0 +1,62 @@
+
+#dubbo:
+#  application:
+#    name: dubbo-producer
+#  registry:
+#    address: zookeeper://192.168.102.130:2181
+#  protocol:
+#    name: dubbo
+#    port: 20880
+#  scan:
+#    base-packages: cn.jxau.producer.serviceimpl
+server:
+  port: 8082
+
+
+
+spring:
+  redis:
+    host: localhost
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 500
+        max-wait: 1000
+        min-idle: 0
+    port: 6379
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        max-concurrency: 10
+        concurrency: 5
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    password: 3852159
+    username: root
+    url: jdbc:mysql://localhost:3306/dc?useSSL=false
+    hikari:
+      auto-commit: true
+
+
+dubbo:
+  application:
+    logger: slf4j
+rabbitmq:
+  topic-name: order.#;
+  queue-name: order
+  exchange-name: topic.exchange
+  exchange-type: topic
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
