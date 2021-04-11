@@ -1,7 +1,6 @@
 package cn.jxau.producer;
 
 import cn.jxau.producer.entity.Order;
-import cn.jxau.producer.mapper.FoodDao;
 import cn.jxau.producer.mq.RabbitSender;
 import cn.jxau.producer.services.impl.HelloServiceImpl;
 import cn.jxau.producer.thrift.Hello;
@@ -11,11 +10,8 @@ import org.apache.thrift.server.TServer;
 import org.apache.thrift.server.TSimpleServer;
 import org.apache.thrift.transport.TServerSocket;
 import org.apache.thrift.transport.TTransportException;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

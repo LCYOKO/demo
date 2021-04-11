@@ -1,7 +1,7 @@
 package cn.jxau.producer.controller;
 
 import cn.jxau.producer.entity.Order;
-import cn.jxau.producer.entity.Result;
+import cn.jxau.common.response.Result;
 import cn.jxau.producer.entity.User;
 import cn.jxau.producer.services.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;

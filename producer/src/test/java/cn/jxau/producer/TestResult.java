@@ -1,9 +1,7 @@
 package cn.jxau.producer;
 
-import cn.jxau.producer.entity.Result;
+import cn.jxau.common.response.Result;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 /**
  * @Author l
