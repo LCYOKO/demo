@@ -14,7 +14,11 @@ public class TestResult {
 
 
     @Test
-    public  void test01(){
-        Result<Object> result = Result.fail("123");
+    public void test01() {
+        Result<Object> result = testDebug(Result.fail("123"));
+    }
+
+    private Result testDebug(Result<Object> result) {
+        return result;
     }
 }

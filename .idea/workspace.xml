@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85c621a5-b1ee-4294-81b2-c9105394b95b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-07_11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-07_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-07_11.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-07_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-07_15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/logs/error-2021-04-03_19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/MapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/mapper/FoodDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/FoodService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/impl/FoodServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/resources/mapper/FoodDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/RedisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/OrderServiceImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestFinagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestFinagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -73,28 +59,47 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\repository" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.2\conf\settings.xml" />
+        <option name="localRepository" value="$PROJECT_DIR$/../../repo" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../apache-maven-3.6.0/conf/settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1q4LALsIriYBzY5X3i9f0d9G4MV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mioffice-operation-api" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -106,14 +111,14 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cn.jxau.producer" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\webProject\demo\consumer\src\main\resources-env" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\webProject\demo\producer\src\main\java\thrift" />
       <recent name="D:\webProject\demo\producer\src\main\java\cn\jxau\producer" />
       <recent name="D:\webProject\demo\producer\src\main\resources" />
       <recent name="D:\webProject\demo\consumer\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\webProject\demo\consumer\src\main\resources-env" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,18 +127,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestFinagle.decFoodAmount">
+  <component name="RunManager" selected="JUnit.TestResult.test01">
     <configuration name="HelloServerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.HelloServerDemo" />
       <module name="producer" />
@@ -161,11 +156,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFinagle.testFinagle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestResult.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="producer" />
       <option name="PACKAGE_NAME" value="cn.jxau.producer" />
-      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestFinagle" />
-      <option name="METHOD_NAME" value="testFinagle" />
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestResult" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,50 +191,42 @@
     <list>
       <item itemvalue="Application.HelloServerDemo" />
       <item itemvalue="JUnit.TestFinagle.sendMsg" />
-      <item itemvalue="JUnit.TestFinagle.testFinagle" />
+      <item itemvalue="JUnit.TestFinagle.decFoodAmount" />
+      <item itemvalue="JUnit.TestResult.test01" />
       <item itemvalue="Spring Boot.app" />
       <item itemvalue="Spring Boot.ConsumerApplication" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="JUnit.TestFinagle.decFoodAmount" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestResult.test01" />
         <item itemvalue="Spring Boot.App" />
         <item itemvalue="JUnit.TestFinagle.decFoodAmount" />
         <item itemvalue="JUnit.TestFinagle.sendMsg" />
         <item itemvalue="Application.HelloServerDemo" />
-        <item itemvalue="JUnit.TestFinagle.testFinagle" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.16051912" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a0c56278" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a0c56278" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@47dcd8c9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@98db8935" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@98db8935" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1496b8ac" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="TaskManager">
@@ -268,6 +255,12 @@
       <workItem from="1617760398805" duration="17000" />
       <workItem from="1617765905672" duration="1041000" />
       <workItem from="1617767020686" duration="13721000" />
+      <workItem from="1617887449186" duration="942000" />
+      <workItem from="1617888409341" duration="1125000" />
+      <workItem from="1617889672272" duration="3399000" />
+      <workItem from="1617932120983" duration="18000" />
+      <workItem from="1617958989001" duration="597000" />
+      <workItem from="1618131470194" duration="187000" />
     </task>
     <servers />
   </component>
@@ -290,6 +283,75 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="340" y="109" key="#Project_Structure" timestamp="1617888915002">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="340" y="109" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1617888915002" />
+    <state x="576" y="265" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1617892474920">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="576" y="265" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1617892474920" />
+    <state x="609" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1617900629486">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="609" y="176" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1617890169822" />
+    <state x="609" y="182" key="#com.intellij.ide.util.MemberChooser/0.23.1680.947@0.23.1680.947" timestamp="1617900629486" />
+    <state x="515" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617889382242">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="515" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1617889382242" />
+    <state width="1626" height="186" key="GridCell.Tab.0.bottom" timestamp="1617900756230">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1617892324687" />
+    <state width="1626" height="186" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1617900756230" />
+    <state width="1626" height="186" key="GridCell.Tab.0.center" timestamp="1617900756229">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1617892324685" />
+    <state width="1626" height="186" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1617900756229" />
+    <state width="1626" height="186" key="GridCell.Tab.0.left" timestamp="1617900756227">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1617892324671" />
+    <state width="1626" height="186" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1617900756227" />
+    <state width="1626" height="186" key="GridCell.Tab.0.right" timestamp="1617900756229">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1617892324686" />
+    <state width="1626" height="186" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1617900756229" />
+    <state width="1626" height="186" key="GridCell.Tab.1.bottom" timestamp="1617900756231">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1617892325055" />
+    <state width="1626" height="186" key="GridCell.Tab.1.bottom/0.23.1680.947@0.23.1680.947" timestamp="1617900756231" />
+    <state width="1626" height="186" key="GridCell.Tab.1.center" timestamp="1617900756230">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1617892325054" />
+    <state width="1626" height="186" key="GridCell.Tab.1.center/0.23.1680.947@0.23.1680.947" timestamp="1617900756230" />
+    <state width="1626" height="186" key="GridCell.Tab.1.left" timestamp="1617900756230">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1617892325053" />
+    <state width="1626" height="186" key="GridCell.Tab.1.left/0.23.1680.947@0.23.1680.947" timestamp="1617900756230" />
+    <state width="1626" height="186" key="GridCell.Tab.1.right" timestamp="1617900756231">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state width="1626" height="349" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1617892325054" />
+    <state width="1626" height="186" key="GridCell.Tab.1.right/0.23.1680.947@0.23.1680.947" timestamp="1617900756231" />
+    <state x="240" y="0" key="SettingsEditor" timestamp="1618142969645">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="240" y="0" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1618142969645" />
+    <state x="240" y="23" key="SettingsEditor/0.23.1680.947@0.23.1680.947" timestamp="1617888520372" />
+    <state x="421" y="39" width="838" height="65" key="search.everywhere.popup" timestamp="1617900598560">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="421" y="18" width="838" height="72" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1617890103115" />
+    <state x="421" y="39" width="838" height="65" key="search.everywhere.popup/0.23.1680.947@0.23.1680.947" timestamp="1617900598560" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -302,6 +364,11 @@
           <url>file://$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/mq/RabbitSender.java</url>
           <line>37</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

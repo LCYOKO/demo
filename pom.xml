@@ -20,6 +20,7 @@
     </parent>
 
     <properties>
+
         <springboot.vserion>2.2.3.RELEASE</springboot.vserion>
         <curator.version>4.2.0</curator.version>
         <dubbo.vserion>2.7.3</dubbo.vserion>

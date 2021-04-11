@@ -2,7 +2,6 @@ package cn.jxau.producer.config;
 
 import cn.jxau.producer.entity.Order;
 import cn.jxau.producer.entity.User;
-import org.apache.dubbo.common.serialize.gson.GsonSerialization;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
