@@ -1,6 +1,5 @@
 package cn.jxau.producer.mapper;
 
-import cn.jxau.producer.entity.Food;
 import org.apache.ibatis.annotations.Param;
 
 public interface FoodDao {
