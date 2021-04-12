@@ -4,22 +4,30 @@ import java.io.Serializable;
 import lombok.Data;
 
 /**
- * item
+ * user_info
  * @author 
  */
 @Data
 public class UserInfo implements Serializable {
     private Integer id;
 
-    private String title;
+    private String name;
 
-    private Double price;
+    /**
+     * //1代表男性，2代表女性
+     */
+    private Byte gender;
 
-    private String description;
+    private Integer age;
 
-    private Integer sales;
+    private String telphone;
 
-    private String imgUrl;
+    /**
+     * //byphone,bywechat,byalipay
+     */
+    private String registerMode;
+
+    private String thirdPartyId;
 
     private static final long serialVersionUID = 1L;
 }

@@ -54,12 +54,12 @@ public class TestFinagle {
     }
 
 
-    @Autowired
-    private FoodDao foodDao;
-    @Test
-    public void decFoodAmount(){
-        System.out.println(foodDao.selectByPrimaryKey(1));
-    }
+    //@Autowired
+    //private FoodDao foodDao;
+    //@Test
+    //public void decFoodAmount(){
+    //    System.out.println(foodDao.selectByPrimaryKey(1));
+    //}
 
 
 

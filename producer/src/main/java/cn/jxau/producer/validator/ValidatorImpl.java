@@ -2,6 +2,7 @@ package cn.jxau.producer.validator;
 
 import cn.jxau.common.validator.ValidationResult;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Path;
@@ -14,6 +15,7 @@ import java.util.Set;
  * @Date 2021/4/11 11:36 下午
  * @Version 1.0
  */
+@Component
 public class ValidatorImpl implements InitializingBean {
     private Validator validator;
 
@@ -26,6 +28,7 @@ public class ValidatorImpl implements InitializingBean {
                 String message = e.getMessage();
                 result.getErros().put(propertyPath,message);
             });
+            result.setHasErrors(true);
         }
         return result;
     }

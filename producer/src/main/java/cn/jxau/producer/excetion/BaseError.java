@@ -6,4 +6,7 @@ package cn.jxau.producer.excetion;
  * @Version 1.0
  */
 public interface BaseError {
+    Integer getCode();
+    String getMsg();
+    void setMsg(String msg);
 }

@@ -3,6 +3,7 @@ package cn.jxau.producer.entity.vo;
 import lombok.Data;
 
 import javax.validation.constraints.Max;
+import java.io.Serializable;
 
 /**
  * @Author liuchiyun
@@ -10,7 +11,7 @@ import javax.validation.constraints.Max;
  * @Version 1.0
  */
 @Data
-public class UserVO {
+public class UserVO implements Serializable{
   @Max(value = 10,message = "id 最大就是10")
   private Integer id;
   private String name;

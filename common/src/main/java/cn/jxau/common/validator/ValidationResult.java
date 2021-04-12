@@ -1,5 +1,8 @@
 package cn.jxau.common.validator;
 
+import com.google.common.base.Strings;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +14,7 @@ import java.util.Map;
 public class ValidationResult {
     private boolean hasErrors;
     private Map<String, String> erros;
-
+    private Character DEFAULT_DELIMITER=',';
     public ValidationResult() {
         hasErrors = false;
         erros = new HashMap<>();
@@ -31,5 +34,9 @@ public class ValidationResult {
 
     public Map<String, String> getErros() {
         return erros;
+    }
+
+    public String getErrorsMsg(){
+        return StringUtils.join(erros.values().toArray(),DEFAULT_DELIMITER);
     }
 }

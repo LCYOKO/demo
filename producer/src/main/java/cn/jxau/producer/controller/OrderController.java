@@ -26,23 +26,23 @@ import java.util.Map;
 public class OrderController {
     @Autowired
     private RabbitSender rabbitSender;
-    @GetMapping("/send")
-    public String sendMessage(String msg){
-        Map<String, Object> headers = new HashMap<>();
-        try {
-            headers.put("x-message-ttl",1000);
-            rabbitSender.sendOrder(buildOrder());
-        }catch (Exception e){
-
-        }
-
-        return "ok";
-    }
-
-    private Order buildOrder(){
-        Order order = new Order();
-        order.setId(1);
-        order.setId(123);
-        return order;
-    }
+    //@GetMapping("/send")
+    //public String sendMessage(String msg){
+    //    Map<String, Object> headers = new HashMap<>();
+    //    try {
+    //        headers.put("x-message-ttl",1000);
+    //        rabbitSender.sendOrder(buildOrder());
+    //    }catch (Exception e){
+    //
+    //    }
+    //
+    //    return "ok";
+    //}
+    //
+    //private Order buildOrder(){
+    //    Order order = new Order();
+    //    order.setId(1);
+    //    order.setId(123);
+    //    return order;
+    //}
 }

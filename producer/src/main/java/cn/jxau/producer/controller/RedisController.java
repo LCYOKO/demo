@@ -24,8 +24,8 @@ public class RedisController {
     private RedisTemplate<String, User> redisTemplate;
     @Autowired
     private RedisTemplate<String, Order> orderRedisTemplate;
-    @Autowired
-    private FoodService foodService;
+    //@Autowired
+    //private FoodService foodService;
 
     @GetMapping("/get")
     public User getVal(String id) {
@@ -61,14 +61,14 @@ public class RedisController {
     }
 
 
-    @GetMapping("/get1")
-    public Result decFood(Integer id, Integer amount) {
-        int update = foodService.decFoodById(id, amount);
-        if(update==0){
-            return Result.fail("扣减库存失败");
-        }
-        return Result.of("扣减库存成功");
-    }
+    //@GetMapping("/get1")
+    //public Result decFood(Integer id, Integer amount) {
+    //    int update = foodService.decFoodById(id, amount);
+    //    if(update==0){
+    //        return Result.fail("扣减库存失败");
+    //    }
+    //    return Result.of("扣减库存成功");
+    //}
 
     ;
 

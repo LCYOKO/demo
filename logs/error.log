@@ -1,0 +1,10 @@
+
+[2021-04-12 16:31:33] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: connection error
+
+[2021-04-12 16:31:33] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: connection error
+
+[2021-04-12 16:31:33] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: connection error
+
+[2021-04-12 16:31:33] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: connection error
+
+[2021-04-12 16:31:33] [operation_prod] [ERROR] [AMQP Connection 127.0.0.1:5672]  o.s.amqp.rabbit.connection.CachingConnectionFactory-Channel shutdown: connection error
