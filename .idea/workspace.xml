@@ -2,51 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85c621a5-b1ee-4294-81b2-c9105394b95b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/util/CodeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/util/Vo2DoConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error-2021-04-12_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-07_16.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-12_14.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info-2021-04-12_15.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/akka/ActorDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/ThreadPoolConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/akka/SupervisorDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/util/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/util/MD5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/validator/ValidationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/validator/ValidationResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/controller/RedisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/vo/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/entity/vo/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BaseError.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BaseError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BizErrorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/excetion/BizErrorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/impl/FoodServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/services/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/validator/ValidatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/validator/ValidatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/resources/mapper/FoodDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestFinagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestFinagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/akka/ActorDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/main/java/cn/jxau/producer/akka/ActorDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/producer/src/test/java/cn/jxau/producer/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/controller/RedisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/controller/RedisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/entity/Food.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/entity/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/mapper/FoodDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/services/impl/FoodServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/classes/mapper/FoodDao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/producer/target/test-classes/cn/jxau/producer/TestFinagle.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/test-classes/cn/jxau/producer/TestFinagle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/akka/ActorDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/classes/cn/jxau/producer/akka/ActorDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/producer/target/test-classes/cn/jxau/producer/TestResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/producer/target/test-classes/cn/jxau/producer/TestResult.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,8 +63,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:/repo" />
-        <option name="userSettingsFile" value="D:/apache-maven-3.6.0/conf/settings.xml" />
+        <option name="localRepository" value="D:\repository" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -133,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/main/java/cn/jxau/common/util" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AkkaDemo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -181,23 +142,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestResult.test">
-    <configuration name="TestFinagle.decFoodAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.SupervisorDemo">
+    <configuration name="ActorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.akka.ActorDemo" />
       <module name="producer" />
-      <option name="PACKAGE_NAME" value="cn.jxau.producer" />
-      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestFinagle" />
-      <option name="METHOD_NAME" value="decFoodAmount" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFinagle.sendMsg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupervisorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.akka.SupervisorDemo" />
       <module name="producer" />
-      <option name="PACKAGE_NAME" value="cn.jxau.producer" />
-      <option name="MAIN_CLASS_NAME" value="cn.jxau.producer.TestFinagle" />
-      <option name="METHOD_NAME" value="sendMsg" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -245,21 +200,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ActorDemo" />
+      <item itemvalue="Application.SupervisorDemo" />
       <item itemvalue="JUnit.TestResult.test01" />
-      <item itemvalue="JUnit.TestFinagle.sendMsg" />
-      <item itemvalue="JUnit.TestFinagle.decFoodAmount" />
+      <item itemvalue="JUnit.TestResult.test" />
       <item itemvalue="Spring Boot.app" />
       <item itemvalue="Spring Boot.ConsumerApplication" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="JUnit.TestResult.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SupervisorDemo" />
+        <item itemvalue="Application.ActorDemo" />
         <item itemvalue="JUnit.TestResult.test" />
         <item itemvalue="Spring Boot.App" />
         <item itemvalue="JUnit.TestResult.test01" />
-        <item itemvalue="JUnit.TestFinagle.decFoodAmount" />
-        <item itemvalue="JUnit.TestFinagle.sendMsg" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +275,9 @@
       <workItem from="1617932120983" duration="18000" />
       <workItem from="1617958989001" duration="597000" />
       <workItem from="1618131470194" duration="683000" />
-      <workItem from="1618224503213" duration="1350000" />
+      <workItem from="1618224503213" duration="4527000" />
+      <workItem from="1618278320858" duration="18383000" />
+      <workItem from="1618364119503" duration="5669000" />
     </task>
     <servers />
   </component>

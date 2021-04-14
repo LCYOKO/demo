@@ -7,6 +7,8 @@
         <groupId>cn.jxau</groupId>
         <version>1.0</version>
     </parent>
+
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>producer</artifactId>
     <properties>
@@ -54,6 +56,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>log4j-over-slf4j</artifactId>
             <version>1.7.19</version>
+
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
