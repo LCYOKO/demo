@@ -1,0 +1,221 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func testGoro() {
+	wg := sync.WaitGroup{}
+	wg.Add(5)
+	for i := 0; i < 5; i++ {
+		go func(i int) {
+			defer wg.Done()
+			fmt.Println(i)
+		}(i)
+	}
+	wg.Wait()
+	wg.Add(1)
+	wg.Wait()
+}
+
+func testChannel1() {
+	ch := make(chan int)
+	fmt.Println(ch)
+	go func() {
+		//写数据
+		ch <- 12
+	}()
+	//读数据
+	fmt.Println("recvie", <-ch)
+}
+
+func testChannel2() {
+	ch := make(chan int)
+	<-ch
+	fmt.Println("123")
+	//对一个关闭的通道再发送值就会导致 panic。
+	//对一个关闭的通道进行接收会一直获取值直到通道为空。
+	//对一个关闭的并且没有值的通道执行接收操作会得到对应类型的零值。
+	//关闭一个已经关闭的通道会导致 panic。
+	close(ch)
+}
+
+func testChannel3() {
+	ch := make(chan int)
+	go func(ch chan int) {
+		for val := range ch {
+			fmt.Println(val)
+		}
+		fmt.Println("break")
+	}(ch)
+	for i := 0; i < 10; i++ {
+		ch <- i
+	}
+}
+
+func testChannel4() {
+	ch := make(chan int, 1)
+	for i := 1; i <= 10; i++ {
+		select {
+		case x := <-ch:
+			fmt.Println(x)
+		case ch <- i:
+		}
+	}
+}
+func testChannelError() {
+	wg := sync.WaitGroup{}
+
+	ch := make(chan int, 10)
+	for i := 0; i < 10; i++ {
+		ch <- i
+	}
+	close(ch)
+
+	wg.Add(3)
+	for j := 0; j < 3; j++ {
+		go func() {
+			for {
+				/**
+				  注意这里有死循环
+				*/
+				task := <-ch
+				// 这里假设对接收的数据执行某些操作
+				fmt.Println(task)
+			}
+			wg.Done()
+		}()
+	}
+	wg.Wait()
+}
+
+var (
+	x       int64
+	wg      sync.WaitGroup
+	mutex   sync.Mutex
+	rwMutex sync.RWMutex
+)
+
+// writeWithLock 使用互斥锁的写操作
+func writeWithLock() {
+	mutex.Lock() // 加互斥锁
+	x = x + 1
+	time.Sleep(10 * time.Millisecond) // 假设读操作耗时10毫秒
+	mutex.Unlock()                    // 解互斥锁
+	wg.Done()
+}
+
+// readWithLock 使用互斥锁的读操作
+func readWithLock() {
+	mutex.Lock()                 // 加互斥锁
+	time.Sleep(time.Millisecond) // 假设读操作耗时1毫秒
+	mutex.Unlock()               // 释放互斥锁
+	wg.Done()
+}
+
+// writeWithLock 使用读写互斥锁的写操作
+func writeWithRWLock() {
+	rwMutex.Lock() // 加写锁
+	x = x + 1
+	time.Sleep(10 * time.Millisecond) // 假设读操作耗时10毫秒
+	rwMutex.Unlock()                  // 释放写锁
+	wg.Done()
+}
+
+// readWithRWLock 使用读写互斥锁的读操作
+func readWithRWLock() {
+	rwMutex.RLock()              // 加读锁
+	time.Sleep(time.Millisecond) // 假设读操作耗时1毫秒
+	rwMutex.RUnlock()            // 释放读锁
+	wg.Done()
+}
+
+func do(wf, rf func(), wc, rc int) {
+	start := time.Now()
+	// wc个并发写操作
+	for i := 0; i < wc; i++ {
+		wg.Add(1)
+		go wf()
+	}
+
+	//  rc个并发读操作
+	for i := 0; i < rc; i++ {
+		wg.Add(1)
+		go rf()
+	}
+
+	wg.Wait()
+	cost := time.Since(start)
+	fmt.Printf("x:%v cost:%v\n", x, cost)
+
+}
+
+func testMutex() {
+	// 使用互斥锁，10并发写，1000并发读
+	do(writeWithLock, readWithLock, 10, 1000) // x:10 cost:1.466500951s
+
+	// 使用读写互斥锁，10并发写，1000并发读
+	do(writeWithRWLock, readWithRWLock, 10, 1000) // x:10 cost:117.207592ms
+}
+
+func testOnce() {
+	num := 10
+	group := sync.WaitGroup{}
+	group.Add(num)
+	for i := 0; i < num; i++ {
+		go func() {
+			defer group.Done()
+			getInstance := GetInstance()
+			fmt.Printf("%p\n", getInstance)
+		}()
+	}
+	group.Wait()
+
+}
+
+type singleton struct{}
+
+var instance *singleton
+var once sync.Once
+
+func GetInstance() *singleton {
+	//once.Do(func() {
+	//	instance = &singleton{}
+	//})
+	//if nil != instance {
+	//	return instance
+	//} else {
+	//	instance = &singleton{}
+	//}
+	return &singleton{}
+}
+
+func testErrorGroup() {
+	//g := new(errgroup.Group) // 创建等待组（类似sync.WaitGroup）
+	//var urls = []string{
+	//	"http://pkg.go.dev",
+	//	"http://www.liwenzhou.com",
+	//	"http://www.yixieqitawangzhi.com",
+	//}
+	//for _, url := range urls {
+	//	url := url // 注意此处声明新的变量
+	//	// 启动一个goroutine去获取url内容
+	//	g.Go(func() error {
+	//		resp, err := http.Get(url)
+	//		if err == nil {
+	//			fmt.Printf("获取%s成功\n", url)
+	//			resp.Body.Close()
+	//		}
+	//		return err // 返回错误
+	//	})
+	//}
+	//if err := g.Wait(); err != nil {
+	//	// 处理可能出现的错误
+	//	fmt.Println(err)
+	//	return err
+	//}
+	//fmt.Println("所有goroutine均成功")
+	//return nil
+}
