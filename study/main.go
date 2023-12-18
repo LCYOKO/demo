@@ -2,22 +2,26 @@ package main
 
 import (
 	"fmt"
-	"maps"
 )
 
 func main() {
 	//基础数据类型
 	//testMap
-	//testSum()
+	//testSum()R
 	//testRune()
-	//testRune()
+	//testRune())
 
 	//基本操作fmt
 	//testSFmt()
 	//testEFmt()
 
 	//文件操作
-	test
+	//testBufferIoWriter("test.txt")
+    //testBufferIoRead("test.txt")
+
+	//命令行参数
+	//testFlag()
+
 	//结构体相关
 	//testNewPerson()
 	//testStruct()
@@ -61,19 +65,19 @@ func testMap() {
 	delete(m, "k2")
 	fmt.Println("map:", m)
 
-	clear(m)
-	fmt.Println("map:", m)
-
-	_, prs := m["k2"]
-	fmt.Println("prs:", prs)
-
-	n := map[string]int{"foo": 1, "bar": 2}
-	fmt.Println("map:", n)
-
-	n2 := map[string]int{"foo": 1, "bar": 2}
-	if maps.Equal(n, n2) {
-		fmt.Println("n == n2")
-	}
+	//clear(m)
+	//fmt.Println("map:", m)
+	//
+	//_, prs := m["k2"]
+	//fmt.Println("prs:", prs)
+	//
+	//n := map[string]int{"foo": 1, "bar": 2}
+	//fmt.Println("map:", n)
+	//
+	//n2 := map[string]int{"foo": 1, "bar": 2}
+	//if maps.Equal(n, n2) {
+	//	fmt.Println("n == n2")
+	//}
 }
 
 func testSum() {

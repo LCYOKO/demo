@@ -16,9 +16,10 @@ func testBufferIoRead(filePath string) {
 	defer func(file *os.File) {
 		err := file.Close()
 		if err != nil {
+			fmt.Println("close file failed, fileName:", filePath, err)
 			return
 		}
-		fmt.Println("close file failed, fileName:", filePath)
+		fmt.Println("close file failed, fileName:", filePath, err)
 	}(file)
 	reader := bufio.NewReader(file)
 	for {
