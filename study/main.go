@@ -17,7 +17,7 @@ func main() {
 	//testEFmt()
 
 	//文件操作
-	test
+
 	//结构体相关
 	//testNewPerson()
 	//testStruct()
@@ -27,11 +27,30 @@ func main() {
 
 	//并发
 	//testGoro()
+	//testChannelCancel()
 	//testChannel1()
 	//testChannel2()
 	//testChannel3()
 	//testChannel4()
 	//testOnce()
+
+	// context
+	// testContext()
+
+	// gin
+
+	// mysql
+	//testQuery()
+	//testInsert()
+
+	// redis
+
+	// conf
+
+	// kafka
+
+	// grpc
+
 }
 
 func testRune() {

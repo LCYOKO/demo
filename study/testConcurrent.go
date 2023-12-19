@@ -16,7 +16,26 @@ func testGoro() {
 		}(i)
 	}
 	wg.Wait()
-	wg.Add(1)
+}
+
+func testChannelCancel() {
+	wg := sync.WaitGroup{}
+	wg.Add(5)
+	ch := make(chan int)
+	for i := 0; i < 5; i++ {
+		go func(i int) {
+			defer wg.Done()
+			fmt.Println(i)
+			select {
+			case val := <-ch:
+				fmt.Println("val", val)
+				break
+			}
+		}(i)
+	}
+	time.Sleep(time.Second)
+	ch <- 10
+	close(ch)
 	wg.Wait()
 }
 

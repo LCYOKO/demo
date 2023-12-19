@@ -6,22 +6,11 @@ import (
 	"time"
 )
 
-func Route(e *gin.Engine)  {
-	group := e.Group("/book")
-	{
-		group.GET("/info",getBook)
-		group.GET("/infos",getBooks)
-	}
+func getBook(c *gin.Context) {
+	time.Sleep(time.Second * 10)
+	c.JSON(http.StatusOK, "BookInfo")
 }
 
-func getBook(c *gin.Context){
-	time.Sleep(time.Second*10)
-   c.JSON(http.StatusOK,"BookInfo")
-}
-
-func getBooks(c *gin.Context)  {
+func getBooks(c *gin.Context) {
 
 }
-
-
-

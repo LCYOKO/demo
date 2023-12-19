@@ -14,6 +14,7 @@ import (
 	"time"
 )
 
+//https://github.com/gin-contrib 第三方插件
 type LogConfig struct {
 	Level      string `json:"level"`
 	Filename   string `json:"filename"`

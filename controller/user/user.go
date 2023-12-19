@@ -7,14 +7,6 @@ import (
 	"net/http"
 )
 
-func Route(e *gin.Engine){
-	group := e.Group("/user")
-	{
-		group.GET("/info",getInfo)
-        group.GET("/infos",getInfos)
-	}
-}
-
 func getInfo(c *gin.Context)  {
 	c.JSON(http.StatusOK,"UserInfo")
 }
