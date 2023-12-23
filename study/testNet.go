@@ -162,3 +162,17 @@ func testPost() {
 	}
 	fmt.Println(string(b))
 }
+
+type myHandler struct{}
+
+func (m *myHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+	resp.WriteHeader(http.StatusAlreadyReported)
+}
+
+func testHttpServer() {
+	s := &http.Server{
+		Addr:    "localhost:8080",
+		Handler: &myHandler{},
+	}
+	s.ListenAndServe()
+}

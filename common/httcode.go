@@ -17,14 +17,14 @@ var (
 )
 
 type BizCode struct {
-	Code int    `json:"code"`
-	Msg  string `json:"msg"`
+	code int    `json:"code"`
+	msg  string `json:"msg"`
 }
 
 func (b BizCode) GetCode() int {
-	return b.Code
+	return b.code
 }
 
 func (b BizCode) GetMsg() string {
-	return b.Msg
+	return b.msg
 }

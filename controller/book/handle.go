@@ -1,14 +1,13 @@
 package book
 
 import (
+	"demo/common"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"time"
 )
 
 func getBook(c *gin.Context) {
-	time.Sleep(time.Second * 10)
-	c.JSON(http.StatusOK, "BookInfo")
+	c.JSON(http.StatusOK, common.Ok("bookInfo"))
 }
 
 func getBooks(c *gin.Context) {

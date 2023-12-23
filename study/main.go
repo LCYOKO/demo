@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"maps"
+	//"maps"
 )
 
 func main() {
@@ -38,6 +38,7 @@ func main() {
 	// testContext()
 
 	// gin
+	testHttpServer()
 
 	// mysql
 	//testQuery()
@@ -80,7 +81,7 @@ func testMap() {
 	delete(m, "k2")
 	fmt.Println("map:", m)
 
-	clear(m)
+	//clear(m)
 	fmt.Println("map:", m)
 
 	_, prs := m["k2"]
@@ -89,10 +90,10 @@ func testMap() {
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
 
-	n2 := map[string]int{"foo": 1, "bar": 2}
-	if maps.Equal(n, n2) {
-		fmt.Println("n == n2")
-	}
+	//n2 := map[string]int{"foo": 1, "bar": 2}
+	//if maps.Equal(n, n2) {
+	//	fmt.Println("n == n2")
+	//}
 }
 
 func testSum() {

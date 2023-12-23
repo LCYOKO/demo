@@ -20,7 +20,7 @@ func DefaultOk() *JsonResult {
 func Ok(data interface{}) *JsonResult {
 	return &JsonResult{
 		Code:      OK.GetCode(),
-		Msg:       OK.Msg,
+		Msg:       OK.GetMsg(),
 		Data:      data,
 		Timestamp: time.Now().UnixMilli(),
 	}
@@ -28,8 +28,8 @@ func Ok(data interface{}) *JsonResult {
 
 func DefaultError() *JsonResult {
 	return &JsonResult{
-		Code:      ERROR.Code,
-		Msg:       ERROR.Msg,
+		Code:      ERROR.GetCode(),
+		Msg:       ERROR.GetMsg(),
 		Timestamp: time.Now().UnixMilli(),
 	}
 }

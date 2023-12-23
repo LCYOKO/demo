@@ -10,7 +10,6 @@ import (
 var DB_Test *gorm.DB
 
 func Init()  error{
-
 	dsn := "root:3852159@tcp(localhost:3306)/miaosha?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err!=nil{
