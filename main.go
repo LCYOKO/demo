@@ -5,6 +5,7 @@ import (
 	"demo/common"
 	"demo/controller/book"
 	"demo/controller/user"
+	testgorm "demo/gorm"
 	"demo/routers"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -25,6 +26,8 @@ type Config struct {
 var config = new(Config)
 
 /**
+https://gin-gonic.com/zh-cn/docs/introduction/
+
 gin.Default()默认使用了Logger和Recovery中间件，其中：
 Logger中间件将日志写入gin.DefaultWriter，即使配置了GIN_MODE=release。
 Recovery中间件会recover任何panic。如果有panic的话，会写入500响应码。
@@ -37,8 +40,8 @@ func main() {
 	//testDefaultGin()
 	//testGinGroup()
 	//testMiddleWare()
-
-	InitGin()
+	testgorm.TestCreate()
+	//InitGin()
 }
 
 func InitGin() {
