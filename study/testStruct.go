@@ -54,6 +54,26 @@ func (this *person) addAge(age int) {
 	this.age += age
 }
 
+type E1 interface {
+	M1()
+	M2()
+	M3()
+}
+type E2 interface {
+	M1()
+	M2()
+	M4()
+}
+type T struct {
+	E1
+	E2
+}
+
+func testT()  {
+	t := T{}
+	t.E1.M1()
+	//t.M2()
+}
 func newPerson() *person {
 	return &person{
 		name: "lisi",

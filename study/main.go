@@ -10,7 +10,6 @@ func main() {
 	//testMap
 	//testSum()
 	//testRune()
-	//testRune()
 
 	//基本操作fmt
 	//testSFmt()
@@ -24,10 +23,11 @@ func main() {
 	//testInterface()
 	//testToJson()
 	//testReflectType()
+	//testT()
 
 	//并发
 	//testGoro()
-	//testChannelCancel()
+	testChannelCancel()
 	//testChannel1()
 	//testChannel2()
 	//testChannel3()
@@ -38,7 +38,7 @@ func main() {
 	// testContext()
 
 	// gin
-	testHttpServer()
+	//testHttpServer()
 
 	// mysql
 	//testQuery()
