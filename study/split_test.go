@@ -5,7 +5,6 @@ import (
 	"reflect"
 	"testing"
 )
-
 func TestSplit(t *testing.T) {
 	// 测试函数名必须以Test开头，必须接收一个*testing.T类型参数
 	// 程序输出的结果
@@ -47,27 +46,27 @@ func TestSplitAll(t *testing.T) {
 		})
 	}
 }
-
-func testGocovery() {
-	// 只需要在顶层的Convey调用时传入t
-	c.Convey("分隔符在开头或结尾用例", t, func() {
-		tt := []struct {
-			name   string
-			s      string
-			sep    string
-			expect []string
-		}{
-			{"分隔符在开头", "*1*2*3", "*", []string{"", "1", "2", "3"}},
-			{"分隔符在结尾", "1+2+3+", "+", []string{"1", "2", "3", ""}},
-		}
-		for _, tc := range tt {
-			c.Convey(tc.name, func() { // 嵌套调用Convey
-				got := Split(tc.s, tc.sep)
-				c.So(got, c.ShouldResemble, tc.expect)
-			})
-		}
-	})
-}
+//
+//func testGocovery() {
+//	// 只需要在顶层的Convey调用时传入t
+//	c.Convey("分隔符在开头或结尾用例", t, func() {
+//		tt := []struct {
+//			name   string
+//			s      string
+//			sep    string
+//			expect []string
+//		}{
+//			{"分隔符在开头", "*1*2*3", "*", []string{"", "1", "2", "3"}},
+//			{"分隔符在结尾", "1+2+3+", "+", []string{"1", "2", "3", ""}},
+//		}
+//		for _, tc := range tt {
+//			c.Convey(tc.name, func() { // 嵌套调用Convey
+//				got := Split(tc.s, tc.sep)
+//				c.So(got, c.ShouldResemble, tc.expect)
+//			})
+//		}
+//	})
+//}
 
 func testMonkey() {
 	//monkey 好用的打桩工具

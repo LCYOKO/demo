@@ -5,7 +5,6 @@ import (
 	"demo/common"
 	"demo/controller/book"
 	"demo/controller/user"
-	testgorm "demo/gorm"
 	"demo/routers"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -40,7 +39,6 @@ func main() {
 	//testDefaultGin()
 	//testGinGroup()
 	//testMiddleWare()
-	testgorm.TestCreate()
 	//InitGin()
 }
 

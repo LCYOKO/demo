@@ -143,3 +143,18 @@ func testTypeSwitch() {
 		println("don't support the type")
 	}
 }
+
+type testInterface1 interface {
+	M1()
+	M2()
+}
+
+type testStruct1 struct {
+	testInterface1
+}
+
+func testMethodSet() {
+	var struct1 = &testStruct1{}
+	struct1.M1()
+	struct1.M2()
+}

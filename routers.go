@@ -1,7 +1,6 @@
 package main
 
 import (
-	"demo/dao"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,7 +15,7 @@ func Include(opts ...Option) {
 
 // 初始化
 func Init() *gin.Engine {
-	dao.Init()
+	//dao.Init()
 	r := gin.Default()
 	for _, opt := range options {
 		opt(r)

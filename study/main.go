@@ -5,6 +5,10 @@ import (
 	//"maps"
 )
 
+func echoAndReturn(name string) int {
+	fmt.Println(name)
+	return 1
+}
 func main() {
 	//基础数据类型
 	//testMap
@@ -20,6 +24,7 @@ func main() {
 	//结构体相关
 	//testNewPerson()
 	//testStruct()
+	testMethodSet()
 	//testInterface()
 	//testToJson()
 	//testReflectType()
@@ -27,7 +32,7 @@ func main() {
 
 	//并发
 	//testGoro()
-	testChannelCancel()
+	//testChannelCancel()
 	//testChannel1()
 	//testChannel2()
 	//testChannel3()

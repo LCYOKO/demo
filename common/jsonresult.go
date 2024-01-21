@@ -13,7 +13,7 @@ func DefaultOk() *JsonResult {
 	return &JsonResult{
 		Code:      OK.GetCode(),
 		Msg:       OK.GetMsg(),
-		Timestamp: time.Now().UnixMilli(),
+		Timestamp: time.Now().UnixNano(),
 	}
 }
 
@@ -22,7 +22,7 @@ func Ok(data interface{}) *JsonResult {
 		Code:      OK.GetCode(),
 		Msg:       OK.GetMsg(),
 		Data:      data,
-		Timestamp: time.Now().UnixMilli(),
+		Timestamp: time.Now().UnixNano(),
 	}
 }
 
@@ -30,7 +30,7 @@ func DefaultError() *JsonResult {
 	return &JsonResult{
 		Code:      ERROR.GetCode(),
 		Msg:       ERROR.GetMsg(),
-		Timestamp: time.Now().UnixMilli(),
+		Timestamp: time.Now().UnixNano(),
 	}
 }
 
@@ -39,6 +39,6 @@ func Error(code BizCode, msg string, data interface{}) *JsonResult {
 		Code:      code.GetCode(),
 		Msg:       msg,
 		Data:      data,
-		Timestamp: time.Now().UnixMilli(),
+		Timestamp: time.Now().UnixNano(),
 	}
 }
