@@ -4,10 +4,10 @@ import (
 	"github.com/go-redis/redis"
 )
 
-var RedisClient *redis.Client
+var Client *redis.Client
 
 func Init() (err error) {
-	RedisClient = redis.NewClient(&redis.Options{
+	Client = redis.NewClient(&redis.Options{
 		Addr:            "localhost:6379",
 		Password:        "",
 		DB:              0,
@@ -15,6 +15,6 @@ func Init() (err error) {
 		MinRetryBackoff: 1,
 		PoolSize:        128,
 	})
-	_, err = RedisClient.Ping().Result()
+	_, err = Client.Ping().Result()
 	return err
 }
