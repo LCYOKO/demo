@@ -5,7 +5,6 @@ import (
 	"demo/common"
 	"demo/controller/book"
 	"demo/controller/user"
-	testgorm "demo/gorm"
 	"demo/routers"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -40,14 +39,16 @@ func main() {
 	//testDefaultGin()
 	//testGinGroup()
 	//testMiddleWare()
-	testgorm.TestCreate()
 	//InitGin()
 }
 
 func InitGin() {
 	routers.Include(book.Routers, user.Route)
 	engine := routers.Init()
-	engine.Run("localhost:8081")
+	err := engine.Run("localhost:8081")
+	if err != nil {
+		return
+	}
 }
 
 func testDefaultGin() {
@@ -168,7 +169,7 @@ func testGracefulShutdown() {
 	defer cancel()
 	// 5秒内优雅关闭服务（将未处理完的请求处理完再关闭服务），超过5秒就超时退出
 	if err := srv.Shutdown(ctx); err != nil {
-		log.Fatal("Server Shutdown: ", err)
+		log.Fatal("server shutdown: .", err)
 	}
 
 	log.Println("Server exiting")

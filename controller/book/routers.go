@@ -7,5 +7,6 @@ func Routers(e *gin.Engine) {
 	{
 		group.GET("/info", getBook)
 		group.GET("/infos", getBooks)
+
 	}
 }
