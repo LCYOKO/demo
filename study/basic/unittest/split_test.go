@@ -1,4 +1,4 @@
-package main
+package unittest
 
 import (
 	"github.com/magiconair/properties/assert"

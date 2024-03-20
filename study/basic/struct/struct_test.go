@@ -1,14 +1,14 @@
-package main
+package _struct
 
 import (
 	"encoding/json"
-	"errors"
 	"fmt"
+	"github.com/pkg/errors"
 	"math"
+	"testing"
 )
 
-func init() {
-	fmt.Println("call init function()")
+func TestStruct1(t *testing.T) {
 }
 
 type person struct {
@@ -69,7 +69,7 @@ type T struct {
 	E2
 }
 
-func testT()  {
+func testT() {
 	t := T{}
 	t.E1.M1()
 	//t.M2()

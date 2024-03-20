@@ -1,10 +1,9 @@
-package main
+package sql
 
 import (
-	"errors"
 	"fmt"
-	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
+	"github.com/pkg/errors"
 )
 
 var db *sqlx.DB
