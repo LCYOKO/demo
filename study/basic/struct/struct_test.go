@@ -8,20 +8,22 @@ import (
 	"testing"
 )
 
-func TestStruct1(t *testing.T) {
-}
-
-type person struct {
-	name string
-	age  int
-}
-
 //Student 学生
 type Student struct {
 	ID     int    `json:"id"` //通过指定tag实现json序列化该字段时的key
 	Gender string //json序列化是默认使用字段名作为key
 	name   string //私有不能被json包访问
 	age    int
+}
+
+func TestStruct1(t *testing.T) {
+	var stu = &Student{
+		ID:     1,
+		Gender: "男",
+		name:   "李四",
+		age:    123,
+	}
+	fmt.Println(stu)
 }
 
 type geometry interface {
@@ -50,10 +52,6 @@ func (c circle) perim() float64 {
 	return 2 * math.Pi * c.radius
 }
 
-func (this *person) addAge(age int) {
-	this.age += age
-}
-
 type E1 interface {
 	M1()
 	M2()
@@ -73,12 +71,6 @@ func testT() {
 	t := T{}
 	t.E1.M1()
 	//t.M2()
-}
-func newPerson() *person {
-	return &person{
-		name: "lisi",
-		age:  12,
-	}
 }
 
 func testStruct() {
@@ -119,13 +111,6 @@ func testError() {
 	var myError error = nil
 	fmt.Println(errors.New("123"))
 	fmt.Println(myError)
-}
-
-func testNewPerson() {
-	lisi := newPerson()
-	fmt.Println(lisi)
-	lisi.addAge(123)
-	fmt.Println(lisi)
 }
 
 func testInterface() {
