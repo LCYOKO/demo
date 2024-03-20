@@ -41,7 +41,6 @@ func main() {
 	//testGinGroup()
 	//testMiddleWare()
 	//InitGin()
-	fmt.Sprintf("One for %s, one for me.", name)
 	fmt.Println("hello")
 }
 
