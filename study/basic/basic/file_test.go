@@ -5,7 +5,12 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"testing"
 )
+
+func TestIoRead(t  *testing.T)  {
+
+}
 
 func testBufferIoRead(filePath string) {
 	file, err := os.Open(filePath)
@@ -58,8 +63,4 @@ func testBufferIoWriter(filePath string) {
 		fmt.Println("close writer failed. filePath:", filePath)
 		return
 	}
-}
-
-func testCopyFile() {
-
 }

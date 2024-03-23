@@ -3,10 +3,11 @@ package current
 import (
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 )
 
-func testGoro() {
+func TestGo(t *testing.T) {
 	wg := sync.WaitGroup{}
 	wg.Add(5)
 	for i := 0; i < 5; i++ {
@@ -18,7 +19,51 @@ func testGoro() {
 	wg.Wait()
 }
 
-func testChannelCancel() {
+func TestChannel1(t *testing.T) {
+	ch := make(chan int)
+	fmt.Println(ch)
+	go func() {
+		ch <- 12
+	}()
+	fmt.Println("recvie", <-ch)
+}
+
+func TestChannel2(t *testing.T) {
+	ch := make(chan int)
+	<-ch
+	fmt.Println("123")
+	//对一个关闭的通道再发送值就会导致 panic。
+	//对一个关闭的通道进行接收会一直获取值直到通道为空。
+	//对一个关闭的并且没有值的通道执行接收操作会得到对应类型的零值。
+	//关闭一个已经关闭的通道会导致 panic。
+	close(ch)
+}
+
+func TestChannel3(t *testing.T) {
+	ch := make(chan int)
+	go func(ch chan int) {
+		for val := range ch {
+			fmt.Println(val)
+		}
+		fmt.Println("break")
+	}(ch)
+	for i := 0; i < 10; i++ {
+		ch <- i
+	}
+}
+
+func TestChannel4(t *testing.T) {
+	ch := make(chan int, 1)
+	for i := 1; i <= 10; i++ {
+		select {
+		case x := <-ch:
+			fmt.Println(x)
+		case ch <- i:
+		}
+	}
+}
+
+func TestChannelCancel(t *testing.T) {
 	wg := sync.WaitGroup{}
 	wg.Add(5)
 	ch := make(chan int)
@@ -39,67 +84,19 @@ func testChannelCancel() {
 	wg.Wait()
 }
 
-func testChannel1() {
-	ch := make(chan int)
-	fmt.Println(ch)
-	go func() {
-		//写数据
-		ch <- 12
-	}()
-	//读数据
-	fmt.Println("recvie", <-ch)
-}
-
-func testChannel2() {
-	ch := make(chan int)
-	<-ch
-	fmt.Println("123")
-	//对一个关闭的通道再发送值就会导致 panic。
-	//对一个关闭的通道进行接收会一直获取值直到通道为空。
-	//对一个关闭的并且没有值的通道执行接收操作会得到对应类型的零值。
-	//关闭一个已经关闭的通道会导致 panic。
-	close(ch)
-}
-
-func testChannel3() {
-	ch := make(chan int)
-	go func(ch chan int) {
-		for val := range ch {
-			fmt.Println(val)
-		}
-		fmt.Println("break")
-	}(ch)
-	for i := 0; i < 10; i++ {
-		ch <- i
-	}
-}
-
-func testChannel4() {
-	ch := make(chan int, 1)
-	for i := 1; i <= 10; i++ {
-		select {
-		case x := <-ch:
-			fmt.Println(x)
-		case ch <- i:
-		}
-	}
-}
-func testChannelError() {
+//很经典的死循环
+func TestChannelError1(t *testing.T) {
 	wg := sync.WaitGroup{}
-
 	ch := make(chan int, 10)
 	for i := 0; i < 10; i++ {
 		ch <- i
 	}
 	close(ch)
-
 	wg.Add(3)
 	for j := 0; j < 3; j++ {
 		go func() {
 			for {
-				/**
-				  注意这里有死循环
-				*/
+				//无限读0值
 				task := <-ch
 				// 这里假设对接收的数据执行某些操作
 				fmt.Println(task)
@@ -108,6 +105,24 @@ func testChannelError() {
 		}()
 	}
 	wg.Wait()
+}
+
+//由于 select 命中了超时逻辑，导致通道没有消费者（无接收操作），而其定义的通道为无缓冲通道
+//因此 goroutine 中的ch <- "job result"操作会一直阻塞，最终导致 goroutine 泄露。
+func TestChannelError2(t *testing.T) {
+	ch := make(chan string)
+	go func() {
+		// 这里假设执行一些耗时的操作
+		time.Sleep(3 * time.Second)
+		ch <- "job result"
+	}()
+
+	select {
+	case result := <-ch:
+		fmt.Println(result)
+	case <-time.After(time.Second): // 较小的超时时间
+		return
+	}
 }
 
 var (
@@ -164,11 +179,9 @@ func do(wf, rf func(), wc, rc int) {
 		wg.Add(1)
 		go rf()
 	}
-
 	wg.Wait()
 	cost := time.Since(start)
 	fmt.Printf("x:%v cost:%v\n", x, cost)
-
 }
 
 func testMutex() {
@@ -191,7 +204,6 @@ func testOnce() {
 		}()
 	}
 	group.Wait()
-
 }
 
 type singleton struct{}
