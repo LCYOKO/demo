@@ -6,7 +6,6 @@ import (
 	book2 "demo/internal/controller/book"
 	user2 "demo/internal/controller/user"
 	"demo/routers"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -41,7 +40,6 @@ func main() {
 	//testGinGroup()
 	//testMiddleWare()
 	//InitGin()
-	fmt.Println("hello")
 }
 
 func InitGin() {

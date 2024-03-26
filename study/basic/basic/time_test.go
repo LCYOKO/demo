@@ -54,5 +54,28 @@ func TestTime2(t *testing.T) {
 }
 
 func TestTime3(t *testing.T) {
+	//沟槽的 pattern
+	str := "2006/01/02 15:04:05.000"
+	fmt.Println(time.Now().Format(str))
+}
 
+func TestTime4(t *testing.T) {
+	// 在没有时区指示符的情况下，time.Parse 返回UTC时间
+	timeFormat := "2006/01/02 15:04:05"
+	timeObj, err := time.Parse(timeFormat, "2022/10/05 11:25:20")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	// 2022-10-05 11:25:20 +0000 UTC
+	fmt.Println(timeObj)
+	// 在有时区指示符的情况下，time.Parse 返回对应时区的时间表示
+	timeObj, err = time.Parse(time.RFC3339, "2022-10-05T11:25:20+08:00")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	// 2022-10-05 11:25:20 +0800 CST
+	fmt.Println(timeObj)
+}
 }

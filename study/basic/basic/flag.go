@@ -3,10 +3,19 @@ package basic
 import (
 	"flag"
 	"fmt"
+	"os"
 	"time"
 )
 
-func testFlag() {
+func Arg() {
+	if len(os.Args) > 0 {
+		for index, arg := range os.Args {
+			fmt.Printf("args[%d]=%v\n", index, arg)
+		}
+	}
+}
+
+func Flag() {
 	//定义命令行参数方式1
 	var name string
 	var age int
