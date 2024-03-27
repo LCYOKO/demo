@@ -223,7 +223,7 @@ func GetInstance() *singleton {
 	return &singleton{}
 }
 
-func testErrorGroup() {
+func TestErrorGroup(t *testing.T) {
 	//g := new(errgroup.Group) // 创建等待组（类似sync.WaitGroup）
 	//var urls = []string{
 	//	"http://pkg.go.dev",

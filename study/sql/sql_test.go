@@ -2,8 +2,9 @@ package sql
 
 import (
 	"fmt"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
-	"github.com/pkg/errors"
+	"testing"
 )
 
 var db *sqlx.DB
@@ -14,14 +15,14 @@ func initDB() (err error) {
 	db, err = sqlx.Connect("mysql", dsn)
 	if err != nil {
 		fmt.Printf("connect DB failed, err:%v\n", err)
-		return
+		return err
 	}
 	db.SetMaxOpenConns(20)
 	db.SetMaxIdleConns(10)
-	return
+	return err
 }
 
-func testQuery() {
+func TestQuery(t *testing.T) {
 	initDB()
 	sqlStr := "select id, name, age from user where id=?"
 	var u User
@@ -30,8 +31,8 @@ func testQuery() {
 		fmt.Printf("get failed, err:%v\n", err)
 		return
 	}
-	fmt.Printf("id:%d name:%s age:%d\n", u.Id, u.Name, u.Age)
-
+	fmt.Printf("user%#v\n", u)
+	//--------------------------
 	sqlStr = "select id, name, age from user where id > ?"
 	var users []User
 	err = db.Select(&users, sqlStr, 0)
@@ -42,7 +43,7 @@ func testQuery() {
 	fmt.Printf("users:%#v\n", users)
 }
 
-func testInsert() {
+func TestInsert(t *testing.T) {
 	initDB()
 	sqlStr := "insert into user(name, age) values (?,?)"
 	ret, err := db.Exec(sqlStr, "沙河小王子", 19)
@@ -58,7 +59,7 @@ func testInsert() {
 	fmt.Printf("insert success, the id is %d.\n", theID)
 }
 
-func testDelete() {
+func TestDelete(t *testing.T) {
 	sqlStr := "delete from user where id = ?"
 	ret, err := db.Exec(sqlStr, 6)
 	if err != nil {
@@ -73,7 +74,7 @@ func testDelete() {
 	fmt.Printf("delete success, affected rows:%d\n", n)
 }
 
-func testUpdate() {
+func TestUpdate(t *testing.T) {
 	sqlStr := "update user set age=? where id = ?"
 	ret, err := db.Exec(sqlStr, 39, 6)
 	if err != nil {
@@ -87,7 +88,7 @@ func testUpdate() {
 	}
 	fmt.Printf("update success, affected rows:%d\n", n)
 }
-func testBatchInsert() {
+func TestBatchInsert(t *testing.T) {
 	users := []User{
 		{
 
@@ -112,19 +113,21 @@ func QueryByIDs(ids []int) (users []User, err error) {
 	return
 }
 
-func transactionDemo2() (err error) {
+func TestTransactionDemo2(t *testing.T) {
 	tx, err := db.Beginx() // 开启事务
 	if err != nil {
 		fmt.Printf("begin trans failed, err:%v\n", err)
-		return err
+		return
 	}
 	defer func() {
 		if p := recover(); p != nil {
-			tx.Rollback()
-			panic(p) // re-throw panic after Rollback
+			_ = tx.Rollback()
+			// re-throw panic after Rollback
+			panic(p)
 		} else if err != nil {
 			fmt.Println("rollback")
-			tx.Rollback() // err is non-nil; don't change it
+			// err is non-nil; don't change it
+			_ = tx.Rollback()
 		} else {
 			err = tx.Commit() // err is nil; if Commit returns error update err
 			fmt.Println("commit")
@@ -135,28 +138,27 @@ func transactionDemo2() (err error) {
 
 	rs, err := tx.Exec(sqlStr1, 1)
 	if err != nil {
-		return err
+		return
 	}
 	n, err := rs.RowsAffected()
 	if err != nil {
-		return err
+		return
 	}
 	if n != 1 {
-		return errors.New("exec sqlStr1 failed")
+		return
 	}
 	sqlStr2 := "Update user set age=50 where i=?"
 	rs, err = tx.Exec(sqlStr2, 5)
 	if err != nil {
-		return err
+		return
 	}
 	n, err = rs.RowsAffected()
 	if err != nil {
-		return err
+		return
 	}
 	if n != 1 {
-		return errors.New("exec sqlStr1 failed")
+		return
 	}
-	return err
 }
 
 type User struct {
