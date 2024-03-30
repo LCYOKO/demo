@@ -2,9 +2,9 @@ package unittest
 
 import (
 	"github.com/magiconair/properties/assert"
-	"reflect"
 	"testing"
 )
+
 func TestSplit(t *testing.T) {
 	// 测试函数名必须以Test开头，必须接收一个*testing.T类型参数
 	// 程序输出的结果
@@ -40,12 +40,11 @@ func TestSplitAll(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) { // 使用t.Run()执行子测试
 			got := Split(tt.input, tt.sep)
-			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("expected:%#v, got:%#v", tt.want, got)
-			}
+			assert.Equal(t, got, tt.want)
 		})
 	}
 }
+
 //
 //func testGocovery() {
 //	// 只需要在顶层的Convey调用时传入t

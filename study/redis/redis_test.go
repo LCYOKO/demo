@@ -3,6 +3,7 @@ package redis
 import (
 	"context"
 	"fmt"
+	"github.com/pkg/errors"
 	"github.com/redis/go-redis/v9"
 	"testing"
 	"time"
@@ -58,4 +59,45 @@ func TestNormal(t *testing.T) {
 	// 直接执行命令获取值
 	value := Cli.Get(ctx, "key").Val()
 	fmt.Println(value)
+}
+
+func TestDo(t *testing.T) {
+	initNormal()
+	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
+	defer cancel()
+
+	// 直接执行命令获取错误
+	err := Cli.Do(ctx, "set", "key", 10, "EX", 3600).Err()
+	fmt.Println(err)
+
+	// 执行命令获取结果
+	val, err := Cli.Do(ctx, "get", "key").Result()
+	fmt.Println(val, err)
+}
+
+func TestNilError(t *testing.T) {
+	initNormal()
+	fromRedis, err := getValueFromRedis("test", "wu")
+	if err != nil {
+		fmt.Println("error", err)
+		return
+	}
+	fmt.Println(fromRedis)
+}
+
+// getValueFromRedis redis.Nil判断
+func getValueFromRedis(key, defaultValue string) (string, error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
+	defer cancel()
+
+	val, err := Cli.Get(ctx, key).Result()
+	if err != nil {
+		// 如果返回的错误是key不存在
+		if errors.Is(err, redis.Nil) {
+			return defaultValue, nil
+		}
+		// 出其他错了
+		return "", err
+	}
+	return val, nil
 }

@@ -17,10 +17,10 @@ import (
 //https://github.com/gin-contrib 第三方插件
 type LogConfig struct {
 	Level      string `json:"level"`
-	Filename   string `json:"filename"`
-	MaxSize    int    `json:"maxsize"`
-	MaxAge     int    `json:"max_age"`
-	MaxBackups int    `json:"max_backups"`
+	Filename   string `json:"fileName"`
+	MaxSize    int    `json:"maxSize"`
+	MaxAge     int    `json:"maxAge"`
+	MaxBackups int    `json:"maxBackups"`
 }
 
 var lg *zap.Logger

@@ -5,7 +5,7 @@ import (
 	common2 "demo/internal/common"
 	book2 "demo/internal/controller/book"
 	user2 "demo/internal/controller/user"
-	"demo/routers"
+	routers2 "demo/internal/routers"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -43,8 +43,8 @@ func main() {
 }
 
 func InitGin() {
-	routers.Include(book2.Routers, user2.Route)
-	engine := routers.Init()
+	routers2.Include(book2.Routers, user2.Route)
+	engine := routers2.Init()
 	err := engine.Run("localhost:8081")
 	if err != nil {
 		return

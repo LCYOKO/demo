@@ -9,17 +9,17 @@ import (
 
 var db *sqlx.DB
 
-func initDB() (err error) {
+func initDB() {
+	var err error
 	dsn := "user:password@tcp(114.55.147.178:33060)/test?charset=utf8mb4&parseTime=True"
 	// 也可以使用MustConnect连接不成功就panic
 	db, err = sqlx.Connect("mysql", dsn)
 	if err != nil {
 		fmt.Printf("connect DB failed, err:%v\n", err)
-		return err
+		panic("connect sql error")
 	}
 	db.SetMaxOpenConns(20)
 	db.SetMaxIdleConns(10)
-	return err
 }
 
 func TestQuery(t *testing.T) {
@@ -88,7 +88,26 @@ func TestUpdate(t *testing.T) {
 	}
 	fmt.Printf("update success, affected rows:%d\n", n)
 }
+
 func TestBatchInsert(t *testing.T) {
+	initDB()
+
+	users := []interface{}{
+		User{Name: "七米", Age: 18},
+		User{Name: "q1mi", Age: 28},
+		User{Name: "小王子", Age: 38},
+	}
+	query, args, _ := sqlx.In(
+		"INSERT INTO user (name, age) VALUES (?), (?), (?)",
+		users..., // 如果arg实现了 driver.Valuer, sqlx.In 会通过调用 Value()来展开它
+	)
+	fmt.Println(query)
+	fmt.Println(args)
+	_, err := db.Exec(query, args...)
+}
+
+func TestBatchInsert2(t *testing.T) {
+	initDB()
 	users := []User{
 		{
 
@@ -97,7 +116,10 @@ func TestBatchInsert(t *testing.T) {
 
 		},
 	}
-	db.NamedExec("INSERT INTO user (name, age) VALUES (:name, :age)", users)
+	_, err := db.NamedExec("INSERT INTO user (name, age) VALUES (:name, :age)", users)
+	if err != nil {
+		t.Log("")
+	}
 }
 
 func QueryByIDs(ids []int) (users []User, err error) {
