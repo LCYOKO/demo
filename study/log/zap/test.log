@@ -1,0 +1,5 @@
+{"level":"info","ts":1711785627.1675715,"msg":"info","name":"lisi"}
+{"level":"info","ts":1711785971.3909729,"msg":"info","name":"lisi"}
+{"level":"info","ts":1711785971.3914835,"msg":"info ,name:lisi"}
+2024-03-30T16:09:12.688+0800	INFO	info	{"name": "lisi"}
+2024-03-30T16:09:12.700+0800	INFO	info ,name:lisi
