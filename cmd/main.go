@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	common2 "demo/internal/common"
 	book2 "demo/internal/controller/book"
 	user2 "demo/internal/controller/user"
 	routers2 "demo/internal/routers"
+	"demo/pkg/common"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -59,7 +59,7 @@ func testDefaultGin() {
 	// gin.H 是map[string]interface{}的缩写
 	r.GET("/someJSON", func(c *gin.Context) {
 		// 方式一：自己拼接JSON
-		c.JSON(http.StatusOK, common2.Ok(gin.H{"message": "Hello world!"}))
+		c.JSON(http.StatusOK, common.Ok(gin.H{"message": "Hello world!"}))
 	})
 	r.GET("/moreJSON", func(c *gin.Context) {
 		// 方法二：使用结构体
@@ -71,7 +71,7 @@ func testDefaultGin() {
 		msg.Name = "小王子"
 		msg.Message = "Hello world!"
 		msg.Age = 18
-		c.JSON(http.StatusOK, common2.Ok(msg))
+		c.JSON(http.StatusOK, common.Ok(msg))
 	})
 	// 启动HTTP服务，默认在0.0.0.0:8080启动服务
 	r.Run()
@@ -82,25 +82,25 @@ func testGinGroup() {
 	userGroup := r.Group("/user")
 	{
 		userGroup.GET("/index", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/user/index"))
+			c.JSON(http.StatusOK, common.Ok("/user/index"))
 		})
 		userGroup.GET("/login", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/user/index"))
+			c.JSON(http.StatusOK, common.Ok("/user/index"))
 		})
 		userGroup.POST("/login", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/user/index"))
+			c.JSON(http.StatusOK, common.Ok("/user/index"))
 		})
 	}
 	shopGroup := r.Group("/shop")
 	{
 		shopGroup.GET("/index", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/shop/index"))
+			c.JSON(http.StatusOK, common.Ok("/shop/index"))
 		})
 		shopGroup.GET("/cart", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/shop/cart"))
+			c.JSON(http.StatusOK, common.Ok("/shop/cart"))
 		})
 		shopGroup.POST("/checkout", func(c *gin.Context) {
-			c.JSON(http.StatusOK, common2.Ok("/shop/checkout"))
+			c.JSON(http.StatusOK, common.Ok("/shop/checkout"))
 
 		})
 	}
