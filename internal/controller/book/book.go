@@ -6,10 +6,13 @@ import (
 	"net/http"
 )
 
-func getBook(c *gin.Context) {
+type Controller struct {
+}
+
+func (b *Controller) GetBook(c *gin.Context) {
 	c.JSON(http.StatusOK, common2.Ok("bookInfo"))
 }
 
-func getBooks(c *gin.Context) {
+func (b *Controller) GetBooks(c *gin.Context) {
 
 }

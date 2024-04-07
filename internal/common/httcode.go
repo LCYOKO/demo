@@ -1,14 +1,13 @@
 package common
 
 var (
-	// HTTP原生状态码
 	OK = &BizCode{
 		200,
 		"请求成功",
 	}
 	NOT_FOUND = &BizCode{
 		404,
-		"请求也",
+		"请求资源不存在",
 	}
 	ERROR = &BizCode{
 		500,
@@ -21,10 +20,10 @@ type BizCode struct {
 	msg  string `json:"msg"`
 }
 
-func (b BizCode) GetCode() int {
+func (b *BizCode) GetCode() int {
 	return b.code
 }
 
-func (b BizCode) GetMsg() string {
+func (b *BizCode) GetMsg() string {
 	return b.msg
 }
