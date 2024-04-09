@@ -8,8 +8,6 @@ import (
 	"time"
 )
 
-var db *gorm.DB
-
 type User struct {
 	gorm.Model
 	Name         string

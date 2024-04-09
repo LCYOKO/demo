@@ -1,0 +1,27 @@
+syntax = "proto3";
+package book;
+
+option go_package = "com.xiaomi";
+
+
+enum ResponseCode{
+  SUCCESS = 0;
+  NOT_FOUND = 1;
+  INTER_ERROR = 2;
+}
+
+
+message BookRequest{
+  string name = 1;
+  int64 id = 2;
+}
+
+message BookResponse{
+  string name = 1;
+  string message = 2;
+  ResponseCode code = 3;
+}
+
+service BookService {
+  rpc getBook(BookRequest) returns(BookResponse){};
+}
