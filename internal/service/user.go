@@ -1,14 +1,18 @@
 package service
 
-import "demo/internal/model"
+import (
+	"demo/internal/dao"
+	"demo/internal/model"
+)
 
 type UserSrv interface {
-	GetUser() *model.UserInfo
+	Get(id int64) *model.UserInfo
 }
 
 type UseService struct {
+	uDao dao.UserDao
 }
 
-func (u *UseService) GetUser() *model.UserInfo {
-	return nil
+func (u *UseService) Get(id int64) *model.UserInfo {
+	return u.uDao.GetById(id)
 }
