@@ -35,6 +35,7 @@ type circle struct {
 }
 
 func (r *rect) area() float64 {
+	r.width = 10
 	return r.width * r.height
 }
 func (r *rect) perim() float64 {
@@ -58,6 +59,7 @@ func TestInterface(t *testing.T) {
 	var r geometry = &rect{width: 3, height: 4}
 	c := circle{radius: 5}
 	measure(r)
+	fmt.Println(r)
 	measure(c)
 }
 
