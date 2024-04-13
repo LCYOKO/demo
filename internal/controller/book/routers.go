@@ -16,6 +16,10 @@ func Instance() *Controller {
 }
 
 func Routers(e *gin.Engine) {
+	initV1(e)
+}
+
+func initV1(e *gin.Engine) {
 	group := e.Group("/books")
 	{
 		bookController = Instance()

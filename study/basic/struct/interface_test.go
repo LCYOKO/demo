@@ -43,6 +43,7 @@ func (r *rect) perim() float64 {
 }
 
 func (c circle) area() float64 {
+	c.radius = 10
 	return math.Pi * c.radius * c.radius
 }
 func (c circle) perim() float64 {
@@ -61,6 +62,7 @@ func TestInterface(t *testing.T) {
 	measure(r)
 	fmt.Println(r)
 	measure(c)
+	fmt.Println(c)
 }
 
 func TestTypeSwitch(t *testing.T) {

@@ -1,15 +1,17 @@
 package user
 
 import (
+	"demo/internal/service"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 type Controller struct {
+	usrv service.UserSrv
 }
 
 func (u *Controller) GetInfo(c *gin.Context) {
-	c.JSON(http.StatusOK, "UserInfo")
+	c.JSON(http.StatusOK, u.usrv.Get(1))
 }
 
 func (u *Controller) GetInfos(c *gin.Context) {

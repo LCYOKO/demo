@@ -9,10 +9,10 @@ type UserSrv interface {
 	Get(id int64) *model.UserInfo
 }
 
-type UseService struct {
-	uDao dao.UserDao
+type userService struct {
+	uDao dao.UserRepository
 }
 
-func (u *UseService) Get(id int64) *model.UserInfo {
-	return u.uDao.GetById(id)
+func (u *userService) Get(id int64) *model.UserInfo {
+	return u.uDao.GetById(id).Info()
 }

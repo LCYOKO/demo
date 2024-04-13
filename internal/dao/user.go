@@ -1,20 +1,23 @@
 package dao
 
-import "gorm.io/gorm"
+import (
+	"demo/internal/model"
+	"gorm.io/gorm"
+)
 
-type UserDao interface {
-	GetById(id int64) *User
-	GetByIds(ids []int64) []*User
+type UserRepository interface {
+	GetById(id int64) *model.User
+	GetByIds(ids []int64) []*model.User
 }
 
-type userDaoImpl struct {
+type userRepository struct {
 	db *gorm.DB
 }
 
-func (u *userDaoImpl) GetById(id int64) *User {
+func (u *userRepository) GetById(id int64) *model.User {
 	return nil
 }
 
-func (u *userDaoImpl) GetByIds(ids []int64) []*User {
+func (u *userRepository) GetByIds(ids []int64) []*model.User {
 	return nil
 }
