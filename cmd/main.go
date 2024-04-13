@@ -26,5 +26,4 @@ func InitGin() {
 	if err != nil {
 		return
 	}
-
 }
