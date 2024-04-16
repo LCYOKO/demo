@@ -15,7 +15,7 @@ type userRepository struct {
 }
 
 func (u *userRepository) GetById(id int64) *model.User {
-	return nil
+	return u.db.Create().
 }
 
 func (u *userRepository) GetByIds(ids []int64) []*model.User {

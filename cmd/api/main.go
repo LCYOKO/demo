@@ -20,7 +20,7 @@ func main() {
 }
 
 func InitGin() {
-	routers2.Include(book2.Routers, user2.Route)
+	routers2.Include(book2.Routers, user2.Routers)
 	engine := routers2.Init()
 	err := engine.Run("localhost:8081")
 	if err != nil {

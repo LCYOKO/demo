@@ -14,16 +14,24 @@ type Config struct {
 var conf *viper.Viper
 
 func Init() {
-	viper.SetConfigFile("config.yaml") // 指定配置文件路径
-	err := viper.ReadInConfig()        // 读取配置信息
-	if err != nil {                    // 读取配置信息失败
-		panic(fmt.Errorf("Fatal error config file: %s \n", err))
+	// 指定配置文件路径
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath("../../../conf")
+	// 读取配置信息失败
+	if err := viper.ReadInConfig(); err != nil {
+		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
+			// 配置文件未找到错误；如果需要可以忽略
+			panic(fmt.Errorf("Fatal error config file: %s \n", err))
+		} else {
+			// 配置文件被找到，但产生了另外的错误
+		}
 	}
 }
 
 func TestParseConfig(t *testing.T) {
 	Init()
-	fmt.Println(viper.Get("version"))
+	fmt.Println(viper.Get("HTTP.Mode"))
+	fmt.Println(viper.Sub("Http"))
 }
 
 func TestParseConfig1(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 var once sync.Once
 var userController *Controller
 
-func Route(e *gin.Engine) {
+func Routers(e *gin.Engine) {
 	userController = Instance()
 	group := e.Group("/user")
 	{
