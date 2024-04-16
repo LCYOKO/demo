@@ -2,6 +2,7 @@ package current
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 	"testing"
 	"time"
@@ -249,4 +250,14 @@ func TestErrorGroup(t *testing.T) {
 	//}
 	//fmt.Println("所有goroutine均成功")
 	//return nil
+}
+
+func TestCurrent1(t *testing.T) {
+	runtime.GOMAXPROCS(1)
+	for i := 1; i < 10; i++ {
+		go func() {
+			fmt.Println("A", i)
+		}()
+	}
+	time.Sleep(time.Hour)
 }

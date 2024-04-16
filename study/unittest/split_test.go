@@ -68,5 +68,6 @@ func TestSplitAll(t *testing.T) {
 //}
 
 func testMonkey() {
+	//list.New().
 	//monkey 好用的打桩工具
 }

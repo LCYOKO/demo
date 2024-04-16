@@ -1,5 +1,4 @@
-Name: moment-svc
-Version: 1.0.0
+AppName: moment-svc
 PprofPort: :5557
 
 HTTP:
@@ -16,10 +15,21 @@ HTTP:
   Debug: false
   EnableTrace: false
   EnablePprof: true
+
 GRPC:
   Addr: :9092
-  ReadTimeout: 5s
-  WriteTimeout: 5s
-
+  ReadTimeoutSecond: 5
+  WriteTimeoutSecond: 5
 
 Redis:
+  Addr: 127.0.0.1:6379
+
+UserDatabase:
+  Host: 127.0.0.1
+  UserName: root
+  Password: 123
+  Database: user
+  Max: 123
+  Min: 12
+
+Log:

@@ -11,7 +11,6 @@ type Controller struct {
 }
 
 func (u *Controller) GetInfo(c *gin.Context) {
-	 c.Query("id")
 	c.JSON(http.StatusOK, u.usrv.Get(1))
 }
 
