@@ -1,9 +1,11 @@
 package main
 
 import (
+	"demo/internal"
 	book2 "demo/internal/controller/book"
 	user2 "demo/internal/controller/user"
 	routers2 "demo/internal/routers"
+	"os"
 )
 
 type Config struct {
@@ -16,7 +18,10 @@ type Config struct {
 var config = new(Config)
 
 func main() {
-	InitGin()
+	command := internal.NewMiniBlogCommand()
+	if err := command.Execute(); err != nil {
+		os.Exit(1)
+	}
 }
 
 func InitGin() {

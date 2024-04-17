@@ -9,6 +9,8 @@ type UserSrv interface {
 	Get(id int64) *model.UserInfo
 }
 
+var _ UserSrv = (*userService)(nil)
+
 type userService struct {
 	uDao dao.UserRepository
 }

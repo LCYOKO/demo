@@ -12,7 +12,7 @@ func InitLogger(cfg conf.Log) (err error) {
 	writeSyncer := getLogWriter(cfg.Filename, cfg.MaxSize, cfg.MaxBackups, cfg.MaxAge)
 	encoder := getEncoder()
 	var l = new(zapcore.Level)
-	err = l.UnmarshalText([]byte(cfg.Level))
+	//err = l.UnmarshalText([]byte(cfg.Level))
 	if err != nil {
 		return
 	}

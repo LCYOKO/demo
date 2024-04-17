@@ -7,8 +7,8 @@ import (
 	"github.com/pkg/errors"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"sync"
 )
+
 
 type Datastore struct {
 	userDb *gorm.DB
@@ -22,27 +22,13 @@ func (ds *Datastore) Close() error {
 	return db.Close()
 }
 
-var (
-	store *Datastore
-	once  sync.Once
-)
-
-// GetMySQLFactoryOr create mysql factory with the given config.
-func GetMySQLFactoryOr(config *conf.Config) (store *Datastore, err error) {
-	once.Do(func() {
-		var userDb *gorm.DB
-		userDb, err = crateDatabase(config.UserDataBase)
-		if err != nil {
-			return
-		}
-		store = &Datastore{userDb}
-	})
-
-	if store == nil || err != nil {
-		return nil, fmt.Errorf("failed to get mysql store fatory, Datastore: %+v, error: %w", store, err)
+func NewMySQLFactory(config *conf.Config) (store *Datastore, err error) {
+	var userDb *gorm.DB
+	userDb, err = crateDatabase(config.UserDataBase)
+	if err != nil {
+		return nil, fmt.Errorf("failed to get mysql store fatory, Datastore: %+v, error: %w", config.UserDataBase.Database, err)
 	}
-
-	return store, nil
+	return &Datastore{userDb}, nil
 }
 
 func crateDatabase(conf conf.Database) (dbIns *gorm.DB, err error) {
