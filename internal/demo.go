@@ -3,7 +3,12 @@ package internal
 import (
 	"demo/pkg/version/verflag"
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
+	"go.uber.org/zap"
+	"net/http"
 )
 
 var cfgFile string
@@ -17,7 +22,6 @@ func NewMiniBlogCommand() *cobra.Command {
 		Short: "A good Go practical project",
 		// 命令的详细描述
 		Long: `A good Go practical project, used to create user with basic information.
-
 Find more miniblog information at:
 	https://github.com/marmotedu/miniblog#readme`,
 
@@ -145,25 +149,25 @@ Find more miniblog information at:
 //	return httpsrv
 //}
 //
-//// startSecureServer 创建并运行 HTTPS 服务器.
-//func startSecureServer(g *gin.Engine) *http.Server {
-//	// 创建 HTTPS Server 实例
-//	httpssrv := &http.Server{Addr: viper.GetString("tls.addr"), Handler: g}
-//
-//	// 运行 HTTPS 服务器。在 goroutine 中启动服务器，它不会阻止下面的正常关闭处理流程
-//	// 打印一条日志，用来提示 HTTPS 服务已经起来，方便排障
-//	log.Infow("Start to listening the incoming requests on https address", "addr", viper.GetString("tls.addr"))
-//	cert, key := viper.GetString("tls.cert"), viper.GetString("tls.key")
-//	if cert != "" && key != "" {
-//		go func() {
-//			if err := httpssrv.ListenAndServeTLS(cert, key); err != nil && !errors.Is(err, http.ErrServerClosed) {
-//				log.Fatalw(err.Error())
-//			}
-//		}()
-//	}
-//
-//	return httpssrv
-//}
+// startSecureServer 创建并运行 HTTPS 服务器.
+func startSecureServer(g *gin.Engine) *http.Server {
+	// 创建 HTTPS Server 实例
+	var log = zap.L()
+	httpssrv := &http.Server{Addr: viper.GetString("tls.addr"), Handler: g}
+
+	// 运行 HTTPS 服务器。在 goroutine 中启动服务器，它不会阻止下面的正常关闭处理流程
+	// 打印一条日志，用来提示 HTTPS 服务已经起来，方便排障
+	zap.L().Info("Start to listening the incoming requests on https address", "addr", viper.GetString("tls.addr"))
+	cert, key := viper.GetString("tls.cert"), viper.GetString("tls.key")
+	if cert != "" && key != "" {
+		go func() {
+			if err := httpssrv.ListenAndServeTLS(cert, key); err != nil && !errors.Is(err, http.ErrServerClosed) {
+				log.Fatal(err.Error())
+			}
+		}()
+	}
+	return httpssrv
+}
 //
 //// startGRPCServer 创建并运行 GRPC 服务器.
 //func startGRPCServer() *grpc.Server {
