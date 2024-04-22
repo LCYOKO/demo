@@ -3,7 +3,6 @@ package conf
 import (
 	"fmt"
 	"github.com/spf13/viper"
-	"os"
 	"time"
 )
 
@@ -11,16 +10,17 @@ type Config struct {
 	Name         string
 	Version      string
 	PprofPort    int
+	Model        string
 	Http         Http
 	Grpc         Grpc
 	Redis        Redis
 	UserDataBase Database
-	InfoLog      Log
-	ErrorLog     Log
+	Log          Log
 }
 
 type Http struct {
-	Addr string
+	Addr    string
+	TslAddr string
 }
 
 type Grpc struct {
@@ -49,17 +49,18 @@ type Log struct {
 	MaxSize    int
 	MaxAge     int
 	MaxBackups int
+	Level      string
 }
 
 func (d *Database) ToMsqlDNS() string {
 	return fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local", d.Username, d.Password, d.Host, d.Database)
 }
 
-var Conf = new(viper.Viper)
+var Conf = new(Config)
 
-func Init() {
-	viper.SetConfigType("yaml")
-	viper.AddConfigPath("../../../conf")
+func Init() error {
+	viper.SetConfigName("config")
+	viper.AddConfigPath("conf")
 	// 读取配置信息失败
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
@@ -67,10 +68,8 @@ func Init() {
 			panic(fmt.Errorf("Fatal error config file: %s \n", err))
 		} else {
 			// 配置文件被找到，但产生了另外的错误
+			return err
 		}
 	}
-	err := viper.Unmarshal(Conf)
-	if err != nil {
-		os.Exit(100)
-	}
+	return viper.Unmarshal(Conf)
 }

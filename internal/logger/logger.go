@@ -7,20 +7,26 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-// InitLogger 初始化Logger
-func InitLogger(cfg conf.Log) (err error) {
-	writeSyncer := getLogWriter(cfg.Filename, cfg.MaxSize, cfg.MaxBackups, cfg.MaxAge)
+var (
+	Logger        *zap.Logger
+	SugaredLogger *zap.SugaredLogger
+)
+
+// Init 初始化Logger
+func Init(cfg *conf.Log) (err error) {
 	encoder := getEncoder()
-	var l = new(zapcore.Level)
-	//err = l.UnmarshalText([]byte(cfg.Level))
+	writer := getLogWriter(cfg)
+	var level = new(zapcore.Level)
+	err = level.UnmarshalText([]byte(cfg.Level))
 	if err != nil {
 		return
 	}
-
-	core := zapcore.NewCore(encoder, writeSyncer, l)
-	lg := zap.New(core, zap.AddCaller())
+	core := zapcore.NewCore(encoder, writer, level)
+	lg := zap.New(core, zap.AddCaller(), zap.AddCallerSkip(1))
 	// 替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可
 	zap.ReplaceGlobals(lg)
+	Logger = lg
+	SugaredLogger = lg.Sugar()
 	return
 }
 
@@ -34,12 +40,12 @@ func getEncoder() zapcore.Encoder {
 	return zapcore.NewJSONEncoder(encoderConfig)
 }
 
-func getLogWriter(filename string, maxSize, maxBackup, maxAge int) zapcore.WriteSyncer {
+func getLogWriter(cfg *conf.Log) zapcore.WriteSyncer {
 	lumberJackLogger := &lumberjack.Logger{
-		Filename:   filename,
-		MaxSize:    maxSize,
-		MaxBackups: maxBackup,
-		MaxAge:     maxAge,
+		Filename:   cfg.Filename,
+		MaxSize:    cfg.MaxSize,
+		MaxBackups: cfg.MaxBackups,
+		MaxAge:     cfg.MaxAge,
 	}
 	return zapcore.AddSync(lumberJackLogger)
 }

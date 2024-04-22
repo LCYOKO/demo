@@ -2,27 +2,14 @@ package book
 
 import (
 	"github.com/gin-gonic/gin"
-	"sync"
 )
 
-var once sync.Once
 var bookController *Controller
 
-func Instance() *Controller {
-	once.Do(func() {
-		bookController = &Controller{}
-	})
-	return bookController
-}
-
-func Routers(e *gin.Engine) {
-	initV1(e)
-}
-
-func initV1(e *gin.Engine) {
-	group := e.Group("/books")
+func Routers(g *gin.Engine) {
+	group := g.Group("/books")
 	{
-		bookController = Instance()
+		bookController = &Controller{}
 		group.GET("/info", bookController.GetBook)
 		group.GET("/infos", bookController.GetBooks)
 

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"demo/internal/dao"
 	"demo/internal/model"
+	"demo/internal/store"
 )
 
 type UserSrv interface {
@@ -12,7 +12,7 @@ type UserSrv interface {
 var _ UserSrv = (*userService)(nil)
 
 type userService struct {
-	uDao dao.UserRepository
+	uDao store.UserRepository
 }
 
 func (u *userService) Get(id int64) *model.UserInfo {

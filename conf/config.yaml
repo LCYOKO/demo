@@ -1,5 +1,6 @@
 AppName: moment-svc
-PprofPort: :5557
+PprofPort: 5557
+Model: release
 
 HTTP:
   Addr: :8082
@@ -25,11 +26,12 @@ Redis:
   Addr: 127.0.0.1:6379
 
 UserDatabase:
-  Host: 127.0.0.1
+  Host:
   UserName: root
-  Password: 123
-  Database: user
+  Password:
+  Database: test
   Max: 123
   Min: 12
 
 Log:
+  fileName: log.log

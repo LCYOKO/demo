@@ -9,26 +9,30 @@ import (
 	"gorm.io/gorm"
 )
 
-
 type Datastore struct {
-	userDb *gorm.DB
+	UserDb *gorm.DB
 }
 
 func (ds *Datastore) Close() error {
-	db, err := ds.userDb.DB()
+	db, err := ds.UserDb.DB()
 	if err != nil {
 		return errors.Wrap(err, "get gorm db instance failed")
 	}
 	return db.Close()
 }
 
-func NewMySQLFactory(config *conf.Config) (store *Datastore, err error) {
+var Store *Datastore
+
+func Init(config *conf.Config) (err error) {
 	var userDb *gorm.DB
 	userDb, err = crateDatabase(config.UserDataBase)
 	if err != nil {
-		return nil, fmt.Errorf("failed to get mysql store fatory, Datastore: %+v, error: %w", config.UserDataBase.Database, err)
+		return fmt.Errorf("failed to get mysql store fatory, Datastore: %+v, error: %w", config.UserDataBase.Database, err)
 	}
-	return &Datastore{userDb}, nil
+	Store = &Datastore{
+		UserDb: userDb,
+	}
+	return nil
 }
 
 func crateDatabase(conf conf.Database) (dbIns *gorm.DB, err error) {
