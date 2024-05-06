@@ -29,8 +29,10 @@ func TestGrpc(t *testing.T) {
 		fmt.Printf("failed to listen: %v", err)
 		return
 	}
-	s := grpc.NewServer()                          // 创建gRPC服务器
-	pb.RegisterBookServiceServer(s, &UserServer{}) // 在gRPC服务端注册服务
+	// 创建gRPC服务器
+	s := grpc.NewServer()
+	// 在gRPC服务端注册服务
+	pb.RegisterBookServiceServer(s, &UserServer{})
 	// 启动服务
 	err = s.Serve(lis)
 	if err != nil {

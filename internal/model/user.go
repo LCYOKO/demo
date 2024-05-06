@@ -9,7 +9,7 @@ import (
 type User struct {
 	gorm.Model
 	Name         string
-	Email        *string
+	Email        string
 	Age          uint8
 	Birthday     *time.Time
 	MemberNumber sql.NullString
@@ -26,7 +26,7 @@ type UserInfo struct {
 }
 
 func (u *User) TableName() string {
-	return "user"
+	return "users"
 }
 
 func (u *User) Info() *UserInfo {

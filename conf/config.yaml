@@ -26,10 +26,10 @@ Redis:
   Addr: 127.0.0.1:6379
 
 UserDatabase:
-  Host:
+  Host: localhost:33060
   UserName: root
-  Password:
-  Database: test
+  Password: lcyoko123
+  Database: jxzy
   Max: 123
   Min: 12
 
