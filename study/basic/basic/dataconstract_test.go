@@ -24,6 +24,11 @@ func TestSlice(t *testing.T) {
 		a = append(a, fmt.Sprintf("%v", i))
 	}
 	fmt.Println(a)
+	var n = 3
+	dp := make([][]int, n)
+	for i := 0; i < len(dp); i++ {
+		fmt.Println(dp[i][0])
+	}
 }
 
 func TestMap(t *testing.T) {
