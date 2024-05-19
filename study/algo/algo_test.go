@@ -18,7 +18,8 @@ func isPalindrome(x int) bool {
 }
 
 func TestAlgo1(t *testing.T) {
-	fmt.Println(longestPalindrome("aaaaa"))
+	//fmt.Println(longestPalindrome("aaaaa")
+	fmt.Println("hello")
 }
 
 func longestPalindrome(s string) string {

@@ -43,6 +43,15 @@ func TestIfCase(t *testing.T) {
 	fmt.Println(score)
 }
 
+func TestIfCase1(t *testing.T) {
+	//a := 5
+	if a := 12; a > 12 {
+
+	} else {
+		fmt.Println(a)
+	}
+}
+
 func TestSwitch(t *testing.T) {
 	switch s := "a"; s {
 	case "a":
