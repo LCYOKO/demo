@@ -1,12 +1,12 @@
 package main
 
 import (
-	"demo/internal"
+	"demo/internal/web"
 	"os"
 )
 
 func main() {
-	command := internal.NewCommand()
+	command := web.NewCommand()
 	if err := command.Execute(); err != nil {
 		os.Exit(1)
 	}

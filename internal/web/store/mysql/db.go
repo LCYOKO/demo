@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"database/sql"
-	"demo/internal/conf"
+	conf2 "demo/internal/web/conf"
 	"fmt"
 	"github.com/pkg/errors"
 	"gorm.io/driver/mysql"
@@ -23,7 +23,7 @@ func (ds *Datastore) Close() error {
 
 var Store *Datastore
 
-func Init(config *conf.Config) (err error) {
+func Init(config *conf2.Config) (err error) {
 	var userDb *gorm.DB
 	userDb, err = crateDatabase(config.UserDataBase)
 	if err != nil {
@@ -35,7 +35,7 @@ func Init(config *conf.Config) (err error) {
 	return nil
 }
 
-func crateDatabase(conf conf.Database) (dbIns *gorm.DB, err error) {
+func crateDatabase(conf conf2.Database) (dbIns *gorm.DB, err error) {
 	dbIns, err = gorm.Open(mysql.New(mysql.Config{
 		// DSN data source name
 		DSN: conf.ToMsqlDNS(),

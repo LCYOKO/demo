@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"demo/internal/conf"
+	conf2 "demo/internal/web/conf"
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -13,7 +13,7 @@ var (
 )
 
 // Init 初始化Logger
-func Init(cfg *conf.Log) (err error) {
+func Init(cfg *conf2.Log) (err error) {
 	encoder := getEncoder()
 	writer := getLogWriter(cfg)
 	var level = new(zapcore.Level)
@@ -40,7 +40,7 @@ func getEncoder() zapcore.Encoder {
 	return zapcore.NewJSONEncoder(encoderConfig)
 }
 
-func getLogWriter(cfg *conf.Log) zapcore.WriteSyncer {
+func getLogWriter(cfg *conf2.Log) zapcore.WriteSyncer {
 	lumberJackLogger := &lumberjack.Logger{
 		Filename:   cfg.Filename,
 		MaxSize:    cfg.MaxSize,

@@ -1,14 +1,14 @@
 package user
 
 import (
-	"demo/internal/service"
+	service2 "demo/internal/web/service"
 	"demo/pkg/web"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
 type Controller struct {
-	usrv service.UserSrv
+	usrv service2.UserSrv
 }
 
 func (u *Controller) GetInfo(c *gin.Context) {
