@@ -36,6 +36,8 @@ type Student struct {
 }
 
 func TestStruct1(t *testing.T) {
+	var stuTest Student
+	fmt.Println("空值", stuTest)
 	var stu = &Student{
 		ID:     1,
 		Gender: "男",
