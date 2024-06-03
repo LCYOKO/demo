@@ -2,38 +2,32 @@ package net
 
 import (
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"strings"
 	"testing"
 	"time"
 )
 
 func TestGet(t *testing.T) {
-	apiUrl := "http://127.0.0.1:9090/get"
-	// URL param
-	data := url.Values{}
-	data.Set("name", "小王子")
-	data.Set("age", "18")
-	u, err := url.ParseRequestURI(apiUrl)
+	url := "https://www.baidu.com"
+	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Printf("parse url requestUrl failed, err:%v\n", err)
-	}
-	u.RawQuery = data.Encode() // URL encode
-	fmt.Println(u.String())
-	resp, err := http.Get(u.String())
-	if err != nil {
-		fmt.Printf("post failed, err:%v\n", err)
+		fmt.Printf("error %v", err)
 		return
 	}
 	defer resp.Body.Close()
-	b, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Printf("get resp failed, err:%v\n", err)
+	if resp.StatusCode != http.StatusOK {
+		fmt.Printf("status not ok, resp:%v", resp)
 		return
 	}
-	fmt.Println(string(b))
+	all, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Printf("read respBody failed")
+		return
+	}
+	fmt.Println(string(all))
 }
 
 func TestPost(t *testing.T) {

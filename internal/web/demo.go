@@ -1,11 +1,11 @@
-package internal
+package web
 
 import (
 	"context"
-	"demo/internal/conf"
-	"demo/internal/controller"
-	"demo/internal/logger"
-	"demo/internal/store"
+	conf2 "demo/internal/web/conf"
+	controller2 "demo/internal/web/controller"
+	logger2 "demo/internal/web/logger"
+	store2 "demo/internal/web/store"
 	middleware "demo/pkg/middware"
 	"demo/pkg/version/verflag"
 	"fmt"
@@ -74,43 +74,43 @@ Find more miniblog information at:
 
 // run 函数是实际的业务代码入口函数.
 func run() error {
-	if err := conf.Init(); err != nil {
+	if err := conf2.Init(); err != nil {
 		return err
 	}
-	if err := logger.Init(&conf.Conf.Log); err != nil {
+	if err := logger2.Init(&conf2.Conf.Log); err != nil {
 		return err
 	}
 	//	// 设置 token 包的签发密钥，用于 token 包 token 的签发和解析
 	//	token.Init(viper.GetString("jwt-secret"), known.XUsernameKey)
 	var g *gin.Engine
 	var err error
-	if g, err = initGin(conf.Conf); err != nil {
+	if g, err = initGin(conf2.Conf); err != nil {
 		return err
 	}
 	// 初始化 store 层
-	if err := store.Init(conf.Conf); err != nil {
+	if err := store2.Init(conf2.Conf); err != nil {
 		return err
 	}
 	// 初始化service
 
 	// 初始化路由
-	if err := controller.Init(g); err != nil {
+	if err := controller2.Init(g); err != nil {
 		return err
 	}
 	// 创建并运行 HTTP 服务器
-	httpSrv := startInsecureServer(g, &conf.Conf.Http)
+	httpSrv := startInsecureServer(g, &conf2.Conf.Http)
 	//
 	//	// 创建并运行 HTTPS 服务器
 	//	httpssrv := startSecureServer(g)
 	//
 	//	// 创建并运行 GRPC 服务器
-	grpcSrv := startGRPCServer(conf.Conf)
+	grpcSrv := startGRPCServer(conf2.Conf)
 	return graceFullShutDown(httpSrv, grpcSrv)
 }
 
-func initGin(conf *conf.Config) (g *gin.Engine, err error) {
+func initGin(conf *conf2.Config) (g *gin.Engine, err error) {
 	//设置 Gin 模式
-	logger.Logger.Info("config", zap.String("model", conf.Model))
+	logger2.Logger.Info("config", zap.String("model", conf.Model))
 	gin.SetMode(conf.Model)
 	// 创建 Gin 引擎
 	g = gin.New()
@@ -119,7 +119,7 @@ func initGin(conf *conf.Config) (g *gin.Engine, err error) {
 }
 
 func graceFullShutDown(httpSrv *http.Server, grpcSrv *grpc.Server) error {
-	var log = logger.SugaredLogger
+	var log = logger2.SugaredLogger
 	// 等待中断信号优雅地关闭服务器（10 秒超时)。
 	quit := make(chan os.Signal, 1)
 	// kill 默认会发送 syscall.SIGTERM 信号
@@ -151,7 +151,7 @@ func graceFullShutDown(httpSrv *http.Server, grpcSrv *grpc.Server) error {
 }
 
 // startInsecureServer 创建并运行 HTTP 服务器.
-func startInsecureServer(g *gin.Engine, conf *conf.Http) *http.Server {
+func startInsecureServer(g *gin.Engine, conf *conf2.Http) *http.Server {
 	// 创建 HTTP Server 实例
 	var log = zap.L()
 	httpSrv := &http.Server{Addr: conf.Addr, Handler: g}
@@ -166,7 +166,7 @@ func startInsecureServer(g *gin.Engine, conf *conf.Http) *http.Server {
 }
 
 // startSecureServer 创建并运行 HTTPS 服务器.
-func startSecureServer(g *gin.Engine, conf *conf.Http) *http.Server {
+func startSecureServer(g *gin.Engine, conf *conf2.Http) *http.Server {
 	// 创建 HTTPS Server 实例
 	var log = zap.L()
 	httpsSrv := &http.Server{Addr: conf.TslAddr, Handler: g}
@@ -184,7 +184,7 @@ func startSecureServer(g *gin.Engine, conf *conf.Http) *http.Server {
 }
 
 // startGRPCServer 创建并运行 GRPC 服务器.
-func startGRPCServer(conf *conf.Config) *grpc.Server {
+func startGRPCServer(conf *conf2.Config) *grpc.Server {
 	var log = zap.L()
 	lis, err := net.Listen("tcp", viper.GetString("grpc.addr"))
 	if err != nil {

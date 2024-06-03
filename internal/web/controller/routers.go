@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"demo/internal/controller/book"
-	"demo/internal/controller/user"
+	book2 "demo/internal/web/controller/book"
+	user2 "demo/internal/web/controller/user"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,7 +17,7 @@ func Include(opts ...Option) {
 
 // Init 初始化
 func Init(g *gin.Engine) error {
-	book.Routers(g)
-	user.Routers(g)
+	book2.Routers(g)
+	user2.Routers(g)
 	return nil
 }

@@ -66,6 +66,19 @@ func TestSwitch(t *testing.T) {
 	}
 }
 
+type NetError struct {
+}
+
+func (e NetError) Error() string {
+	return "error"
+}
+
+func TestForceConvert(t *testing.T) {
+	var bytes = []byte("123")
+	fmt.Println(string(bytes))
+
+}
+
 func TestSum(t *testing.T) {
 	sum(1, 2)
 	sum(1, 2, 3)

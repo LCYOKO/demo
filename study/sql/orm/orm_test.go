@@ -1,7 +1,7 @@
 package orm
 
 import (
-	"demo/internal/model"
+	model2 "demo/internal/web/model"
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -26,7 +26,7 @@ func init() {
 }
 
 func TestInsert(t *testing.T) {
-	user := &model.User{
+	user := &model2.User{
 		Name: "wangwu",
 	}
 	result := db.Create(user)
@@ -39,7 +39,7 @@ func TestInsert(t *testing.T) {
 
 func TestQuery(t *testing.T) {
 	//user := &model.User{}
-	users := make([]model.User, 10)
+	users := make([]model2.User, 10)
 	result := db.Find(users, []int{1, 2, 3})
 	fmt.Println(users, result)
 }

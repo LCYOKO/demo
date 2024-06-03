@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file. The original repo for
 // this file is https://github.com/marmotedu/miniblog.
 
-package internal
+package web
 
 const (
 	// recommendedHomeDir 定义放置 miniblog 服务配置的默认目录.
