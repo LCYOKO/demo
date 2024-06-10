@@ -7,7 +7,7 @@ import (
 )
 
 func TestError(t *testing.T) {
-  fmt.Println(throw())
+	fmt.Printf("%+v", throw())
 }
 
 func throw() error {
