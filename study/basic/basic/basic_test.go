@@ -43,13 +43,22 @@ func TestIfCase(t *testing.T) {
 	fmt.Println(score)
 }
 
+func TestIfCase2(t *testing.T) {
+	if a := 1; false {
+	} else if b := 2; false {
+	} else if c := 3; false {
+	} else {
+		println(a, b, c)
+	}
+}
+
 func TestIfCase1(t *testing.T) {
 	//a := 5
 	if a := 12; a > 12 {
-
 	} else {
 		fmt.Println(a)
 	}
+	//fmt.Println(a)
 }
 
 func TestSwitch(t *testing.T) {
@@ -114,4 +123,21 @@ func modifyString(str string) string {
 	var strRune = []rune(str)
 	strRune[0] = '刘'
 	return string(strRune)
+}
+
+func TestForEach(t *testing.T) {
+	var a = [5]int{1, 2, 3, 4, 5}
+	var r [5]int
+
+	fmt.Println("original a =", a)
+	for i, v := range a {
+		if i == 0 {
+			a[1] = 12
+			a[2] = 13
+		}
+		r[i] = v
+	}
+
+	fmt.Println("after for range loop, r =", r)
+	fmt.Println("after for range loop, a =", a)
 }
