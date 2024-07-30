@@ -27,16 +27,20 @@ func TestSlice(t *testing.T) {
 	var n = 3
 	dp := make([][]int, n)
 	for i := 0; i < len(dp); i++ {
+		dp[i] = make([]int, 5)
 		fmt.Println(dp[i][0])
 	}
+}
+func TestSlice1(t *testing.T) {
+	var sl1 []int
+	sl1 = append(sl1, 1)
+	fmt.Println(sl1[0])
 }
 
 func TestMap(t *testing.T) {
 	m := make(map[string]int)
-
 	m["k1"] = 7
 	m["k2"] = 13
-
 	fmt.Println("map:", m)
 
 	v1 := m["k1"]
@@ -58,11 +62,6 @@ func TestMap(t *testing.T) {
 
 	n := map[string]int{"foo": 1, "bar": 2}
 	fmt.Println("map:", n)
-
-	//	n2 := map[string]int{"foo": 1, "bar": 2}
-	//	if maps.Equal(n, n2) {
-	//		fmt.Println("n == n2")
-	//	}
 }
 
 func TestMap1(t *testing.T) {
@@ -79,4 +78,60 @@ func TestMap1(t *testing.T) {
 
 func modifyArray(arr *[3]int) {
 	arr[0] = 100
+}
+
+type I interface {
+	M()
+}
+
+type T struct {
+}
+
+func (T) M() {
+}
+
+func TestSwitch1(t1 *testing.T) {
+	//var t T
+	//var i I = t
+	//switch i.(type) {
+	//case T:
+	//	println("it is type T")
+	//case int:
+	//	println("it is type int")
+	//case string:
+	//	println("it is type string")
+	//}
+}
+
+func TestSwitch2(t *testing.T) {
+	var x interface{} = 13
+	switch v := x.(type) {
+	case nil:
+		println("v is nil")
+	case int:
+		println("the type of v is int, v =", v)
+	case string:
+		println("the type of v is string, v =", v)
+	case bool:
+		println("the type of v is bool, v =", v)
+	default:
+		println("don't support the type")
+	}
+}
+
+type Book struct {
+	Title   string         // 书名
+	Pages   int            // 书的页数
+	Indexes map[string]int // 书的索引
+}
+
+func (b Book) sayTitle() {
+	fmt.Println(b.Title)
+}
+
+func TestEmpty(t *testing.T) {
+	var book Book
+	book.Title = "123"
+	book.sayTitle()
+	fmt.Println(book)
 }
