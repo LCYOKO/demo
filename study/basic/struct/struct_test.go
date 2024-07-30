@@ -70,3 +70,33 @@ func TestJson(t *testing.T) {
 	}
 	fmt.Println(string(jsonStr))
 }
+
+type UserSvc interface {
+	sayHello()
+	sayName()
+}
+
+type AbsSvc struct {
+	Name string
+}
+
+func (a *AbsSvc) sayHello() {
+	fmt.Println("sayHello")
+}
+func (a *AbsSvc) sayName() {
+	fmt.Println(a.Name)
+}
+
+type UserSvcImpl struct {
+	*AbsSvc
+}
+
+func (u *UserSvcImpl) sayHello() {
+	fmt.Println("override sayHello")
+}
+
+func TestAbs(t *testing.T) {
+	var u UserSvc = &UserSvcImpl{&AbsSvc{Name: "abs"}}
+	u.sayName()
+	u.sayHello()
+}
