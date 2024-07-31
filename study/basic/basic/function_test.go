@@ -115,3 +115,18 @@ func TestPanic(t *testing.T) {
 	}()
 	panic("panic in B")
 }
+
+func TestFun1(t *testing.T) {
+
+}
+
+func myAppend(sl []int, elems ...int) []int {
+	fmt.Printf("%T\n", elems)
+	if len(elems) == 0 {
+		println("no elems to append")
+		return sl
+	}
+
+	sl = append(sl, elems...)
+	return sl
+}

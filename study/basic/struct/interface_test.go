@@ -16,6 +16,10 @@ type testStruct1 struct {
 	testInterface1
 }
 
+func Test()  {
+
+}
+
 func TestMethodSet(t *testing.T) {
 	var struct1 = &testStruct1{}
 	struct1.M1()
@@ -118,7 +122,7 @@ func TestError1(t *testing.T) {
 
 func TestError2(t *testing.T) {
 	// 使用pkg.errors打印当前的协程栈
-	fmt.Println(createError())
+	fmt.Printf("%+v", createError())
 }
 
 func createError() error {
