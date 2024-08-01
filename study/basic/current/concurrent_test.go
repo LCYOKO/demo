@@ -64,6 +64,13 @@ func TestChannel4(t *testing.T) {
 	}
 }
 
+func TestChannel5(t *testing.T) {
+	ch := make(chan int)
+	fmt.Println(ch == nil)
+	close(ch)
+	fmt.Println(ch == nil)
+}
+
 func TestChannelCancel(t *testing.T) {
 	wg := sync.WaitGroup{}
 	wg.Add(5)

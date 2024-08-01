@@ -10,12 +10,22 @@ import (
 	"strings"
 )
 
+type HttpResponse struct {
+	Status  int
+	Headers map[string]string
+	data    interface{}
+}
+
+func (r HttpResponse) toBytesBuffer() []byte {
+	return []byte{}
+}
+
 func process(conn net.Conn) {
 	defer conn.Close()
 	for {
 		reader := bufio.NewReader(conn)
-		var buf [128]byte
-		n, err := reader.Read(buf[:]) // 读取数据
+		var buf = make([]byte, 128)
+		n, err := reader.Read(buf) // 读取数据
 		if err != nil {
 			fmt.Println("read from client failed, err:", err)
 			break
