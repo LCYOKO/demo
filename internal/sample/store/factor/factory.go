@@ -1,16 +1,21 @@
-package store
+package factor
 
 import (
+	"demo/internal/sample/store"
+	"demo/internal/sample/store/memorystore"
 	"fmt"
 	"sync"
 )
 
 var (
 	providersMu sync.RWMutex
-	providers   = make(map[string]BookStore)
+	providers   = make(map[string]store.BookStore)
 )
 
-func Register(name string, p BookStore) {
+func init() {
+	Register("memo", memorystore.NewStore())
+}
+func Register(name string, p store.BookStore) {
 	providersMu.Lock()
 	defer providersMu.Unlock()
 	if p == nil {
@@ -21,7 +26,7 @@ func Register(name string, p BookStore) {
 	}
 	providers[name] = p
 }
-func New(providerName string) (BookStore, error) {
+func New(providerName string) (store.BookStore, error) {
 	providersMu.RLock()
 	p, ok := providers[providerName]
 	providersMu.RUnlock()
