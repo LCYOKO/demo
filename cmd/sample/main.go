@@ -13,6 +13,7 @@ import (
 	"time"
 )
 
+//Package
 func main() {
 	s, err := factor.New("memo")
 	log.Println("s", s)
