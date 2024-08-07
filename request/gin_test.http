@@ -4,3 +4,34 @@ Content-Type: application/x-www-form-urlencoded
 user=lisi
 
 ###
+POST http://localhost:8080/post
+Content-Type: application/x-www-form-urlencoded
+
+username=zhangsan&address=wuhan
+
+###
+POST http://localhost:8080/json
+Content-Type: application/json
+
+{
+    "username": "lisi",
+    "address": "nanchang"
+}
+
+###
+GET http://localhost:8080/user/search/zhangsan/beijing
+
+###
+POST http://localhost:8080/loginJSON
+Content-Type: application/json
+
+{
+  "user": "zhangsan",
+  "password": "123"
+}
+
+###
+POST http://localhost:8080/loginForm?user=zhangsan&password=123
+Content-Type: application/x-www-form-urlencoded
+
+#user=zhangsan&password=123

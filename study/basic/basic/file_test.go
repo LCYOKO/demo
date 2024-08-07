@@ -8,8 +8,9 @@ import (
 	"testing"
 )
 
-func TestIoRead(t  *testing.T)  {
-
+func TestIoRead(t *testing.T) {
+	//testBufferIoWriter("test.txt")
+	testBufferIoRead("test.txt")
 }
 
 func testBufferIoRead(filePath string) {
@@ -18,14 +19,7 @@ func testBufferIoRead(filePath string) {
 		fmt.Println("open file failed, err:", err)
 		return
 	}
-	defer func(file *os.File) {
-		err := file.Close()
-		if err != nil {
-			fmt.Println("close file failed, fileName:", filePath, err)
-			return
-		}
-		fmt.Println("close file failed, fileName:", filePath, err)
-	}(file)
+	defer file.Close()
 	reader := bufio.NewReader(file)
 	for {
 		line, err := reader.ReadString('\n') //注意是字符
@@ -45,6 +39,7 @@ func testBufferIoRead(filePath string) {
 }
 
 func testBufferIoWriter(filePath string) {
+	//perm：文件权限，一个八进制数。r（读）04，w（写）02，x（执行）01。
 	file, err := os.OpenFile(filePath, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0666)
 	if err != nil {
 		fmt.Println("open file failed, err:", err)
@@ -62,5 +57,21 @@ func testBufferIoWriter(filePath string) {
 	if err != nil {
 		fmt.Println("close writer failed. filePath:", filePath)
 		return
+	}
+}
+
+// cat命令实现
+func cat(r *bufio.Reader) {
+	for {
+		buf, err := r.ReadBytes('\n') //注意是字符
+		if err == io.EOF {
+			// 退出之前将已读到的内容输出
+			_, err2 := fmt.Fprintf(os.Stdout, "%s", buf)
+			if err2 != nil {
+				return
+			}
+			break
+		}
+		fmt.Fprintf(os.Stdout, "%s", buf)
 	}
 }

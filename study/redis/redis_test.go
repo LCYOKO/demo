@@ -1,10 +1,12 @@
 package redis
 
+// https://redis.uptrace.dev/zh/ 官方文档
 import (
 	"context"
 	"fmt"
 	"github.com/pkg/errors"
 	"github.com/redis/go-redis/v9"
+	"os"
 	"testing"
 	"time"
 )
@@ -15,11 +17,12 @@ var ClusterClient *redis.ClusterClient
 
 func initNormal() {
 	Cli = redis.NewClient(&redis.Options{
-		Addr:     "114.55.147.178:6379",
+		Addr:     "127.0.0.1:6379",
 		Password: "", // 密码
 		DB:       0,  // 数据库
 		PoolSize: 20, // 连接池大小
 	})
+	Cli.Ping(context.Background())
 }
 
 func initSentinel() {
@@ -39,8 +42,15 @@ func initCluster() {
 	})
 }
 
-func TestNormal(t *testing.T) {
+func TestMain(m *testing.M) {
 	initNormal()
+	initSentinel()
+	initCluster()
+	run := m.Run()
+	os.Exit(run)
+}
+
+func TestNormal(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
 	defer cancel()
 
@@ -100,4 +110,69 @@ func getValueFromRedis(key, defaultValue string) (string, error) {
 		return "", err
 	}
 	return val, nil
+}
+
+func TestZset(t *testing.T) {
+	// key
+	zsetKey := "language_rank"
+	// value
+	// 注意：v8版本使用[]*redis.Z；此处为v9版本使用[]redis.Z
+	languages := []redis.Z{
+		{Score: 90.0, Member: "Golang"},
+		{Score: 98.0, Member: "Java"},
+		{Score: 95.0, Member: "Python"},
+		{Score: 97.0, Member: "JavaScript"},
+		{Score: 99.0, Member: "C/C++"},
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
+	defer cancel()
+
+	// ZADD
+	err := Cli.ZAdd(ctx, zsetKey, languages...).Err()
+	if err != nil {
+		fmt.Printf("zadd failed, err:%v\n", err)
+		return
+	}
+	fmt.Println("zadd success")
+
+	// 把Golang的分数加10
+	newScore, err := Cli.ZIncrBy(ctx, zsetKey, 10.0, "Golang").Result()
+	if err != nil {
+		fmt.Printf("zincrby failed, err:%v\n", err)
+		return
+	}
+	fmt.Printf("Golang's score is %f now.\n", newScore)
+
+	// 取分数最高的3个
+	ret := Cli.ZRevRangeWithScores(ctx, zsetKey, 0, 2).Val()
+	for _, z := range ret {
+		fmt.Println(z.Member, z.Score)
+	}
+
+	// 取95~100分的
+	op := &redis.ZRangeBy{
+		Min: "95",
+		Max: "100",
+	}
+	ret, err = Cli.ZRangeByScoreWithScores(ctx, zsetKey, op).Result()
+	if err != nil {
+		fmt.Printf("zrangebyscore failed, err:%v\n", err)
+		return
+	}
+	for _, z := range ret {
+		fmt.Println(z.Member, z.Score)
+	}
+}
+
+func TestScan(t *testing.T) {
+	ctx, cancel := context.WithTimeout(context.Background(), 500*time.Millisecond)
+	defer cancel()
+	// 按前缀扫描key
+	iter := Cli.Scan(ctx, 0, "prefix:*", 0).Iterator()
+	for iter.Next(ctx) {
+		fmt.Println("keys", iter.Val())
+	}
+	if err := iter.Err(); err != nil {
+		panic(err)
+	}
 }

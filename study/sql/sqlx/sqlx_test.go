@@ -1,4 +1,4 @@
-package sql
+package sqlx
 
 import (
 	"fmt"
@@ -103,7 +103,7 @@ func TestBatchInsert(t *testing.T) {
 	)
 	fmt.Println(query)
 	fmt.Println(args)
-	_, err := db.Exec(query, args...)
+	db.Exec(query, args...)
 }
 
 func TestBatchInsert2(t *testing.T) {
