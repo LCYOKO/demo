@@ -137,7 +137,12 @@ func TestForEach(t *testing.T) {
 		}
 		r[i] = v
 	}
-
 	fmt.Println("after for range loop, r =", r)
 	fmt.Println("after for range loop, a =", a)
+}
+
+func Test11(t *testing.T) {
+	s1 := fmt.Sprint("沙河小王子")
+	fmt.Println(s1)
+	fmt.Formatter()
 }
