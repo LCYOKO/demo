@@ -2,6 +2,8 @@ package current
 
 import (
 	"fmt"
+	"golang.org/x/sync/errgroup"
+	"net/http"
 	"runtime"
 	"sync"
 	"testing"
@@ -64,13 +66,6 @@ func TestChannel4(t *testing.T) {
 	}
 }
 
-func TestChannel5(t *testing.T) {
-	ch := make(chan int)
-	fmt.Println(ch == nil)
-	close(ch)
-	fmt.Println(ch == nil)
-}
-
 func TestChannelCancel(t *testing.T) {
 	wg := sync.WaitGroup{}
 	wg.Add(5)
@@ -109,6 +104,7 @@ func TestChannelError1(t *testing.T) {
 				// 这里假设对接收的数据执行某些操作
 				fmt.Println(task)
 			}
+			//FIXME
 			wg.Done()
 		}()
 	}
@@ -192,15 +188,14 @@ func do(wf, rf func(), wc, rc int) {
 	fmt.Printf("x:%v cost:%v\n", x, cost)
 }
 
-func testMutex() {
+func TestMutex(t *testing.T) {
 	// 使用互斥锁，10并发写，1000并发读
 	do(writeWithLock, readWithLock, 10, 1000) // x:10 cost:1.466500951s
-
 	// 使用读写互斥锁，10并发写，1000并发读
 	do(writeWithRWLock, readWithRWLock, 10, 1000) // x:10 cost:117.207592ms
 }
 
-func testOnce() {
+func TestOnce(t *testing.T) {
 	num := 10
 	group := sync.WaitGroup{}
 	group.Add(num)
@@ -220,51 +215,107 @@ var instance *singleton
 var once sync.Once
 
 func GetInstance() *singleton {
-	//once.Do(func() {
-	//	instance = &singleton{}
-	//})
-	//if nil != instance {
-	//	return instance
-	//} else {
-	//	instance = &singleton{}
-	//}
-	return &singleton{}
-}
-
-func TestErrorGroup(t *testing.T) {
-	//g := new(errgroup.Group) // 创建等待组（类似sync.WaitGroup）
-	//var urls = []string{
-	//	"http://pkg.go.dev",
-	//	"http://www.liwenzhou.com",
-	//	"http://www.yixieqitawangzhi.com",
-	//}
-	//for _, url := range urls {
-	//	url := url // 注意此处声明新的变量
-	//	// 启动一个goroutine去获取url内容
-	//	g.Go(func() error {
-	//		resp, err := http.Get(url)
-	//		if err == nil {
-	//			fmt.Printf("获取%s成功\n", url)
-	//			resp.Body.Close()
-	//		}
-	//		return err // 返回错误
-	//	})
-	//}
-	//if err := g.Wait(); err != nil {
-	//	// 处理可能出现的错误
-	//	fmt.Println(err)
-	//	return err
-	//}
-	//fmt.Println("所有goroutine均成功")
-	//return nil
+	once.Do(func() {
+		instance = &singleton{}
+	})
+	return instance
 }
 
 func TestCurrent1(t *testing.T) {
 	runtime.GOMAXPROCS(1)
 	for i := 1; i < 10; i++ {
 		go func() {
+			//FIXME
 			fmt.Println("A", i)
 		}()
 	}
 	time.Sleep(time.Hour)
 }
+
+func TestErrorGroup(t *testing.T) {
+	g := new(errgroup.Group) // 创建等待组（类似sync.WaitGroup）
+	var urls = []string{
+		"http://pkg.go.dev",
+		"http://www.liwenzhou.com",
+		"http://www.yixieqitawangzhi.com",
+	}
+	for _, url := range urls {
+		url := url // 注意此处声明新的变量
+		// 启动一个goroutine去获取url内容
+		g.Go(func() error {
+			resp, err := http.Get(url)
+			if err == nil {
+				fmt.Printf("获取%s成功\n", url)
+				resp.Body.Close()
+			}
+			return err // 返回错误
+		})
+	}
+	if err := g.Wait(); err != nil {
+		// 处理可能出现的错误
+		fmt.Println(err)
+		return
+	}
+	fmt.Println("所有goroutine均成功")
+}
+
+//func GetFriends(ctx context.Context, user int64) (map[string]*User, error) {
+//	g, ctx := errgroup.WithContext(ctx)
+//	friendIds := make(chan int64)
+//
+//	// Produce
+//	g.Go(func() error {
+//		defer close(friendIds)
+//		for it := GetFriendIds(user); ; {
+//			if id, err := it.Next(ctx); err != nil {
+//				if err == io.EOF {
+//					return nil
+//				}
+//				return fmt.Errorf("GetFriendIds %d: %s", user, err)
+//			} else {
+//				select {
+//				case <-ctx.Done():
+//					return ctx.Err()
+//				case friendIds <- id:
+//				}
+//			}
+//		}
+//	})
+//
+//	friends := make(chan *User)
+//
+//	// Map
+//	workers := int32(nWorkers)
+//	for i := 0; i < nWorkers; i++ {
+//		g.Go(func() error {
+//			defer func() {
+//				// Last one out closes shop
+//				if atomic.AddInt32(&workers, -1) == 0 {
+//					close(friends)
+//				}
+//			}()
+//
+//			for id := range friendIds {
+//				if friend, err := GetUserProfile(ctx, id); err != nil {
+//					return fmt.Errorf("GetUserProfile %d: %s", user, err)
+//				} else {
+//					select {
+//					case <-ctx.Done():
+//						return ctx.Err()
+//					case friends <- friend:
+//					}
+//				}
+//			}
+//			return nil
+//		})
+//	}
+//	// Reduce
+//	ret := map[string]*User{}
+//	g.Go(func() error {
+//		for friend := range friends {
+//			ret[friend.Name] = friend
+//		}
+//		return nil
+//	})
+//	return ret, g.Wait()
+//}

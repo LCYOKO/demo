@@ -1,5 +1,7 @@
 package conf
 
+// https://github.com/spf13/viper/blob/master/README.md
+// https://liwenzhou.com/posts/Go/viper/
 import (
 	"fmt"
 	"github.com/spf13/viper"
@@ -50,6 +52,7 @@ func TestParseConfig1(t *testing.T) {
 			// 配置文件被找到，但产生了另外的错误
 		}
 	}
-	var Config = new(Config)
-	viper.Unmarshal(Config)
+	var conf Config
+	viper.Unmarshal(&conf)
+	fmt.Println(conf)
 }

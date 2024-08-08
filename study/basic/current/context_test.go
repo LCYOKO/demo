@@ -15,6 +15,7 @@ LOOP:
 		time.Sleep(time.Second)
 		select {
 		case <-ctx.Done(): // 等待上级通知
+			fmt.Println("worker over")
 			break LOOP
 		default:
 		}
@@ -29,6 +30,7 @@ LOOP:
 		time.Sleep(time.Second)
 		select {
 		case <-ctx.Done(): // 等待上级通知
+			fmt.Println("worker2 over")
 			break LOOP
 		default:
 		}
@@ -56,7 +58,7 @@ func TestTimeout(t *testing.T) {
 	}
 }
 
-func TestDeadLien(t *testing.T) {
+func TestDeadLine(t *testing.T) {
 	ctx, cancelFunc := context.WithDeadline(context.Background(), time.Now().Add(time.Millisecond*5))
 	defer cancelFunc()
 	select {
@@ -68,5 +70,10 @@ func TestDeadLien(t *testing.T) {
 }
 
 func TestWithValue(t *testing.T) {
+	ctx := context.WithValue(context.Background(), "traceId", "v1")
+	test1(ctx)
+}
 
+func test1(c context.Context) {
+	fmt.Println(c.Value("traceId"))
 }

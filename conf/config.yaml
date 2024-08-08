@@ -1,4 +1,4 @@
-AppName: moment-svc
+appName: moment-svc
 PprofPort: 5557
 Model: release
 

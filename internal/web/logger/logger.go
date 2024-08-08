@@ -5,6 +5,8 @@ import (
 	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"io"
+	"os"
 )
 
 var (
@@ -47,5 +49,6 @@ func getLogWriter(cfg *conf2.Log) zapcore.WriteSyncer {
 		MaxBackups: cfg.MaxBackups,
 		MaxAge:     cfg.MaxAge,
 	}
-	return zapcore.AddSync(lumberJackLogger)
+	ws := io.MultiWriter(lumberJackLogger, os.Stdout)
+	return zapcore.AddSync(ws)
 }

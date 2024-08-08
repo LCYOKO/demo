@@ -5,6 +5,8 @@ go 1.19
 require (
 	github.com/casbin/casbin/v2 v2.58.0
 	github.com/casbin/gorm-adapter/v3 v3.13.0
+	github.com/fsnotify/fsnotify v1.7.0
+	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-contrib/cors v1.7.2
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-sql-driver/mysql v1.6.0
@@ -24,6 +26,7 @@ require (
 	github.com/stretchr/testify v1.9.0
 	go.uber.org/zap v1.21.0
 	golang.org/x/crypto v0.22.0
+	golang.org/x/sync v0.5.0
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.34.0
 	gorm.io/driver/mysql v1.4.4
@@ -42,7 +45,6 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fatih/color v1.14.1 // indirect
-	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/glebarez/go-sqlite v1.19.1 // indirect
