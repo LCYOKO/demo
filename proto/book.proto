@@ -1,27 +1,37 @@
 syntax = "proto3";
 package book;
 
-option go_package = "com.xiaomi";
+option go_package = "pb/book";
 
-
-enum ResponseCode{
+import "google/protobuf/wrappers.proto";
+// 引入google/protobuf/timestamp.proto文件
+import "google/protobuf/timestamp.proto";
+message Book{
+  int64 id = 1;
+  string name = 2;
+}
+enum Status{
+  //成功
   SUCCESS = 0;
-  NOT_FOUND = 1;
-  INTER_ERROR = 2;
+  FAILED = 1;
+  DEAD = 2;
 }
 
 
 message BookRequest{
-  string name = 1;
-  int64 id = 2;
+  int64 id = 1;
+  optional google.protobuf.StringValue name = 2;
 }
 
 message BookResponse{
-  string name = 1;
-  string message = 2;
-  ResponseCode code = 3;
+  repeated Book books = 1;
+  Status status = 2;
+  map<string, Book> bookMap = 3;
 }
 
-service BookService {
-  rpc getBook(BookRequest) returns(BookResponse){};
+service BookService{
+  rpc getBooks1(BookRequest) returns(BookResponse);
+  rpc getBooks2(BookRequest) returns(stream BookResponse);
+  rpc getBooks3(stream BookRequest) returns(BookResponse);
+  rpc getBooks4(stream BookRequest) returns(stream BookResponse);
 }
