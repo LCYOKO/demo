@@ -9,10 +9,12 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"testing"
 	"time"
 )
+
 // https://www.liwenzhou.com/posts/Go/graceful-shutdown/
-func testGracefulShutdown() {
+func TestGracefulShutdown(t *testing.T) {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
 		time.Sleep(5 * time.Second)
@@ -51,7 +53,7 @@ func testGracefulShutdown() {
 	log.Println("Server exiting")
 }
 
-func testGracefulRestart() {
+func TestGracefulRestart(t *testing.T) {
 	router := gin.Default()
 	router.GET("/", func(c *gin.Context) {
 		time.Sleep(5 * time.Second)
