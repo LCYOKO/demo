@@ -1,17 +1,13 @@
 syntax = "proto3";
 package book;
-
 option go_package = "pb/book";
-
 import "google/protobuf/wrappers.proto";
-// 引入google/protobuf/timestamp.proto文件
-import "google/protobuf/timestamp.proto";
+
 message Book{
   int64 id = 1;
   string name = 2;
 }
 enum Status{
-  //成功
   SUCCESS = 0;
   FAILED = 1;
   DEAD = 2;
