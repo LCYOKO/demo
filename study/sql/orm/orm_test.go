@@ -53,7 +53,7 @@ func TestQuery(t *testing.T) {
 	db.Find(user, 1)
 	fmt.Println(user)
 	users := make([]User, 3)
-	result := db.Find(users, []int{1, 2, 3})
+	result := db.Find(users, []int{1, 2})
 	fmt.Println(users, result)
 }
 
