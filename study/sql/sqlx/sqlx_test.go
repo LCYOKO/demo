@@ -1,36 +1,40 @@
 package sqlx
 
 import (
+	"database/sql"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"testing"
 )
 
+type User struct {
+	Id         int64
+	Name       string
+	Age        int
+	CreateTime sql.NullTime `db:"create_time"`
+	UpdateTime sql.NullTime `db:"update_time"`
+}
+
 var db *sqlx.DB
 
-func initDB() {
-	var err error
-	dsn := "user:password@tcp(114.55.147.178:33060)/test?charset=utf8mb4&parseTime=True"
-	// 也可以使用MustConnect连接不成功就panic
-	db, err = sqlx.Connect("mysql", dsn)
-	if err != nil {
-		fmt.Printf("connect DB failed, err:%v\n", err)
-		panic("connect sql error")
-	}
+func setup() {
+	dsn := "root:lcyoko123@tcp(localhost:33060)/users?charset=utf8mb4&parseTime=True"
+	db = sqlx.MustConnect("mysql", dsn)
 	db.SetMaxOpenConns(20)
 	db.SetMaxIdleConns(10)
 }
 
 func TestQuery(t *testing.T) {
-	initDB()
-	sqlStr := "select id, name, age from user where id=?"
+	setup()
+	sqlStr := "select * from user where id=?"
 	var u User
 	err := db.Get(&u, sqlStr, 1)
 	if err != nil {
 		fmt.Printf("get failed, err:%v\n", err)
 		return
 	}
+	fmt.Printf("time: %v\n", u.CreateTime)
 	fmt.Printf("user%#v\n", u)
 	//--------------------------
 	sqlStr = "select id, name, age from user where id > ?"
@@ -44,7 +48,8 @@ func TestQuery(t *testing.T) {
 }
 
 func TestInsert(t *testing.T) {
-	initDB()
+	setup()
+
 	sqlStr := "insert into user(name, age) values (?,?)"
 	ret, err := db.Exec(sqlStr, "沙河小王子", 19)
 	if err != nil {
@@ -90,7 +95,7 @@ func TestUpdate(t *testing.T) {
 }
 
 func TestBatchInsert(t *testing.T) {
-	initDB()
+	setup()
 
 	users := []interface{}{
 		User{Name: "七米", Age: 18},
@@ -99,7 +104,8 @@ func TestBatchInsert(t *testing.T) {
 	}
 	query, args, _ := sqlx.In(
 		"INSERT INTO user (name, age) VALUES (?), (?), (?)",
-		users..., // 如果arg实现了 driver.Valuer, sqlx.In 会通过调用 Value()来展开它
+		//sql.NullTime
+		users...,
 	)
 	fmt.Println(query)
 	fmt.Println(args)
@@ -107,7 +113,7 @@ func TestBatchInsert(t *testing.T) {
 }
 
 func TestBatchInsert2(t *testing.T) {
-	initDB()
+	setup()
 	users := []User{
 		{
 
@@ -122,7 +128,7 @@ func TestBatchInsert2(t *testing.T) {
 	}
 }
 
-func QueryByIDs(ids []int) (users []User, err error) {
+func QueryByIds(ids []int) (users []User, err error) {
 	// 动态填充id
 	query, args, err := sqlx.In("SELECT name, age FROM user WHERE id IN (?)", ids)
 	if err != nil {
@@ -151,7 +157,8 @@ func TestTransactionDemo2(t *testing.T) {
 			// err is non-nil; don't change it
 			_ = tx.Rollback()
 		} else {
-			err = tx.Commit() // err is nil; if Commit returns error update err
+			// err is nil; if Commit returns error update err
+			err = tx.Commit()
 			fmt.Println("commit")
 		}
 	}()
@@ -181,10 +188,4 @@ func TestTransactionDemo2(t *testing.T) {
 	if n != 1 {
 		return
 	}
-}
-
-type User struct {
-	Id   int64
-	Name string
-	Age  int
 }

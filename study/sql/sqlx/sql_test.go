@@ -7,20 +7,14 @@ import (
 	"testing"
 )
 
-// 定义一个全局对象db
 var mysqlDb *sql.DB
 
-// 定义一个初始化数据库的函数
 func setSqlUp() (err error) {
-	// DSN:Data Source Name
 	dsn := "root:lcyoko123@tcp(localhost:33060)/users?charset=utf8mb4&parseTime=True"
-	// 不会校验账号密码是否正确
-	// 注意！！！这里不要使用:=，我们是给全局变量赋值，然后在main函数中使用全局变量db
 	mysqlDb, err = sql.Open("mysql", dsn)
 	if err != nil {
 		return err
 	}
-	// 尝试与数据库建立连接（校验dsn是否正确）
 	err = mysqlDb.Ping()
 	if err != nil {
 		return err
@@ -35,14 +29,22 @@ type user struct {
 }
 
 func TestMain(m *testing.M) {
-	setSqlUp()
+	err := setSqlUp()
+	if err != nil {
+		fmt.Printf("create datasource failed err: %v\n", err)
+		return
+	}
 	run := m.Run()
 	os.Exit(run)
 }
 
 func TestSqlQueryOne(t *testing.T) {
 	var usr user
-	mysqlDb.QueryRow("select * from user where id=?", 1).Scan(&usr.Id, &usr.Name, &usr.Age)
+	err := mysqlDb.QueryRow("select * from user where id=?", 1).Scan(&usr.Id, &usr.Name, &usr.Age)
+	if err != nil {
+		fmt.Printf("query failed. err:%v\n", err)
+		return
+	}
 	fmt.Printf("user:%+v", usr)
 }
 
@@ -184,6 +186,5 @@ func TestTxt(t *testing.T) {
 		tx.Rollback()
 		fmt.Println("事务回滚啦...")
 	}
-
 	fmt.Println("exec trans success!")
 }
