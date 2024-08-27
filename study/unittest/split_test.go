@@ -24,8 +24,6 @@ func TestSplitWithComplexSep(t *testing.T) {
 
 func TestSplitAll(t *testing.T) {
 	// 定义测试表格
-	// 这里使用匿名结构体定义了若干个测试用例
-	// 并且为每个测试用例设置了一个名称
 	tests := []struct {
 		name  string
 		input string
@@ -63,27 +61,29 @@ func setupSubTest(t *testing.T) func(t *testing.T) {
 }
 
 func TestSplitMore(t *testing.T) {
-	type test struct { // 定义test结构体
+	type test struct {
 		input string
 		sep   string
 		want  []string
 	}
-	tests := map[string]test{ // 测试用例使用map存储
+	tests := map[string]test{
 		"simple":      {input: "a:b:c", sep: ":", want: []string{"a", "b", "c"}},
 		"wrong sep":   {input: "a:b:c", sep: ",", want: []string{"a:b:c"}},
 		"more sep":    {input: "abcd", sep: "bc", want: []string{"a", "d"}},
 		"leading sep": {input: "沙河有沙又有河", sep: "沙", want: []string{"", "河有", "又有河"}},
 	}
-	teardownTestCase := setupTestCase(t) // 测试之前执行setup操作
-	defer teardownTestCase(t)            // 测试之后执行testdoen操作
+	teardownTestCase := setupTestCase(t)
+	defer teardownTestCase(t)
 
 	for name, tc := range tests {
-		t.Run(name, func(t *testing.T) { // 使用t.Run()执行子测试
-			teardownSubTest := setupSubTest(t) // 子测试之前执行setup操作
-			defer teardownSubTest(t)           // 测试之后执行testdoen操作
+		t.Run(name, func(t *testing.T) {
+			// 子测试之前执行setUp操作
+			teardownSubTest := setupSubTest(t)
+			// 测试之后执行testDown操作
+			defer teardownSubTest(t)
 			got := Split(tc.input, tc.sep)
 			if !reflect.DeepEqual(got, tc.want) {
-				t.Errorf("expected:%#v, got:%#v", tc.want, got)
+				assert.Equal(t, got, tc.want)
 			}
 		})
 	}

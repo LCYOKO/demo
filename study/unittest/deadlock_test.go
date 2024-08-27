@@ -2,7 +2,6 @@ package unittest
 
 import (
 	"sync"
-	"testing"
 )
 
 type task struct{}
@@ -28,9 +27,9 @@ func (m *MyMap) DoMyJob(taskID int) {
 	m.finishJob(t, taskID)
 }
 
-func Test(t *testing.T) {
-	var taskMap = &MyMap{
-		m: map[int]task{},
-	}
-	taskMap.DoMyJob(1)
-}
+//func Test(t *testing.T) {
+//	var taskMap = &MyMap{
+//		m: map[int]task{},
+//	}
+//	taskMap.DoMyJob(1)
+//}

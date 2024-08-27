@@ -3,10 +3,10 @@ module demo
 go 1.19
 
 require (
+	bou.ke/monkey v1.0.2
 	github.com/casbin/casbin/v2 v2.58.0
 	github.com/casbin/gorm-adapter/v3 v3.13.0
 	github.com/fsnotify/fsnotify v1.7.0
-	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-contrib/cors v1.7.2
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-sql-driver/mysql v1.6.0
@@ -20,7 +20,9 @@ require (
 	github.com/marmotedu/miniblog v1.0.0
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/shirou/gopsutil v3.21.11+incompatible
-	github.com/sirupsen/logrus v1.6.0
+	github.com/sirupsen/logrus v1.8.1
+	github.com/smartystreets/goconvey v1.8.1
+	github.com/sourcegraph/conc v0.3.0
 	github.com/spf13/cobra v1.6.1
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.9.0
@@ -29,6 +31,7 @@ require (
 	golang.org/x/sync v0.5.0
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.34.0
+	gopkg.in/h2non/gock.v1 v1.1.2
 	gorm.io/driver/mysql v1.4.4
 	gorm.io/gorm v1.24.2
 )
@@ -56,6 +59,8 @@ require (
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/gopherjs/gopherjs v1.17.2 // indirect
+	github.com/h2non/parth v0.0.0-20190131123155-b4df798d6542 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
@@ -69,8 +74,8 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.3 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
@@ -89,7 +94,7 @@ require (
 	github.com/rivo/uniseg v0.4.2 // indirect
 	github.com/sagikazarmark/locafero v0.4.0 // indirect
 	github.com/sagikazarmark/slog-shim v0.1.0 // indirect
-	github.com/sourcegraph/conc v0.3.0 // indirect
+	github.com/smarty/assertions v1.15.0 // indirect
 	github.com/spf13/afero v1.11.0 // indirect
 	github.com/spf13/cast v1.6.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect

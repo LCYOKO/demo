@@ -36,7 +36,6 @@ func NewCommand() *cobra.Command {
 		Long: `A good Go practical project, used to create user with basic information.
 Find more miniblog information at:
 	https://github.com/marmotedu/miniblog#readme`,
-
 		// 命令出错时，不打印帮助信息。不需要打印帮助信息，设置为 true 可以保持命令出错时一眼就能看到错误信息
 		SilenceUsage: true,
 		// 指定调用 cmd.Execute() 时，执行的 Run 函数，函数执行失败会返回错误信息
