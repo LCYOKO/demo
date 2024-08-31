@@ -2,7 +2,6 @@ package unittest
 
 import (
 	"bou.ke/monkey"
-	"demo/study/data"
 	"fmt"
 	"github.com/magiconair/properties/assert"
 	"os"
@@ -10,8 +9,17 @@ import (
 	"testing"
 )
 
+type UserInfo struct {
+	Name string
+}
+
+func GetInfoByUID(uid int64) (*UserInfo, error) {
+	return &UserInfo{
+		Name: "lisi",
+	}, nil
+}
 func MyFunc(uid int64) string {
-	u, err := data.GetInfoByUID(uid)
+	u, err := GetInfoByUID(uid)
 	if err != nil {
 		return "welcome"
 	}
@@ -24,8 +32,8 @@ func MyFunc(uid int64) string {
 // go test -run=TestMyFunc -v -gcflags=-l 注意需要避免内联优化
 func TestMyFunc(t *testing.T) {
 	// 对GetInfoByUID 进行打桩
-	monkey.Patch(data.GetInfoByUID, func(int64) (*data.UserInfo, error) {
-		return &data.UserInfo{Name: "liwenzhou"}, nil
+	monkey.Patch(GetInfoByUID, func(int64) (*UserInfo, error) {
+		return &UserInfo{Name: "liwenzhou"}, nil
 	})
 
 	ret := MyFunc(123)
