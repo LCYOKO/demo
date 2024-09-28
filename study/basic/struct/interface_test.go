@@ -16,10 +16,6 @@ type testStruct1 struct {
 	testInterface1
 }
 
-func Test()  {
-
-}
-
 func TestMethodSet(t *testing.T) {
 	var struct1 = &testStruct1{}
 	struct1.M1()

@@ -1,7 +1,6 @@
 package main
 
 // package
-//  hello
 import (
 	"context"
 	"demo/internal/sample/server"
@@ -13,7 +12,6 @@ import (
 	"time"
 )
 
-//Package
 func main() {
 	s, err := factor.New("memo")
 	log.Println("s", s)

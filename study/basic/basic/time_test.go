@@ -78,3 +78,13 @@ func TestTime4(t *testing.T) {
 	// 2022-10-05 11:25:20 +0800 CST
 	fmt.Println(timeObj)
 }
+
+func TestTimer(t *testing.T) {
+	timer := time.NewTimer(2 * time.Second)
+	time.Sleep(3 * time.Second)
+	<-timer.C
+	fmt.Println("timer fired")
+	timer.Reset(3 * time.Second)
+	<-timer.C
+	fmt.Println("timer fired")
+}

@@ -144,5 +144,4 @@ func TestForEach(t *testing.T) {
 func Test11(t *testing.T) {
 	s1 := fmt.Sprint("沙河小王子")
 	fmt.Println(s1)
-	fmt.Formatter()
 }

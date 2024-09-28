@@ -36,6 +36,17 @@ func TestReflectType(t *testing.T) {
 	reflectType(e) // type:book kind:struct
 }
 
+func TestSet1(t *testing.T) {
+	type book struct {
+		title string
+		price float64
+	}
+	b := &book{title: "Java", price: 5.33}
+	value := reflect.ValueOf(b)
+    fmt.Println(value)
+	value.Elem()
+}
+
 func reflectSetValue1(x interface{}) {
 	v := reflect.ValueOf(x)
 	if v.Kind() == reflect.Int64 {
