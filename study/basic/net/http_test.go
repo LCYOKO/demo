@@ -3,6 +3,8 @@ package net
 import (
 	"fmt"
 	"io"
+	"log"
+	"net"
 	"net/http"
 	"net/url"
 	"strings"
@@ -79,11 +81,22 @@ func TestPost(t *testing.T) {
 }
 
 func TestHttpClient(t *testing.T) {
-	//tr := &http.Transport{
-	//	DisableCompression: true,
-	//}
-	//client := &http.Client{Transport: tr}
-	//resp, err := client.Get("https://example.com")
+	//FIXME 注意线上一定不能使用默认的
+	client := &http.Client{
+		//RequestTimeout
+		Timeout: 5 * time.Second,
+		Transport: &http.Transport{
+			DialContext: (&net.Dialer{
+				Timeout: time.Second,
+			}).DialContext,
+			//TLS最大握手超时时间
+			TLSHandshakeTimeout: time.Second,
+			//最大响应时间
+			ResponseHeaderTimeout: time.Second,
+			MaxIdleConns:          10,
+		},
+	}
+	_ = client
 }
 
 type myHandler struct{}
@@ -101,4 +114,30 @@ func testHttpServer() {
 		MaxHeaderBytes: 1 << 20,
 	}
 	s.ListenAndServe()
+}
+
+func (h handler) getStatusCode2(body io.Reader) (int, error) {
+	resp, err := h.client.Post(h.url, "application/json", body)
+	if err != nil {
+		return 0, err
+	}
+
+	defer func() {
+		err := resp.Body.Close()
+		if err != nil {
+			log.Printf("failed to close response: %v\n", err)
+		}
+	}()
+	//需要注意的点：
+	//如果你没有读取Respose.Body的内容，那么默认的 http transport 会直接关闭连接
+	//如果你读取了Body的内容，下次连接可以直接复用
+	//在高并发的场景下，建议你使用长连接，可以调用 io.Copy(io.Discard, resp.Body) 读取Body的内容。
+	_, _ = io.Copy(io.Discard, resp.Body)
+
+	return resp.StatusCode, nil
+}
+
+type handler struct {
+	client http.Client
+	url    string
 }
