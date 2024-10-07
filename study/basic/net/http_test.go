@@ -121,7 +121,6 @@ func (h handler) getStatusCode2(body io.Reader) (int, error) {
 	if err != nil {
 		return 0, err
 	}
-
 	defer func() {
 		err := resp.Body.Close()
 		if err != nil {
@@ -133,7 +132,6 @@ func (h handler) getStatusCode2(body io.Reader) (int, error) {
 	//如果你读取了Body的内容，下次连接可以直接复用
 	//在高并发的场景下，建议你使用长连接，可以调用 io.Copy(io.Discard, resp.Body) 读取Body的内容。
 	_, _ = io.Copy(io.Discard, resp.Body)
-
 	return resp.StatusCode, nil
 }
 
