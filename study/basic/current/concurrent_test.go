@@ -319,3 +319,14 @@ func TestErrorGroup(t *testing.T) {
 //	})
 //	return ret, g.Wait()
 //}
+
+func TestSync(t *testing.T) {
+	//同步类型的值不能被拷贝,以下类型均不能被拷贝
+	//sync.Cond
+	//sync.Map
+	//sync.Mutex
+	//sync.RWMutex
+	//sync.Once
+	//sync.Pool
+	//sync.WaitGroup
+}
