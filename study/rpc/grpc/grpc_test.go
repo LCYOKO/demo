@@ -1,10 +1,12 @@
 package grpc
+
 //https://liwenzhou.com/posts/Go/gRPC/#c-0-7-7
 import (
 	"context"
 	book "demo/pb"
 	"fmt"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/metadata"
 	"io"
 	"net"
 	"sync"
@@ -17,7 +19,11 @@ type bookServer struct {
 }
 
 func (b *bookServer) GetBooks1(context context.Context, req *book.BookRequest) (resp *book.BookResponse, err error) {
-	fmt.Printf("recive req:%T", req)
+	md, ok := metadata.FromIncomingContext(context)
+	if !ok {
+		return nil, err
+	}
+	fmt.Printf("recive req:%T, md:%T", req, md)
 	return generateResp(), nil
 }
 func (b *bookServer) GetBooks2(req *book.BookRequest, s book.BookService_GetBooks2Server) error {

@@ -13,8 +13,29 @@ import (
 
 var c book.BookServiceClient
 
+type CustomerPerRPCCredentials struct {
+}
+
+func (c CustomerPerRPCCredentials) GetRequestMetadata(ctx context.Context, uri ...string) (map[string]string, error) {
+	return map[string]string{
+		"appId": "123",
+		"sign":  "123",
+	}, nil
+}
+
+func (c CustomerPerRPCCredentials) RequireTransportSecurity() bool {
+	return false
+}
+
+func (c CustomerPerRPCCredentials) name() {
+
+}
+
 func TestClient(t *testing.T) {
-	conn, err := grpc.Dial("localhost:6333", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	var opts []grpc.DialOption
+	opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	opts = append(opts, grpc.WithPerRPCCredentials(&CustomerPerRPCCredentials{}))
+	conn, err := grpc.Dial("localhost:6333", opts...)
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
