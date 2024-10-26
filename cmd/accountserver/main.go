@@ -10,18 +10,18 @@ import (
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	e := gin.Default()
-
 	e.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Hello World",
 		})
 	})
 	e.Use(cors.New(cors.Config{
-		AllowOrigins: []string{"https://foo.com"},
-		AllowMethods: []string{"PUT", "PATCH"},
-		AllowHeaders: []string{"Origin"},
-		ExposeHeaders: []string{"Content-Length"},
+		AllowOrigins:     []string{"https://foo.com"},
+		AllowMethods:     []string{"PUT", "PATCH"},
+		AllowHeaders:     []string{"Origin"},
+		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
 		AllowOriginFunc: func(origin string) bool {
 			return origin == "https://github.com"
@@ -29,8 +29,8 @@ func main() {
 		MaxAge: 12 * time.Hour,
 	}))
 	securityServer := http.Server{Addr: ":8888", Handler: e}
-	//securityServer.ListenAndServe()
-	securityServer.ListenAndServeTLS("conf/server.crt", "conf/server.key")
+	securityServer.ListenAndServe()
+	//securityServer.ListenAndServeTLS("conf/server.crt", "conf/server.key")
 }
 
 func runCmd() {
