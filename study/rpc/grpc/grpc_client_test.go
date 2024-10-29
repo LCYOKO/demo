@@ -18,7 +18,7 @@ type CustomerPerRPCCredentials struct {
 
 func (c CustomerPerRPCCredentials) GetRequestMetadata(ctx context.Context, uri ...string) (map[string]string, error) {
 	return map[string]string{
-		"appId": "123",
+		"id": "123",
 		"sign":  "123",
 	}, nil
 }
@@ -32,10 +32,7 @@ func (c CustomerPerRPCCredentials) name() {
 }
 
 func TestClient(t *testing.T) {
-	var opts []grpc.DialOption
-	opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
-	opts = append(opts, grpc.WithPerRPCCredentials(&CustomerPerRPCCredentials{}))
-	conn, err := grpc.Dial("localhost:6333", opts...)
+	conn, err := grpc.Dial("localhost:8999", getGrpcOpts()...)
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
 	}
@@ -48,6 +45,14 @@ func TestClient(t *testing.T) {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.GetBooks())
+}
+
+func getGrpcOpts() []grpc.DialOption {
+	var opts []grpc.DialOption
+	opts = append(opts, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	opts = append(opts, grpc.WithPerRPCCredentials(&CustomerPerRPCCredentials{}))
+	//opts = append(opts, grpc.WithDefaultServiceConfig(`{"loadBalancingConfig": [{"round_robin":{}}]}`))
+	return opts
 }
 
 func TestClient2(t *testing.T) {

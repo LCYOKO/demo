@@ -42,7 +42,6 @@ love by spf13 and friends in Go.
 Complete documentation is available at http://hugo.spf13.com`,
 		SilenceUsage: true,
 		Run: func(cmd *cobra.Command, args []string) {
-			// Do Stuff Here
 			fmt.Printf("haha")
 		},
 	}
