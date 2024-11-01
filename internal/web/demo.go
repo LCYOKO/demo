@@ -182,20 +182,14 @@ func startSecureServer(g *gin.Engine, conf *conf2.Http) *http.Server {
 	return httpsSrv
 }
 
-// startGRPCServer 创建并运行 GRPC 服务器.
 func startGRPCServer(conf *conf2.Config) *grpc.Server {
 	var log = zap.L()
 	lis, err := net.Listen("tcp", viper.GetString("grpc.addr"))
 	if err != nil {
 		log.Fatal("Failed to listen", zap.Error(err))
 	}
-
-	// 创建 GRPC Server 实例
 	grpcSrv := grpc.NewServer()
-
 	//pb.RegisterMiniBlogServer(grpcsrv, user.New(store.S, nil))
-
-	// 打印一条日志，用来提示 GRPC 服务已经起来，方便排障
 	log.Info("Start to listening the incoming requests on grpc address", zap.String("addr", conf.Grpc.Addr))
 	go func() {
 		if err := grpcSrv.Serve(lis); err != nil {

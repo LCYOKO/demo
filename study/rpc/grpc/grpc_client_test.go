@@ -28,7 +28,6 @@ func (c CustomerPerRPCCredentials) RequireTransportSecurity() bool {
 }
 
 func (c CustomerPerRPCCredentials) name() {
-
 }
 
 func TestClient(t *testing.T) {

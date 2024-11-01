@@ -1,8 +1,3 @@
-// Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
-
 // Package verflag defines utility functions to handle command line flags
 // related to version of IAM.
 package verflag
@@ -17,7 +12,6 @@ import (
 
 type versionValue int
 
-// 定义一些常量.
 const (
 	VersionFalse versionValue = 0
 	VersionTrue  versionValue = 1
@@ -45,7 +39,7 @@ func (v *versionValue) String() string {
 		return strRawVersion
 	}
 
-	return fmt.Sprintf("%v", bool(*v == VersionTrue))
+	return fmt.Sprintf("%v", *v == VersionTrue)
 }
 
 // Set 实现了 pflag.Value 接口中的 Set 方法.
@@ -65,7 +59,6 @@ func (v *versionValue) Set(s string) error {
 	return err
 }
 
-// Type 实现了 pflag.Value 接口中的 Type 方法.
 func (v *versionValue) Type() string {
 	return "version"
 }
@@ -78,11 +71,9 @@ func VersionVar(p *versionValue, name string, value versionValue, usage string) 
 	pflag.Lookup(name).NoOptDefVal = "true"
 }
 
-// Version 包装了 VersionVar 函数.
 func Version(name string, value versionValue, usage string) *versionValue {
 	p := new(versionValue)
 	VersionVar(p, name, value, usage)
-
 	return p
 }
 
@@ -96,7 +87,8 @@ func PrintAndExitIfRequested() {
 	if *versionFlag == VersionRaw {
 		fmt.Printf("%#v\n", version.Get())
 		os.Exit(0)
-	} else if *versionFlag == VersionTrue {
+	}
+	if *versionFlag == VersionTrue {
 		fmt.Printf("%s\n", version.Get())
 		os.Exit(0)
 	}
