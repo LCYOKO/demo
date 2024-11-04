@@ -3,7 +3,6 @@ package net
 import (
 	"fmt"
 	"io"
-	"log"
 	"net"
 	"net/http"
 	"net/url"
@@ -96,7 +95,32 @@ func TestHttpClient(t *testing.T) {
 			MaxIdleConns:          10,
 		},
 	}
-	_ = client
+	fetchBeKePrice(client)
+}
+
+func fetchBeKePrice(client *http.Client) {
+	bekeUrl, _ := url.Parse("https://imapi.lianjia.com/user/conv/list?offset=0&limit=100")
+	h := http.Header{}
+	h.Add("Lianjia-Access-Token", "2.0015d736c9758d3362047a1ff84a3222ac")
+	h.Add("Lianjia-im-protocal-version", "1.1")
+	h.Add("Lianjia-app-id", "BEIKE_WEB_20170105")
+	h.Add("Lianjia-Device-Id", "5ef64f9e-6eca-44dd-b776-069a9199ef00")
+	request := &http.Request{
+		Method: http.MethodGet,
+		URL:    bekeUrl,
+		Body:   nil,
+		Header: h,
+	}
+	response, err := client.Do(request)
+	if err != nil {
+		return
+	}
+	defer response.Body.Close()
+	all, err := io.ReadAll(response.Body)
+	if err != nil {
+		return
+	}
+	fmt.Println(string(all))
 }
 
 type myHandler struct{}
@@ -121,12 +145,7 @@ func (h handler) getStatusCode2(body io.Reader) (int, error) {
 	if err != nil {
 		return 0, err
 	}
-	defer func() {
-		err := resp.Body.Close()
-		if err != nil {
-			log.Printf("failed to close response: %v\n", err)
-		}
-	}()
+	defer resp.Body.Close()
 	//需要注意的点：
 	//如果你没有读取Respose.Body的内容，那么默认的 http transport 会直接关闭连接
 	//如果你读取了Body的内容，下次连接可以直接复用
