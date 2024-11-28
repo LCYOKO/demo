@@ -3,6 +3,7 @@ package basic
 import (
 	"fmt"
 	"testing"
+	"unicode/utf8"
 )
 
 // const 只能修饰基本变量，不能修饰结构体
@@ -28,6 +29,22 @@ func TestNumber(t *testing.T) {
 func TestString(t *testing.T) {
 	traversalString()
 	fmt.Println(modifyString("你好"))
+}
+
+func TestStringCount(t *testing.T) {
+	// 一般推荐用于短的，不用换行的，不含双引号的
+	println("He said:\" Hello Go \" ")
+	// 长的，复杂的。比如说放个 json 串
+	println(`He said: "hello, Go"
+我还可以换个行
+`)
+
+	println(len("你好"))                      // 输出6
+	println(utf8.RuneCountInString("你好"))   // 输出 2
+	println(utf8.RuneCountInString("你好ab")) // 输出 4
+
+	// 字符串拼接。只能发生在 string 之间
+	println("Hello, " + "Go!")
 }
 
 func TestIfCase(t *testing.T) {

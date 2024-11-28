@@ -1,5 +1,6 @@
 syntax = "proto3";
-package book;
+//命名规范 packge_name.version
+package book.v1;
 option go_package = "pb/book";
 import "google/protobuf/wrappers.proto";
 

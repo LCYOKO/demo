@@ -54,3 +54,22 @@ func getBalance(db *sql.DB, clientID string) (balance float32, err error) {
 	// Use rows
 	return 0, nil
 }
+
+func TestError2(t *testing.T) {
+	if errors.New("error") == errors.New("error") {
+		fmt.Println("equals1")
+	}
+   e1:= &MyError{err: "err"}
+   e2:= &MyError{err: "err"}
+	if e1==e2 {
+		fmt.Println("equals2")
+	}
+}
+
+type MyError struct {
+	err string
+}
+
+func (e *MyError) Error() string {
+	return e.err
+}

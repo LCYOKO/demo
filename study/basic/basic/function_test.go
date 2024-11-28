@@ -117,7 +117,10 @@ func TestPanic(t *testing.T) {
 }
 
 func TestFun1(t *testing.T) {
-
+	sl := make([]int, 0, 10)
+	fmt.Println(sl)
+	sl = myAppend(sl, 1, 2, 3, 4)
+	fmt.Println(sl)
 }
 
 func myAppend(sl []int, elems ...int) []int {
@@ -126,7 +129,6 @@ func myAppend(sl []int, elems ...int) []int {
 		println("no elems to append")
 		return sl
 	}
-
 	sl = append(sl, elems...)
 	return sl
 }

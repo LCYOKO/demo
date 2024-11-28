@@ -4,12 +4,15 @@ import (
 	"fmt"
 	"testing"
 )
+
 func TestArray(t *testing.T) {
 	//定义数组
 	var arr1 [4]int
 	var arr2 = [4]int{1, 2, 3, 4}
 	var arr3 = [...]int{1, 2, 3}
 	fmt.Println(arr1, arr2, arr3)
+
+	//修改数组
 	modifyArray(&arr3)
 	fmt.Println(arr3)
 	fmt.Printf("%T", arr3)
@@ -36,12 +39,12 @@ func TestSlice1(t *testing.T) {
 	sl1 = append(sl1, 1)
 	fmt.Println(sl1[0])
 
-	sl1 = make([]int,10)
-	sl2:= sl1[1:3]
-	sl1[3]=4
+	sl1 = make([]int, 10)
+	sl2 := sl1[1:3]
+	sl1[3] = 4
 	fmt.Println(sl1)
 	_ = append(sl2, 1)
-	fmt.Println(len(sl2),cap(sl2),sl1)
+	fmt.Println(len(sl2), cap(sl2), sl1)
 }
 
 func TestMap(t *testing.T) {
@@ -112,7 +115,6 @@ func TestCompare1(t *testing.T) {
 	//当接口（interface）值如果持有深度相等的具体值，则深度相等。
 	//当切片（slice）序号相同，如果值,指针都相等，那么就是深度相等的
 	//当哈希表（map）相同的key，如果值，指针都相等，那么就是深度相等的。
-
 
 	//channel、指针
 	//指针可比较，只要指针指向的地址一样，则相等

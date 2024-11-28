@@ -73,3 +73,18 @@ func TestIoReader(t *testing.T) {
 	text = strings.TrimSpace(text)
 	fmt.Printf("%#v\n", text)
 }
+
+func TestReplaceHolder(t *testing.T) {
+	type user struct {
+		Name string
+		Age  int
+	}
+	u := &user{
+		Name: "Tom",
+		Age:  17,
+	}
+	fmt.Printf("v => %v \n", u)
+	fmt.Printf("+v => %+v \n", u)
+	fmt.Printf("#v => %#v \n", u)
+	fmt.Printf("T => %T \n", u)
+}
