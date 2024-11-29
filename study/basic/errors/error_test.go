@@ -8,6 +8,42 @@ import (
 	"testing"
 )
 
+func TestError1(t *testing.T) {
+	error1 := errors.New("123")
+	error2 := fmt.Errorf("fmt create error")
+	error3 := fmt.Errorf("fmt create error2 ,err:%w", error2)
+	fmt.Println(error1)
+	fmt.Println(error2)
+	fmt.Println(error3)
+	//实现自定义error 狠简单就是实现error接口就可以
+	var myError error = &MyError{
+		err: "1231231",
+	}
+	fmt.Println(myError)
+}
+
+func TestError2(t *testing.T) {
+	// 使用pkg.errors打印当前的协程栈
+	fmt.Printf("%+v", createError())
+}
+
+func createError() error {
+	return errors.New("1231")
+}
+
+func TestError3(t *testing.T) {
+	var myError error = &MyError{
+		err: "1231231",
+	}
+	var err error = fmt.Errorf("%w", myError)
+	//func Unwrap(err error) error                 // 获得err包含下一层错误
+	fmt.Println(errors.Unwrap(myError))
+	//func Is(err, target error) bool              // 判断err是否包含target
+	fmt.Println(errors.Is(myError, err))
+	//func As(err error, target interface{}) bool  // 判断err是否为target类型
+	//fmt.Println(errors.As(myError, err))
+}
+
 func TestError(t *testing.T) {
 	fmt.Printf("%+v", throw())
 }
@@ -16,19 +52,20 @@ func throw() error {
 	return errors.New("error")
 }
 
-func Test1(t *testing.T) {
-	//if err != nil {
-	//	// 使用 %w 指令，会返回一个包装了err的错误，接收方可以从父error中获取到源error
-	//	// 并根据判断错误是否为某一个错误类型
-	//	// sourceErr --wrap--> WrapErr(sourceErr)
-	//	return fmt.Errorf("bar failed: %w", err)
-	//}
-	//
-	//if err != nil {
-	//	// 使用 %v 指令，不会包装错误，会直接转化为另一个错误，源错误不再可用
-	//	// sourceErr --transform--> otherErr
-	//	return fmt.Errorf("bar failed: %v", err)
-	//}
+func test(err error) error {
+	if err != nil {
+		// 使用 %w 指令，会返回一个包装了err的错误，接收方可以从父error中获取到源error
+		// 并根据判断错误是否为某一个错误类型
+		// sourceErr --wrap--> WrapErr(sourceErr)
+		return fmt.Errorf("bar failed: %w", err)
+	}
+
+	if err != nil {
+		// 使用 %v 指令，不会包装错误，会直接转化为另一个错误，源错误不再可用
+		// sourceErr --transform--> otherErr
+		return fmt.Errorf("bar failed: %v", err)
+	}
+	return nil
 }
 
 // 一种解决方式是使用命名结果，把错误信息通过命名结果返回
@@ -55,21 +92,51 @@ func getBalance(db *sql.DB, clientID string) (balance float32, err error) {
 	return 0, nil
 }
 
-func TestError2(t *testing.T) {
-	if errors.New("error") == errors.New("error") {
-		fmt.Println("equals1")
-	}
-   e1:= &MyError{err: "err"}
-   e2:= &MyError{err: "err"}
-	if e1==e2 {
-		fmt.Println("equals2")
-	}
-}
-
 type MyError struct {
 	err string
 }
 
 func (e *MyError) Error() string {
 	return e.err
+}
+
+func TestError4(t *testing.T) {
+	if errors.New("error") == errors.New("error") {
+		fmt.Println("equals1")
+	}
+	e1 := &MyError{err: "err"}
+	e2 := &MyError{err: "err"}
+	if e1 == e2 {
+		fmt.Println("equals2")
+	}
+}
+
+func TestError5(t *testing.T) {
+	var err error = &MyError{}
+	println(err.Error())
+	ErrorsPkg()
+}
+
+func ErrorsPkg() {
+	err := &MyError{}
+	// 使用 %w 占位符，返回的是一个新错误
+	// wrappedErr 是一个新类型，fmt.wrapError
+	wrappedErr := fmt.Errorf("this is an wrapped error %w", err)
+
+	// 再解出来
+	if err == errors.Unwrap(wrappedErr) {
+		fmt.Println("unwrapped")
+	}
+
+	if errors.Is(wrappedErr, err) {
+		// 虽然被包了一下，但是 Is 会逐层解除包装，判断是不是该错误
+		fmt.Println("wrapped is err")
+	}
+
+	copyErr := &MyError{}
+	// 这里尝试将 wrappedErr转换为 MyError
+	// 注意我们使用了两次的取地址符号
+	if errors.As(wrappedErr, &copyErr) {
+		fmt.Println("convert error")
+	}
 }

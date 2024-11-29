@@ -87,7 +87,7 @@ func TestChannelCancel(t *testing.T) {
 	wg.Wait()
 }
 
-//很经典的死循环
+// 很经典的死循环
 func TestChannelError1(t *testing.T) {
 	wg := sync.WaitGroup{}
 	ch := make(chan int, 10)
@@ -111,8 +111,8 @@ func TestChannelError1(t *testing.T) {
 	wg.Wait()
 }
 
-//由于 select 命中了超时逻辑，导致通道没有消费者（无接收操作），而其定义的通道为无缓冲通道
-//因此 goroutine 中的ch <- "job result"操作会一直阻塞，最终导致 goroutine 泄露。
+// 由于 select 命中了超时逻辑，导致通道没有消费者（无接收操作），而其定义的通道为无缓冲通道
+// 因此 goroutine 中的ch <- "job result"操作会一直阻塞，最终导致 goroutine 泄露。
 func TestChannelError2(t *testing.T) {
 	ch := make(chan string)
 	go func() {
