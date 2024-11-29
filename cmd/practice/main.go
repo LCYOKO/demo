@@ -4,7 +4,6 @@ import (
 	"context"
 	web "demo/pkg/practice"
 	"fmt"
-	_ "geektime/toy-web/demo/filters"
 	"net/http"
 	"time"
 )
@@ -36,8 +35,8 @@ func main() {
 		web.MetricFilterBuilder, shutdown.ShutdownFilterBuilder)
 
 	// 注册路由
-	_ = server.Route("POST", "/user/create/*", demo.SignUp)
-	_ = server.Route("POST", "/slowService", demo.SlowService)
+	_ = server.Route("POST", "/user/create/*", web.SignUp)
+	_ = server.Route("POST", "/slowService", web.SlowService)
 
 	// 准备静态路由
 
