@@ -21,11 +21,9 @@ func InitToyProtocolProxy(address string, val Service, ftls ...FilterChain) erro
 }
 
 func setFuncField(val Service, c Proxy) {
-
 	v := reflect.ValueOf(val)
 	ele := v.Elem()
 	t := ele.Type()
-
 	numField := t.NumField()
 	for i := 0; i < numField; i++ {
 		field := t.Field(i)
@@ -35,7 +33,6 @@ func setFuncField(val Service, c Proxy) {
 				in := args[1].Interface()
 				out := reflect.New(field.Type.Out(0).Elem()).Interface()
 				inData, err := json.Marshal(in)
-
 				req := &dto.Request{
 					ServiceName: val.ServiceName(),
 					Method:      field.Name,
