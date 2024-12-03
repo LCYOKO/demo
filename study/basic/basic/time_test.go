@@ -10,7 +10,7 @@ import (
 
 func TestTime1(t *testing.T) {
 	now := time.Now() // 获取当前时间
-	fmt.Printf("current time:%v\n", now)
+	fmt.Printf("concurrent time:%v\n", now)
 	year := now.Year()     // 年
 	month := now.Month()   // 月
 	day := now.Day()       // 日

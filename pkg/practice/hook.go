@@ -13,8 +13,7 @@ import (
 type Hook func(ctx context.Context) error
 
 // BuildCloseServerHook 这里其实可以考虑使用 errgroup，
-// 但是我们这里不用是希望每个 server 单独关闭
-// 互相之间不影响
+// 但是我们这里不用是希望每个 server 单独关闭 互相之间不影响
 func BuildCloseServerHook(servers ...Server) Hook {
 	return func(ctx context.Context) error {
 		wg := sync.WaitGroup{}

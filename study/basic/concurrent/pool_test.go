@@ -1,4 +1,4 @@
-package current
+package concurrent
 
 import (
 	"sync"

@@ -18,7 +18,6 @@ type GracefulShutdown struct {
 	reqCnt int64
 	// 大于 1 就说明要关闭了
 	closing int32
-
 	// 用 channel 来通知已经处理完了所有请求
 	zeroReqCnt chan struct{}
 }

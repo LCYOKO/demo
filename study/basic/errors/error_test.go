@@ -1,10 +1,15 @@
 package errors
 
+// 你应该只处理一次错误。处理一个错误意味着检查错误值，并做出单一的决定。
+//
 import (
 	"database/sql"
 	"fmt"
 	"github.com/pkg/errors"
+	"io"
 	"log"
+	"os"
+	"path/filepath"
 	"testing"
 )
 
@@ -132,11 +137,73 @@ func ErrorsPkg() {
 		// 虽然被包了一下，但是 Is 会逐层解除包装，判断是不是该错误
 		fmt.Println("wrapped is err")
 	}
-
 	copyErr := &MyError{}
 	// 这里尝试将 wrappedErr转换为 MyError
 	// 注意我们使用了两次的取地址符号
 	if errors.As(wrappedErr, &copyErr) {
 		fmt.Println("convert error")
 	}
+}
+
+// ### 重复 `Wrap()` 的坑
+// 使用 `Wrap()`虽然打印日志时很方便的附带堆栈信息，但使用时也有一个不小的坑：
+// - 就是**多处 `Wrap()`**，导致打印的错误时会有**多倍的堆栈信息**，因为每 `Wrap()`一次，底层便会调用一次 `withStack()`，就会多输出一次堆栈信息。
+//
+// 如何合理的使用 `Wrap()`呢，给出以下几点建议：
+// - 1. 在你的**应用代码(指偏向业务的逻辑，不是封装的基础库)** 中，使用 `errors.New` 或者  `errros.Errorf` 返回自定义错误，注意都是指 `pkg/errors`库，如：
+// ```go
+//
+//	func parseArgs(args []string) error {
+//		if len(args) < 3 {
+//			return erros.Errorf("not enough arguments, expected at least 3 argument")
+//		}
+//	}
+//
+// ```
+// - 2. 如果**调用其他包内的函数（即项目某个函数）**，通常简单的**直接返回err**，如：
+//
+//	if err := somePkg.Logic();err != nil{
+//		return err
+//	}
+//
+// - 3. 如果是**最底层的业务逻辑，通常是与数据库相关的**，考虑使用 `errors.Wrap` 或者 `errors.Wrapf` **包装**数据库返回的err
+// - 4. 如果**和第三方库(如github这类库)、标准库、公司或个人封装的基础库进行协作**，考虑使用 `errors.Wrap` 或者 `errors.Wrapf` **包装**这些库返回的err，如：
+// f, err := os.Open(filePath)
+//
+//	if err != nil {
+//		return errros.Wrapf(err, "failed to open %q", filePath)
+//	}
+//
+// 记不住上面具体建议没关系，记住一个基本原则：**最底层的逻辑需要wrap**，如业务开发是数据库操作相关（Mysql、MongoDB、Redis等），调用基础库，如GO标准库或第三方库
+func TestWrapError(t *testing.T) {
+	_, err := ReadFile("test")
+	fmt.Printf("err:%+v", err)
+}
+
+func ReadFile(path string) ([]byte, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		// Wrapf err： 包含堆栈信息，可以格式化错误内容
+		return nil, errors.Wrapf(err, "failed to open %q", path) // %q 单引号围绕的字符字面值，由Go语法安全地转义，这样中文文件名也能正确显示
+	}
+	defer f.Close()
+	buf, err := io.ReadAll(f)
+	if err != nil {
+		// Wraperr： 包含堆栈信息
+		return nil, errors.Wrap(err, "read failed")
+	}
+	return buf, nil
+}
+
+func TestErrWithMessage(t *testing.T) {
+	_, err := ReadConfig("test")
+	fmt.Printf("err:%+v", err)
+}
+
+var filePath = "test_file_path"
+
+func ReadConfig(path string) ([]byte, error) {
+	home := os.Getenv("HOME")
+	config, err := ReadFile(filepath.Join(home, ".yaml"))
+	return config, errors.WithMessage(err, "could mot read config")
 }

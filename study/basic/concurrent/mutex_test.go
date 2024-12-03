@@ -1,4 +1,4 @@
-package current
+package concurrent
 
 import "testing"
 
@@ -22,9 +22,6 @@ func TestRwMutex(t *testing.T) {
 func TestFailed1(t *testing.T) {
 	mutex.Lock()
 	defer mutex.Unlock()
-
-	// 这一句会死锁
-	// 但是如果你只有一个goroutine，那么这一个会导致程序崩溃
 	mutex.Lock()
 	defer mutex.Unlock()
 }
@@ -33,9 +30,10 @@ func TestFailed1(t *testing.T) {
 func TestFailed2(t *testing.T) {
 	rwMutex.RLock()
 	defer rwMutex.RUnlock()
-
-	// 这一句会死锁
-	// 但是如果你只有一个goroutine，那么这一个会导致程序崩溃
 	mutex.Lock()
 	defer mutex.Unlock()
 }
+
+//func TestFailed3() {
+//
+//}

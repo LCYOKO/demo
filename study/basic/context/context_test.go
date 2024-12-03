@@ -95,13 +95,31 @@ func TestDeadLine(t *testing.T) {
 	ctx, cancel := context.WithDeadline(context.Background(),
 		time.Now().Add(2*time.Second))
 	defer cancel()
-
 	start := time.Now().Unix()
 	<-ctx.Done()
 	end := time.Now().Unix()
 	// 输出2，说明在 ctx.Done()这里阻塞了两秒
 	fmt.Println(end - start)
+}
 
+func TestTimeoutExample(t *testing.T) {
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	defer cancel()
+	bsChan := make(chan struct{})
+	go func() {
+		slowBusiness()
+		bsChan <- struct{}{}
+	}()
+	select {
+	case <-ctx.Done():
+		fmt.Println("timeout")
+	case <-bsChan:
+		fmt.Println("business end")
+	}
+}
+
+func slowBusiness() {
+	time.Sleep(2 * time.Second)
 }
 
 func TestWithValue(t *testing.T) {

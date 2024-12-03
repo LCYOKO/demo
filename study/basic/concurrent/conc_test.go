@@ -1,4 +1,5 @@
-package current
+package concurrent
+
 //https://www.liwenzhou.com/posts/Go/conc/#c-0-4-2
 //https://github.com/sourcegraph/conc
 import (

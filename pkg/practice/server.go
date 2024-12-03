@@ -25,7 +25,6 @@ type Server interface {
 
 // sdkHttpServer 这个是基于 net/http 这个包实现的 http server
 type sdkHttpServer struct {
-	// Name server 的名字，给个标记，日志输出的时候用得上
 	Name    string
 	handler Handler
 	root    Filter

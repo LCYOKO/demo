@@ -19,17 +19,14 @@ func (c *Context) ReadJson(data interface{}) error {
 	return json.Unmarshal(body, data)
 }
 func (c *Context) OkJson(data interface{}) error {
-	// http 库里面提前定义好了各种响应码
 	return c.WriteJson(http.StatusOK, data)
 }
 
 func (c *Context) SystemErrJson(data interface{}) error {
-	// http 库里面提前定义好了各种响应码
 	return c.WriteJson(http.StatusInternalServerError, data)
 }
 
 func (c *Context) BadRequestJson(data interface{}) error {
-	// http 库里面提前定义好了各种响应码
 	return c.WriteJson(http.StatusBadRequest, data)
 }
 
