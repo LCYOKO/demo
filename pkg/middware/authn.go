@@ -1,14 +1,9 @@
-// Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
-
 package middleware
 
 import (
+	"demo/pkg/auth"
 	"demo/pkg/web"
 	"github.com/gin-gonic/gin"
-	"github.com/marmotedu/miniblog/pkg/token"
 	"go.uber.org/zap"
 )
 
@@ -17,7 +12,7 @@ import (
 func Authn() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		// 解析 JWT Token
-		username, err := token.ParseRequest(c)
+		username, err := auth.ParseRequest(c)
 		if err != nil {
 			zap.L().Error("Parse jtwToken failed.", zap.Error(err))
 			web.WriteResponse(c, web.TokenInvalid, nil)

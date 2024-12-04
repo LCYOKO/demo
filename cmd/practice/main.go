@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	web "demo/pkg/practice"
+	"demo/study/practice"
 	"fmt"
 	"net/http"
 	"time"
@@ -25,26 +25,26 @@ func order(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	shutdown := web.NewGracefulShutdown()
-	server := web.NewSdkHttpServer("my-test-server",
-		web.MetricFilterBuilder, shutdown.ShutdownFilterBuilder)
-	adminServer := web.NewSdkHttpServer("admin-test-server",
+	shutdown := practice.NewGracefulShutdown()
+	server := practice.NewSdkHttpServer("my-test-server",
+		practice.MetricFilterBuilder, shutdown.ShutdownFilterBuilder)
+	adminServer := practice.NewSdkHttpServer("admin-test-server",
 		// 注意，如果你真实环境里面，使用的是多个 server监听不同端口，
 		// 那么这个 shutdown最好也是多个。互相之间就不会有竞争
 		// MetricFilterBuilder 是无状态的，所以不存在这种问题
-		web.MetricFilterBuilder, shutdown.ShutdownFilterBuilder)
+		practice.MetricFilterBuilder, shutdown.ShutdownFilterBuilder)
 
 	// 注册路由
-	_ = server.Route("POST", "/user/create/*", web.SignUp)
-	_ = server.Route("POST", "/slowService", web.SlowService)
+	_ = server.Route("POST", "/user/create/*", practice.SignUp)
+	_ = server.Route("POST", "/slowService", practice.SlowService)
 
 	// 准备静态路由
 
-	staticHandler := web.NewStaticResourceHandler(
+	staticHandler := practice.NewStaticResourceHandler(
 		"demo/static", "/static",
-		web.WithMoreExtension(map[string]string{
+		practice.WithMoreExtension(map[string]string{
 			"mp3": "audio/mp3",
-		}), web.WithFileCache(1<<20, 100))
+		}), practice.WithFileCache(1<<20, 100))
 	// 访问 Get http://localhost:8080/static/forest.png
 	server.Route("GET", "/static/*", staticHandler.ServeStaticResource)
 
@@ -65,7 +65,7 @@ func main() {
 	// 先执行 RejectNewRequestAndWaiting，等待所有的请求
 	// 然后我们关闭 server，如果是多个 server，可以多个 goroutine 一起关闭
 	//
-	web.WaitForShutdown(
+	practice.WaitForShutdown(
 		func(ctx context.Context) error {
 			// 假设我们这里有一个 hook
 			// 可以通知网关我们要下线了
@@ -75,7 +75,7 @@ func main() {
 		},
 		shutdown.RejectNewRequestAndWaiting,
 		// 全部请求处理完了我们就可以关闭 server了
-		web.BuildCloseServerHook(server, adminServer),
+		practice.BuildCloseServerHook(server, adminServer),
 		func(ctx context.Context) error {
 			// 假设这里我要清理一些执行过程中生成的临时资源
 			fmt.Println("mock release resources")

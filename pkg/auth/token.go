@@ -1,8 +1,3 @@
-// Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
-
 package auth
 
 import (
@@ -25,8 +20,9 @@ type Config struct {
 var ErrMissingHeader = errors.New("the length of the `Authorization` header is zero")
 
 var (
-	config = Config{"Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5", "identityKey"}
-	once   sync.Once
+	_defaultConfig = Config{"Rtg8BPKNEf2mB4mgvKONGPZZQSaJWNLijxR42qRgq0iBb5", "identityKey"}
+	config         = _defaultConfig
+	once           sync.Once
 )
 
 // Init 设置包级别的配置 config, config 会用于本包后面的 token 签发和解析.
