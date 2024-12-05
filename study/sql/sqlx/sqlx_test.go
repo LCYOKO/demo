@@ -115,12 +115,8 @@ func TestBatchInsert(t *testing.T) {
 func TestBatchInsert2(t *testing.T) {
 	setup()
 	users := []User{
-		{
-
-		},
-		{
-
-		},
+		{},
+		{},
 	}
 	_, err := db.NamedExec("INSERT INTO user (name, age) VALUES (:name, :age)", users)
 	if err != nil {

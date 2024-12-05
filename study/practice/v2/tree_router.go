@@ -10,13 +10,13 @@ var ErrorInvalidRouterPattern = errors.New("invalid router pattern")
 
 type HandlerBasedOnTree struct {
 	root *node
-
 }
-var supportMethods = [4]string {http.MethodPost, http.MethodGet,
+
+var supportMethods = [4]string{http.MethodPost, http.MethodGet,
 	http.MethodDelete, http.MethodPut}
+
 func NewHandlerBasedOnTree() Handler {
-	root := &node{
-	}
+	root := &node{}
 	return &HandlerBasedOnTree{
 		root: root,
 	}
@@ -128,7 +128,7 @@ func (h *HandlerBasedOnTree) validatePattern(pattern string) error {
 	// 找到了 *
 	if pos > 0 {
 		// 必须是最后一个
-		if pos != len(pattern) - 1 {
+		if pos != len(pattern)-1 {
 			return ErrorInvalidRouterPattern
 		}
 		if pattern[pos-1] != '/' {
@@ -144,7 +144,7 @@ func (h *HandlerBasedOnTree) findMatchChild(root *node, path string) (*node, boo
 		// 并不是 * 的节点命中了，直接返回
 		// != * 是为了防止用户乱输入
 		if child.path == path &&
-			child.path != "*"{
+			child.path != "*" {
 			return child, true
 		}
 		// 命中了通配符的，我们看看后面还有没有更加详细的
@@ -166,7 +166,7 @@ func (h *HandlerBasedOnTree) createSubTree(root *node, paths []string, handlerFn
 }
 
 type node struct {
-	path string
+	path     string
 	children []*node
 
 	// 如果这是叶子节点，
@@ -176,7 +176,7 @@ type node struct {
 
 func newNode(path string) *node {
 	return &node{
-		path: path,
+		path:     path,
 		children: make([]*node, 0, 2),
 	}
 }

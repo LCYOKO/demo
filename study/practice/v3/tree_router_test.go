@@ -94,7 +94,7 @@ func TestHandlerBasedOnTree_Route(t *testing.T) {
 	err = handler.Route(http.MethodConnect, "/order/checkout", func(c *Context) {})
 	assert.Equal(t, ErrorInvalidMethod, err)
 
-	err = handler.Route(http.MethodPost, "/order/:id", func(c *Context){})
+	err = handler.Route(http.MethodPost, "/order/:id", func(c *Context) {})
 	assert.Nil(t, err)
 	// 这时候我们有/order/* 和 /order/:id
 	// 因为我们并没有认为它们不兼容，而是/order/:id优先
@@ -111,7 +111,7 @@ func TestHandlerBasedOnTree_findRouter(t *testing.T) {
 	fn, found := handler.findRouter(http.MethodPost, "/user", ctx)
 	assert.True(t, found)
 	assert.NotNil(t, fn)
-	_, found = handler.findRouter(http.MethodPost,"/user/profile", ctx)
+	_, found = handler.findRouter(http.MethodPost, "/user/profile", ctx)
 	assert.False(t, found)
 
 	_ = handler.Route(http.MethodPost, "/user/profile", func(c *Context) {})
@@ -123,27 +123,27 @@ func TestHandlerBasedOnTree_findRouter(t *testing.T) {
 
 	var detailHandler handlerFunc = func(c *Context) {}
 	_ = handler.Route(http.MethodPost, "/order/detail", detailHandler)
-	_, found = handler.findRouter(http.MethodPost,"/order", ctx)
+	_, found = handler.findRouter(http.MethodPost, "/order", ctx)
 	assert.False(t, found)
 
-	fn, found = handler.findRouter(http.MethodPost,"/order/detail", ctx)
+	fn, found = handler.findRouter(http.MethodPost, "/order/detail", ctx)
 	assert.True(t, found)
 	assert.True(t, handlerFuncEquals(detailHandler, fn))
 
 	var wildcardHandler handlerFunc = func(c *Context) {}
 	_ = handler.Route(http.MethodPost, "/order/*", wildcardHandler)
-	_, found = handler.findRouter(http.MethodPost,"/order", ctx)
+	_, found = handler.findRouter(http.MethodPost, "/order", ctx)
 	assert.False(t, found)
 
-	fn, found = handler.findRouter(http.MethodPost,"/order/detail", ctx)
+	fn, found = handler.findRouter(http.MethodPost, "/order/detail", ctx)
 	assert.True(t, found)
 	assert.True(t, handlerFuncEquals(detailHandler, fn))
 
-	fn, found = handler.findRouter(http.MethodPost,"/order/checkout", ctx)
+	fn, found = handler.findRouter(http.MethodPost, "/order/checkout", ctx)
 	assert.True(t, found)
 	assert.True(t, handlerFuncEquals(wildcardHandler, fn))
 
-	_, found = handler.findRouter(http.MethodGet,"/order/checkout", ctx)
+	_, found = handler.findRouter(http.MethodGet, "/order/checkout", ctx)
 	assert.False(t, found)
 
 	// 参数路由

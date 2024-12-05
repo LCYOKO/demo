@@ -18,8 +18,8 @@ type CustomerPerRPCCredentials struct {
 
 func (c CustomerPerRPCCredentials) GetRequestMetadata(ctx context.Context, uri ...string) (map[string]string, error) {
 	return map[string]string{
-		"id": "123",
-		"sign":  "123",
+		"id":   "123",
+		"sign": "123",
 	}, nil
 }
 

@@ -78,7 +78,6 @@ func TestHelloHandler(t *testing.T) {
 	}
 }
 
-
 type ReqParam struct {
 	X int `json:"x"`
 }

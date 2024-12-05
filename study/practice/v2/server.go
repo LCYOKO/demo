@@ -34,7 +34,7 @@ func (s *sdkHttpServer) Start(address string) error {
 	return http.ListenAndServe(address, s)
 }
 
-func (s *sdkHttpServer) ServeHTTP(writer http.ResponseWriter, request *http.Request)  {
+func (s *sdkHttpServer) ServeHTTP(writer http.ResponseWriter, request *http.Request) {
 	c := NewContext(writer, request)
 	s.root(c)
 }
@@ -52,10 +52,9 @@ func NewSdkHttpServer(name string, builders ...FilterBuilder) Server {
 		root = b(root)
 	}
 	res := &sdkHttpServer{
-		Name: name,
+		Name:    name,
 		handler: handler,
-		root: root,
+		root:    root,
 	}
 	return res
 }
-

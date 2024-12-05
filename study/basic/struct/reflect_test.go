@@ -43,7 +43,7 @@ func TestSet1(t *testing.T) {
 	}
 	b := &book{title: "Java", price: 5.33}
 	value := reflect.ValueOf(b)
-    fmt.Println(value)
+	fmt.Println(value)
 	value.Elem()
 }
 

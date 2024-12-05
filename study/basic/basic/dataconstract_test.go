@@ -37,7 +37,7 @@ func TestSlice(t *testing.T) {
 func TestSlice1(t *testing.T) {
 	var sl1 []int
 	sl1 = append(sl1, 1)
-	fmt.Println(sl1[0])
+	fmt.Println(sl1[0], len(sl1))
 
 	sl1 = make([]int, 10)
 	sl2 := sl1[1:3]

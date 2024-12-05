@@ -7,7 +7,6 @@ import (
 
 type HandlerBasedOnTree struct {
 	root *node
-
 }
 
 func NewHandlerBasedOnTree() Handler {
@@ -126,7 +125,7 @@ func (h *HandlerBasedOnTree) createSubTree(root *node, paths []string, handlerFn
 }
 
 type node struct {
-	path string
+	path     string
 	children []*node
 
 	// 如果这是叶子节点，
@@ -136,7 +135,7 @@ type node struct {
 
 func newNode(path string) *node {
 	return &node{
-		path: path,
+		path:     path,
 		children: make([]*node, 0, 2),
 	}
 }

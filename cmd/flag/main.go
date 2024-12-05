@@ -20,10 +20,10 @@ func testArgs() {
 	}
 }
 
-//-flag xxx （使用空格，一个-符号）
-//--flag xxx （使用空格，两个-符号）
-//-flag=xxx （使用等号，一个-符号）
-//--flag=xxx （使用等号，两个-符号）
+// -flag xxx （使用空格，一个-符号）
+// --flag xxx （使用空格，两个-符号）
+// -flag=xxx （使用等号，一个-符号）
+// --flag=xxx （使用等号，两个-符号）
 func testFlagType() {
 	name := flag.String("name", "张三", "姓名")
 	age := flag.Int("age", 18, "年龄")

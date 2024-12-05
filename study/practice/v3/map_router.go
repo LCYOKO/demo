@@ -10,7 +10,6 @@ import (
 // 用于确保HandlerBasedOnMap肯定实现了这个接口
 var _ Handler = &HandlerBasedOnMap{}
 
-
 type HandlerBasedOnMap struct {
 	handlers sync.Map
 }

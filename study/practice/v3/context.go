@@ -7,8 +7,8 @@ import (
 )
 
 type Context struct {
-	W http.ResponseWriter
-	R *http.Request
+	W          http.ResponseWriter
+	R          *http.Request
 	PathParams map[string]string
 }
 

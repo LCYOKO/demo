@@ -14,7 +14,7 @@ type HandlerBasedOnTree struct {
 	forest map[string]*node
 }
 
-var supportMethods = [4]string {
+var supportMethods = [4]string{
 	http.MethodGet,
 	http.MethodPost,
 	http.MethodPut,
@@ -23,7 +23,7 @@ var supportMethods = [4]string {
 
 func NewHandlerBasedOnTree() Handler {
 	forest := make(map[string]*node, len(supportMethods))
-	for _, m :=range supportMethods {
+	for _, m := range supportMethods {
 		forest[m] = newRootNode(m)
 	}
 	return &HandlerBasedOnTree{
@@ -116,7 +116,7 @@ func (h *HandlerBasedOnTree) validatePattern(pattern string) error {
 	// 找到了 *
 	if pos > 0 {
 		// 必须是最后一个
-		if pos != len(pattern) - 1 {
+		if pos != len(pattern)-1 {
 			return ErrorInvalidRouterPattern
 		}
 		if pattern[pos-1] != '/' {
@@ -143,7 +143,7 @@ func (h *HandlerBasedOnTree) findMatchChild(root *node,
 	sort.Slice(candidates, func(i, j int) bool {
 		return candidates[i].nodeType < candidates[j].nodeType
 	})
-	return candidates[len(candidates) - 1], true
+	return candidates[len(candidates)-1], true
 }
 
 func (h *HandlerBasedOnTree) createSubTree(root *node, paths []string, handlerFn handlerFunc) {
@@ -155,4 +155,3 @@ func (h *HandlerBasedOnTree) createSubTree(root *node, paths []string, handlerFn
 	}
 	cur.handler = handlerFn
 }
-

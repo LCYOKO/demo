@@ -10,6 +10,7 @@ import (
 )
 
 // Eval : 判断 map 是否符合 bool 表达式
+//
 //	expr = `a > 1 && b < 0`
 func Eval(m map[string]string, expr string) (bool, error) {
 	fset := token.NewFileSet()
